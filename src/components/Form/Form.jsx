@@ -33,12 +33,7 @@ const Form = () => {
   };
 
   const handleConfirmSubmit = () => {
-    // Lakukan sesuatu dengan data form jika validasi berhasil
-    // Misalnya, kirim data ke server
-
-    // Tampilkan toast sukses
     toast.success("Komentar berhasil diposting");
-
     // Reset form setelah submit
     setFormData({
       comment: "",
