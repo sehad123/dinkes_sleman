@@ -78,14 +78,14 @@ const Menu1 = [
 const Other = () => {
   return (
     <>
-      <div className="text-center mt-16 max-w-[600px] mx-auto">
+      <div className=" lg:translate-x-0 translate-x-16 text-center mt-16 max-w-[600px] mx-auto">
         <h1 data-aos="fade-up" className="text-3xl font-bold">
           Layanan Lainnya
         </h1>
         {/* Dropdown untuk memilih bulan */}
       </div>
 
-      <div className="container mx-auto px-4 py-20 ">
+      <div className="container lg:translate-x-0 translate-x-16 mx-auto px-4 py-20 ">
         <div data-aos="fade-up" className="container w-max grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14">
           {Menu1.map((content, index) => (
             <Link key={index} to={content.link} className="text-lg">

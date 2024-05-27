@@ -68,35 +68,35 @@ const Layout = () => {
         {/* Conditionally rendering sidebar toggle buttons */}
         {/* Fixed inline styles to adjust the position on smaller screens */}
         {isProfilPage && (
-          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0" : "left-[290px]"} transition-all duration-300`}>
+          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0" : "lg:left-[290px] left-[350px]"} transition-all duration-300`}>
             <button onClick={toggleSidebar} className="bg-gray-200 dark:bg-gray-800">
               {isSidebarOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>
           </div>
         )}
         {isUnduhPage && (
-          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0" : "left-[280px]"} transition-all duration-300`}>
+          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0" : "lg:left-[280px] left-[350px]"} transition-all duration-300`}>
             <button onClick={toggleSidebarUnduh} className="bg-gray-200 dark:bg-gray-800">
               {isSidebarUnduhOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>
           </div>
         )}
         {isGrafikPage && (
-          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0" : "left-[280px]"} transition-all duration-300`}>
+          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0" : "lg:left-[280px] left-[350px]"} transition-all duration-300`}>
             <button onClick={toggleSidebarGrafik} className="bg-gray-200 dark:bg-gray-800">
               {isSidebarUnduhOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>
           </div>
         )}
         {isInfoPage && (
-          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0" : "left-[280px]"} transition-all duration-300`}>
+          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0" : "lg:left-[280px] left-[400px]"} transition-all duration-300`}>
             <button onClick={toggleSidebarInfo} className="bg-gray-200 dark:bg-gray-800">
               {isSidebarInfoOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>
           </div>
         )}
         {isMediaPage && (
-          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0" : "left-[290px]"} transition-all duration-300`}>
+          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0" : "lg:left-[290px] left-[390px]"} transition-all duration-300`}>
             <button onClick={toggleSidebarMedia} className="bg-gray-200 dark:bg-gray-800">
               {isSidebarMediaOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>

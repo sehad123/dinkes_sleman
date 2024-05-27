@@ -140,7 +140,7 @@ const Info_berkala = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className="bg-white w-screen lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200">
       <div className="py-10">
         <div className="container">
           {/* header section */}
@@ -151,7 +151,7 @@ const Info_berkala = () => {
           </div>
 
           {/* Testimonial cards */}
-          <div data-aos="zoom-in" className="px-16 ml-16 lg:ml-0 ">
+          <div data-aos="zoom-in" className="px-16  lg:ml-0  ">
             <p className="text-center font-bold text-lg">Profil Kesehatan</p>
             <Slider {...settings}>
               {KesehatanData.map((data, index) => (
@@ -170,7 +170,7 @@ const Info_berkala = () => {
           <div className="container grid grid-cols-1 md:grid-cols-2 gap-6 ">
             <div className="flex flex-col">
               <p className="font-bold text-lg text-center">Laporan Tahunan</p>
-              <div data-aos="zoom-in" className="flex flex-wrap lg:justify-start ml-24 lg:ml-0">
+              <div data-aos="zoom-in" className="flex flex-wrap lg:justify-start ml-6 lg:ml-0">
                 {LaporanTahunan.map((data, index) => (
                   <Link key={index} to={data.link} className="w-full md:w-auto">
                     <div className="my-6 cursor-pointer">
@@ -182,7 +182,7 @@ const Info_berkala = () => {
             </div>
             <div className="flex flex-col">
               <p className="font-bold text-lg text-center ">Laporan Kinerja Pemerintah (LKJP)</p>
-              <div data-aos="zoom-in" className="flex flex-wrap lg:justify-start items-start ml-24 lg:ml-0 ">
+              <div data-aos="zoom-in" className="flex flex-wrap lg:justify-start items-start ml-6 lg:ml-0 ">
                 {LKJPData.map((data, index) => (
                   <Link key={index} to={data.link} className="w-full md:w-auto">
                     <div className="my-6 cursor-pointer">
@@ -194,7 +194,7 @@ const Info_berkala = () => {
             </div>
             <div className="flex flex-col lg:translate-x-64">
               <p className="font-bold text-lg text-center ">Laporan SPM Kesehatan</p>
-              <div data-aos="zoom-in" className="flex flex-wrap justify-end ml-24 lg:ml-0">
+              <div data-aos="zoom-in" className="flex flex-wrap justify-end ml-6 lg:ml-0">
                 {LSKData.map((data, index) => (
                   <Link key={index} to={data.link} className="w-full md:w-auto">
                     <div className="my-6 cursor-pointer">
@@ -210,7 +210,7 @@ const Info_berkala = () => {
           <br />
           <br />
           <br />
-          <div data-aos="zoom-in" className="px-16 ml-16 lg:ml-0 ">
+          <div data-aos="zoom-in" className="px-16 ml-6 lg:ml-0 ">
             <p className="text-center font-bold text-lg">Gerakan Masyarakat Hidup Sehat (GERMAS)</p>
             <Slider {...settings}>
               {GermasData.map((data, index) => (

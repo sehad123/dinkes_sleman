@@ -109,6 +109,7 @@ const Berita = () => {
   // Data untuk setiap konten
   const contents = [
     {
+      id: 1,
       image: Artikel,
       title: "Implementasikan PKAT, Dinkes Sleman Raih Apresiasi Kemenkes RI",
       description: "Sebagai wujud apresiasi atas penyelenggaraan Pemeriksaan Kesehatan Anak Terintegrasi (PKAT), Dinas Kesehatan Kabupaten Sleman sukses raih penghargaan dari Kementerian Kesehatan...",
@@ -116,20 +117,16 @@ const Berita = () => {
       link: "/artikel1",
     },
     {
+      id: 2,
       image: Artikel2,
       title: "Empat Tenaga Kesehatan Sleman Raih Juara Nakesdan Tingkat DIY Tahun 2024",
       description: "Prestasi membanggakan kembali diraih Tenaga Kesehatan Kabupaten Sleman pada tahun 2024. Sebanyak empat orang sabet Juara I Tenaga Kesehatan Teladan...",
       date: "Selasa, 12 Februari 2024",
       link: "/artikel2",
     },
+
     {
-      image: Artikel3,
-      title: "Simulasi Bencana dalam Peringatan Hari Kesiapsiagaan Bencana (HKB)",
-      description: "Dinas Kesehatan Kabupaten Sleman menyelenggarakan simulasi bencana. Agenda ini merupakan bagian dalam mendukung Peringatan Hari Kesiapsiagaan Bencana di Daerah Istimewa...",
-      date: "Selasa, 26 April 2024",
-      link: "/artikel3",
-    },
-    {
+      id: 3,
       image: Artikel4,
       title: "Tingkatkan Kapasitas Puskesmas, Dinkes Sleman Selenggarakan Orientasi Integrasi Pelayanan Kesehatan Primer",
       description: "Senin (22/4) Kepala Dinas Kesehatan Kabupaten Sleman, dr. Cahya Purnama, M.Kes membuka secara resmi Orientasi Integrasi Pelayanan Kesehatan Primer bagi...",
@@ -137,6 +134,15 @@ const Berita = () => {
       link: "/artikel4",
     },
     {
+      id: 4,
+      image: Artikel3,
+      title: "Simulasi Bencana dalam Peringatan Hari Kesiapsiagaan Bencana (HKB)",
+      description: "Dinas Kesehatan Kabupaten Sleman menyelenggarakan simulasi bencana. Agenda ini merupakan bagian dalam mendukung Peringatan Hari Kesiapsiagaan Bencana di Daerah Istimewa...",
+      date: "Selasa, 26 April 2024",
+      link: "/artikel3",
+    },
+    {
+      id: 5,
       image: Artikel5,
       title: "Selamat Hari Raya Idul Fitri 1445 H",
       description: "Kepala Dinas Kesehatan Kabupaten Sleman beserta seluruh jajaran menghaturkan Selamat Hari Raya Idul Fitri 1445 H. Mohon maaf lahir dan...",
@@ -144,6 +150,7 @@ const Berita = () => {
       link: "/artikel5",
     },
     {
+      id: 6,
       image: Artikel6,
       title: "Dialog Interaktif Tetap Sehat dan Bugar Saat Lebaran",
       description: "Mudik pada Hari Raya Idul Fitri merupakan fenomena yang umumnya terjadi di Indonesia. Kabupaten Sleman menjadi salah satu tujuan mudik...",
@@ -206,7 +213,7 @@ const Berita = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 py-10">
+    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 py-10">
       <div data-aos="fade-up" className="container mx-auto">
         {/* header section */}
         <div className="text-center mb-5 lg:-translate-y-1 max-w-[600px] mx-auto"></div>
@@ -254,17 +261,17 @@ const Berita = () => {
 
         <div className="container grid grid-cols-1 gap-8 sm:grid-cols-1 lg:grid-cols-1 lg:-translate-y-5">
           {/* Mapping data untuk membuat container */}
-          {currentItems.map((content, index) => (
+          {currentItems.map((content) => (
             <div
               data-aos="fade-up"
-              key={index}
-              className="border border-gray-800 dark:border-white lg:h-[220px] h-[190px] lg:w-[1000px] lg:p-4 lg:px-0 px-4 lg:ml-10"
+              key={content.id}
+              className="border border-gray-800 dark:border-white lg:h-[220px] h-[200px] lg:w-[1000px] lg:p-4 lg:px-0 px-4 lg:ml-10"
               style={{ boxShadow: "10px 10px 12px rgba(0, 0, 0, 0.1)" }} // Menambahkan shadow
             >
               {/* Konten artikel */}
               <div className="relative">
                 <Link to={content.link} target="_blank" rel="noopener noreferrer">
-                  <img src={content.image} alt="" className="lg:w-[200px] w-[150px] lg:h-[180px] h-[150px] mt-4 lg:ml-3 pr-2 lg:mt-0 object-cover absolute lg:top-0 lg:left-0 " />
+                  <img src={content.image} alt="" className="lg:w-[200px] w-[150px] lg:h-[180px] h-[150px] mt-5 lg:ml-3 pr-2 lg:mt-0 object-cover absolute lg:top-0 lg:left-0 " />
                 </Link>
               </div>
 
@@ -287,7 +294,7 @@ const Berita = () => {
                       Selengkapnya
                     </Link>
                   </p>
-                  <p className="lg:mt-5 lg:ml-0 ml-4 text-[8px] lg:text-[15px]">
+                  <p className="lg:mt-5 lg:ml-0 ml-2 text-[7px] lg:text-[15px]">
                     <FontAwesomeIcon icon={faClock} />
                     <span> {content.date}</span>
                   </p>

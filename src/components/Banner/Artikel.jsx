@@ -13,6 +13,7 @@ const Banner = () => {
   // Data untuk setiap konten
   const contents = [
     {
+      id: 1,
       image: Artikel,
       title: "Implementasikan PKAT, Dinkes Sleman Raih Apresiasi Kemenkes RI",
       description: "Sebagai wujud apresiasi atas penyelenggaraan Pemeriksaan Kesehatan Anak Terintegrasi (PKAT), Dinas Kesehatan Kabupaten Sleman sukses raih penghargaan dari Kementerian Kesehatan...",
@@ -20,6 +21,7 @@ const Banner = () => {
       link: "/artikel1",
     },
     {
+      id: 2,
       image: Artikel2,
       title: "Empat Tenaga Kesehatan Sleman Raih Juara Nakesdan Tingkat DIY Tahun 2024",
       description: "Prestasi membanggakan kembali diraih Tenaga Kesehatan Kabupaten Sleman pada tahun 2024. Sebanyak empat orang sabet Juara I Tenaga Kesehatan Teladan...",
@@ -27,6 +29,7 @@ const Banner = () => {
       link: "/artikel2",
     },
     {
+      id: 3,
       image: Artikel3,
       title: "Simulasi Bencana dalam Peringatan Hari Kesiapsiagaan Bencana (HKB)",
       description: "Dinas Kesehatan Kabupaten Sleman menyelenggarakan simulasi bencana. Agenda ini merupakan bagian dalam mendukung Peringatan Hari Kesiapsiagaan Bencana di Daerah Istimewa...",
@@ -34,6 +37,7 @@ const Banner = () => {
       link: "/artikel3",
     },
     {
+      id: 4,
       image: Artikel4,
       title: "Tingkatkan Kapasitas Puskesmas, Dinkes Sleman Selenggarakan Orientasi Integrasi Pelayanan Kesehatan Primer",
       description: "Senin (22/4) Kepala Dinas Kesehatan Kabupaten Sleman, dr. Cahya Purnama, M.Kes membuka secara resmi Orientasi Integrasi Pelayanan Kesehatan Primer bagi...",
@@ -41,6 +45,7 @@ const Banner = () => {
       link: "/artikel4",
     },
     {
+      id: 5,
       image: Artikel5,
       title: "Selamat Hari Raya Idul Fitri 1445 H",
       description: "Kepala Dinas Kesehatan Kabupaten Sleman beserta seluruh jajaran menghaturkan Selamat Hari Raya Idul Fitri 1445 H. Mohon maaf lahir dan...",
@@ -48,6 +53,7 @@ const Banner = () => {
       link: "/artikel5",
     },
     {
+      id: 6,
       image: Artikel6,
       title: "Dialog Interaktif Tetap Sehat dan Bugar Saat Lebaran",
       description: "Mudik pada Hari Raya Idul Fitri merupakan fenomena yang umumnya terjadi di Indonesia. Kabupaten Sleman menjadi salah satu tujuan mudik...",
@@ -58,17 +64,17 @@ const Banner = () => {
 
   return (
     <>
-      <div className="text-center mt-10 max-w-[600px] mx-auto">
+      <div className=" lg:translate-x-0 translate-x-16 text-center mt-10 max-w-[600px] mx-auto">
         <h1 data-aos="fade-up" className="text-3xl font-bold">
           Informasi Terbaru
         </h1>
         {/* Dropdown untuk memilih bulan */}
       </div>
 
-      <div className=" min-h-[550px] flex flex-wrap justify-center items-center py-12 px-8 sm:py-0">
+      <div className=" lg:translate-x-0 translate-x-16 min-h-[550px] flex flex-wrap justify-center items-center lg:py-12 py-0 px-8">
         {/* Mapping data untuk membuat container */}
-        {contents.map((content, index) => (
-          <div key={index} className="my-20 container w-full sm:w-1/1 lg:w-1/2">
+        {contents.map((content) => (
+          <div key={content.id} className="my-20 container w-full sm:w-1/1 lg:w-1/2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
               {/* Image section */}
               <div data-aos="zoom-in">

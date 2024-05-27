@@ -119,7 +119,7 @@ const Navbar = () => {
     const result = Menu1.find((menuItem) => menuItem.name.toLowerCase().includes(searchQuery.toLowerCase()));
     if (result) {
       setSearchResult(result); // Menyimpan hasil pencarian
-      window.location.to = result.link; // Arahkan ke halaman yang ditemukan
+      window.location.href = result.link; // Arahkan ke halaman yang ditemukan
     } else {
       setSearchResult("Pencarian tidak ditemukan");
       setOrderPopup(true); // Tampilkan popup ketika pencarian tidak ditemukan
@@ -137,7 +137,7 @@ const Navbar = () => {
     window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
   };
   return (
-    <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
+    <div className="shadow-md bg-white dark:bg-gray-900 w-[500px] lg:w-screen dark:text-white duration-200 relative z-40">
       {/* Upper Navbar */}
       <div className="lg:px-10 bg-green-500 py-2 sm:h-[150px] lg:h-[130px]">
         <div className="container mt-3 sm: flex justify-between items-center">

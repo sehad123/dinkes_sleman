@@ -2,7 +2,7 @@ import React from "react";
 
 const Visi_misi = () => {
   return (
-    <div className="lg:h-[500px] bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
+    <div className="lg:translate-x-0 translate-x-16 lg:h-[500px] bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
       <article id="post-2147" className="post-2147 page type-page status-publish hentry container mb-10">
         <header data-aos="fade-up" className="entry-header" style={{ borderBottom: "1px solid black" }}>
           <h1 className="entry-title text-center font-bold text-2xl py-5">Visi dan Misi</h1>

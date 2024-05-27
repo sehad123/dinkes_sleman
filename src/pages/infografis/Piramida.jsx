@@ -72,7 +72,7 @@ const Piramida = () => {
   const canvasRef = useRef(null);
 
   return (
-    <div className="lg:h-[500px] bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto">
+    <div className=" ml-32 lg:ml-0 lg:h-[500px] bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto">
       <div className="text-center mt-10 max-w-[600px] mx-auto">
         <h1 data-aos="fade-up" className="text-xl font-bold">
           Piramida Penduduk Menurut Golongan Umur di Kabupaten Sleman Tahun 2021

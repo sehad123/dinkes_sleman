@@ -16,7 +16,7 @@ const data = [
 
 const Perjanjian_kesehatan = () => {
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 w-screen lg:container">
+    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 w-screen lg:container">
       <div className="py-10 dark:py-20">
         <div className="container">
           {/* header section */}

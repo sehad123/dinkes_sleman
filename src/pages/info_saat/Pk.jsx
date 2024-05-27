@@ -2,7 +2,7 @@ import React from "react";
 
 const Pk = () => {
   return (
-    <div className="lg:h-[600px] bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
+    <div className="lg:h-[600px] ml-32 lg:ml-0 bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
       <div className="flex items-center justify-center w-max container">
         <div className="lg:w-[600px] w-[380px]">
           <h4 className="font-bold text-[19px] my-10 text-center">Perjanjian Kinerja (PK)</h4>

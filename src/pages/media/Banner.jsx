@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="bg-white py-10 dark:bg-gray-900 dark:pb-[160px] dark:text-white duration-200">
+    <div className="bg-white lg:translate-x-0 translate-x-16 py-10 dark:bg-gray-900 dark:pb-[160px] dark:text-white duration-200">
       <div className="flex items-center justify-center w-max container">
         <div className="lg:w-[700px] w-[380px] lg:mb-12">
           <h4 className="font-bold text-[16px] mb-4 text-center">ROLL BANNER</h4>

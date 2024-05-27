@@ -26,7 +26,7 @@ const Poster = () => {
   ];
 
   return (
-    <div className="lg:h-[500px] bg-white py-10 dark:bg-gray-900 dark:text-white duration-200">
+    <div className="lg:h-[500px] lg:translate-x-0 translate-x-16 bg-white py-10 dark:bg-gray-900 dark:text-white duration-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 lg:ml-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {PromosiData.map((data, index) => (

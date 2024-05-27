@@ -53,7 +53,7 @@ const Form = () => {
   };
 
   return (
-    <div className="dark:pb-10">
+    <div className="lg:translate-x-0 translate-x-16 dark:pb-10">
       {/* Modal Konfirmasi */}
       {showModal && (
         <div className="fixed z-10 inset-0 overflow-y-auto">

@@ -5,7 +5,7 @@ const Iklan = () => {
     window.scrollTo(0, 0); // Bergulir ke paling atas saat halaman dimuat
   }, []);
   return (
-    <div className="lg:h-[500px] pb-10 bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
+    <div className="lg:h-[500px] lg:translate-x-0 translate-x-16 pb-10 bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
       <div className="flex items-center justify-center w-max container">
         <div className="lg:w-[700px] w-[380px]">
           <h4 className="font-bold text-[19px] my-10 text-center">Iklan Layanan Masyarakat</h4>

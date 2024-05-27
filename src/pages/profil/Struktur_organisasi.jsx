@@ -3,7 +3,7 @@ import Image from "../../assets/organisasi.png";
 
 const StrukturOrganisasi = () => {
   return (
-    <div className="lg:h-[500px] bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className="lg:h-[500px] lg:translate-x-0 translate-x-16 bg-white dark:bg-gray-900 dark:text-white duration-200">
       <div className="py-10">
         <div className="container">
           {/* header section */}

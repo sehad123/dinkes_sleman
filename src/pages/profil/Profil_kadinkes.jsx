@@ -3,7 +3,7 @@ import Image from "../../assets/kadinkes.jpg";
 
 const Profil_kadinkes = () => {
   return (
-    <div className="lg:h-[500px] bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
+    <div className="lg:translate-x-0 translate-x-16 lg:h-[500px] bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
       <div className="py-10 dark:py-20">
         <div data-aos="zoom-in" className="container">
           {/* header section */}
