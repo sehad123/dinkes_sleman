@@ -4,7 +4,7 @@ import Image from "../assets/dinkes.jpeg";
 
 const Hubungi_kami = () => {
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className=" lg:translate-x-0 translate-x-16 bg-white dark:bg-gray-900 dark:text-white duration-200">
       <div className="py-10">
         <div className="container">
           {/* header section */}
