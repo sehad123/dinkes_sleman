@@ -74,7 +74,7 @@ const Footer = () => {
   };
 
   return (
-    <div style={BannerImg} className="w-[135%] lg:w-[100%] text-white dark:-mt-6 dark:border-t border-white">
+    <div style={BannerImg} className="w-[140%] lg:w-[100%] text-white dark:-mt-6 dark:border-t border-white">
       <div className="container mx-auto ">
         <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-44 pt-5">
           {/* company details */}
