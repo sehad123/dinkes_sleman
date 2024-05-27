@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "../../assets/hero/g5.png";
 
 const Artikel5 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Bergulir ke paling atas saat halaman dimuat
+  }, []);
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
       <div className="py-10">

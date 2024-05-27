@@ -78,19 +78,19 @@ const Banner = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
               {/* Image section */}
               <div data-aos="zoom-in">
-                <Link to={content.link} target="_blank" rel="noopener noreferrer">
+                <Link to={content.link}>
                   <img src={content.image} alt="" className="max-w-[350px] h-[300px] w-full mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)] object-cover" />
                 </Link>
               </div>
 
               {/* Text details section */}
               <div className="flex flex-col justify-center mx-auto gap-6 mt-4 sm:mt-0 w-[300px]">
-                <Link to={content.link} target="_blank" rel="noopener noreferrer">
+                <Link to={content.link}>
                   <h1 data-aos="fade-up" className="lg:text-xl sm:text-2xl sm:translate-x-3 font-bold">
                     {content.title.length > 80 ? content.title.slice(0, 80) + "..." : content.title}
                   </h1>
                 </Link>
-                <Link to={content.link} target="_blank" rel="noopener noreferrer">
+                <Link to={content.link}>
                   <p data-aos="fade-up" className="text-gray-500 tracking-wide text-lg leading-5 dark:text-white">
                     {content.description}
                   </p>

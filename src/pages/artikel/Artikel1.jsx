@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "../../assets/artikel/a1.jpeg";
 import Image2 from "../../assets/artikel/a2.jpeg";
 
 const Artikel1 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Bergulir ke paling atas saat halaman dimuat
+  }, []);
   return (
     <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200">
       <div className="py-10">

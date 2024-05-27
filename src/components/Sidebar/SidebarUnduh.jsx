@@ -15,7 +15,7 @@ const SidebarUnduh = ({ title, sidebarStyle }) => {
     },
     {
       name: "Bahan Pengembangan",
-      link: "/unduh/##",
+      link: "/unduh/siaga_aktif",
       dropdown: [
         {
           name: "Desa Siaga Aktif",

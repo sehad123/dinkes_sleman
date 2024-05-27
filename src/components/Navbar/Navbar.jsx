@@ -137,7 +137,7 @@ const Navbar = () => {
     window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
   };
   return (
-    <div className="shadow-md bg-white dark:bg-gray-900 w-[500px] lg:w-screen dark:text-white duration-200 relative z-40">
+    <div className="shadow-md bg-white dark:bg-gray-900 w-[500px] lg:w-[100%] dark:text-white duration-200 relative z-40">
       {/* Upper Navbar */}
       <div className="lg:px-10 bg-green-500 py-2 sm:h-[150px] lg:h-[130px]">
         <div className="container mt-3 sm: flex justify-between items-center">
@@ -156,7 +156,7 @@ const Navbar = () => {
 
           <div className="flex justify-center items-center gap-2">
             {/* Dark mode switch */}
-            <div className="mb-20 translate-x-10">
+            <div className="mb-20 translate-x-10 lg:flex hidden md:hidden">
               <DarkMode />
             </div>
             {/* Hamburger Icon (Hidden on Desktop) */}

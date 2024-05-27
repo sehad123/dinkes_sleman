@@ -1,25 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "../../assets/hero/g3.jpg";
 
 const Artikel3 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Bergulir ke paling atas saat halaman dimuat
+  }, []);
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200">
       <div className="py-10">
         <div className="container">
           {/* header section */}
-          <div className="text-center mb-10 max-w-[600px] mx-auto">
-            <h1 data-aos="fade-up" className="text-3xl font-bold">
+          <div className="text-center mb-10 lg:max-w-[600px] w-[400px] mx-auto">
+            <h1 data-aos="fade-up" className="lg:text-3xl  font-bold">
               Simulasi Bencana dalam Peringatan Hari Kesiapsiagaan Bencana (HKB){" "}
             </h1>
           </div>
 
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
-            <div className="my-6 cursor-pointer lg:ml-52">
-              <img src={Image} className="w-[750px] h-[500px]" />
+            <div className="my-6 cursor-pointer lg:ml-80 ml-20">
+              <img src={Image} className="lg:w-[550px] w-[400px] h-[500px]" />
             </div>
           </div>
-          <div className="container lg:px-32 py-4">
+          <div className="container lg:px-32 py-4 w-screen lg:w-[1000px]">
             <p data-aos="zoom-in">
               Dinas Kesehatan Kabupaten Sleman menyelenggarakan simulasi bencana. Agenda ini merupakan bagian dalam mendukung Peringatan Hari Kesiapsiagaan Bencana di Daerah Istimewa Yogyakarta. Acara yang berlangsung Jumat (26/4) bertempat
               di Kantor Dinas Kesehatan Kabupaten Sleman. <br />
@@ -30,7 +33,7 @@ const Artikel3 = () => {
             </p>
           </div>
           <div data-aos="zoom-in">
-            <div className="my-6 cursor-pointer lg:ml-80">
+            <div className="my-6 cursor-pointer lg:ml-80 ml-10">
               <iframe
                 width="520"
                 height="503"

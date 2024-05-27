@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "../../assets/artikel/p1.jpeg";
 import Image2 from "../../assets/artikel/p2.jpeg";
 import Image3 from "../../assets/artikel/p3.jpeg";
@@ -6,8 +6,11 @@ import Image4 from "../../assets/artikel/p4.jpeg";
 import Image5 from "../../assets/artikel/p5.jpeg";
 
 const Artikel4 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Bergulir ke paling atas saat halaman dimuat
+  }, []);
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200">
       <div className="py-10">
         <div className="container">
           {/* header section */}

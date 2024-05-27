@@ -11,10 +11,13 @@ const Home = () => {
   const [orderPopup, setOrderPopup] = useState(false);
 
   useEffect(() => {
-    // Cek apakah aplikasi berjalan dalam mode pengembangan
-    const isDevMode = process.env.NODE_ENV === "development";
+    // Cek apakah aplikasi berjalan di lingkungan produksi
+    const isProduction = process.env.NODE_ENV === "production";
 
-    if (isDevMode) {
+    if (isProduction) {
+      // Jika aplikasi berjalan di lingkungan produksi, set orderPopup menjadi false
+      setOrderPopup(false);
+    } else {
       // Jika aplikasi berjalan dalam mode pengembangan, tampilkan pop-up selama 3 detik
       setOrderPopup(true);
       setTimeout(() => {
@@ -31,14 +34,12 @@ const Home = () => {
     <>
       <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
         <Hero handleOrderPopup={handleOrderPopup} />
-
         <Other />
         <Artikel />
         <Testimonials />
         <Form />
         {orderPopup && <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />}
       </div>
-      ;
     </>
   );
 };

@@ -24,7 +24,7 @@ const Agenda = () => {
   };
 
   return (
-    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200">
+    <div className="bg-white lg:translate-x-0 translate-x-16 mb-20 dark:bg-gray-900 dark:text-white duration-200">
       <div className="max-w-xl mx-auto mt-10 mb-6">
         {/* <div className="text-center font-bold text-xl py-10">Agenda</div> */}
         <FullCalendar

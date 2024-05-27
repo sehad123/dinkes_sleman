@@ -220,7 +220,7 @@ const Berita = () => {
         {/* filter section */}
         <div className="flex justify-end items-center mb-5 lg:-translate-y-6 lg:ml-10 lg:mr-0 mr-4 lg:-space-x-24 lg:gap-2 gap-2">
           <div className="">
-            <select className="border border-gray-500 rounded px-3 py-1 lg:mr-[100px] outline-none dark:text-gray-900" value={selectedDays} onChange={handleDayChange}>
+            <select className="border border-gray-500 rounded lg:px-3 px-1 py-1 lg:mr-[100px] outline-none dark:text-gray-900" value={selectedDays} onChange={handleDayChange}>
               <option value="">Pilih Hari</option>
               <option value="0">Senin</option>
               <option value="1">Selasa</option>
@@ -233,7 +233,7 @@ const Berita = () => {
             </select>
           </div>
           <div className="">
-            <select className="border border-gray-500 rounded px-3 py-1 lg:mr-[100px] outline-none dark:text-gray-900" value={selectedMonth} onChange={handleMonthChange}>
+            <select className="border border-gray-500 rounded lg:px-3 px-1 py-1 lg:mr-[100px] outline-none dark:text-gray-900" value={selectedMonth} onChange={handleMonthChange}>
               <option value="">Pilih Bulan</option>
               <option value="0">Januari</option>
               <option value="1">Februari</option>
@@ -245,7 +245,7 @@ const Berita = () => {
           </div>
 
           <div className="ml-0 mr-0">
-            <select className="border border-gray-500 rounded px-3 py-1 lg:mr-[100px] outline-none dark:text-gray-900" value={selectedYear} onChange={handleYearChange}>
+            <select className="border border-gray-500 rounded lg:px-3 px-1 py-1 lg:mr-[100px] outline-none dark:text-gray-900" value={selectedYear} onChange={handleYearChange}>
               <option value="">Pilih Tahun</option>
               <option value="0">2024</option>
               <option value="1">2023</option>
@@ -265,38 +265,34 @@ const Berita = () => {
             <div
               data-aos="fade-up"
               key={content.id}
-              className="border border-gray-800 dark:border-white lg:h-[220px] h-[200px] lg:w-[1000px] lg:p-4 lg:px-0 px-4 lg:ml-10"
+              className="border border-gray-800 dark:border-white lg:h-[220px] h-[190px] lg:w-[1000px] lg:p-4 lg:px-0 px-4 lg:ml-10"
               style={{ boxShadow: "10px 10px 12px rgba(0, 0, 0, 0.1)" }} // Menambahkan shadow
             >
               {/* Konten artikel */}
               <div className="relative">
-                <Link to={content.link} target="_blank" rel="noopener noreferrer">
+                <Link to={content.link}>
                   <img src={content.image} alt="" className="lg:w-[200px] w-[150px] lg:h-[180px] h-[150px] mt-5 lg:ml-3 pr-2 lg:mt-0 object-cover absolute lg:top-0 lg:left-0 " />
                 </Link>
               </div>
 
               {/* Text details section */}
-              <div className=" lg:pl-[220px] pl-[150px] pr-2">
+              <div className=" lg:pl-[220px] pl-[150px] pr-2 lg:mt-0 mt-3">
                 <h4 className="font-bold text-[12px] mt-2 lg:mt-0 lg:text-[20px]">
-                  <Link to={content.link} target="_blank" rel="noopener noreferrer">
-                    {content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}
-                  </Link>
+                  <Link to={content.link}>{content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}</Link>
                 </h4>
                 <p className="text-gray-500 mt-2 text-[9px] lg:text-[17px] dark:text-white">
-                  <Link to={content.link} target="_blank" rel="noopener noreferrer">
-                    {content.description}
-                  </Link>
+                  <Link to={content.link}>{content.description.length > 150 ? content.description.slice(0, 150) + "..." : content.description}</Link>
                 </p>
                 <hr className="my-2" />
-                <div className="flex lg:block ">
-                  <p className="lg:mt-4 text-[8px] lg:text-[14px] ">
-                    <Link className=" lg:p-2 p-2 bg-blue-700 text-white rounded-full" to={content.link} target="_blank" rel="noopener noreferrer">
-                      Selengkapnya
-                    </Link>
-                  </p>
-                  <p className="lg:mt-5 lg:ml-0 ml-2 text-[7px] lg:text-[15px]">
+                <div className="hidden md:hidden lg:block ">
+                  <p className="text-[8px] lg:text-[15px] ">
                     <FontAwesomeIcon icon={faClock} />
                     <span> {content.date}</span>
+                  </p>
+                  <p className="lg:mt-4 lg:ml-0 ml-2 text-[7px] lg:text-[15px]">
+                    <Link className=" lg:p-[10px] bg-blue-700 text-white rounded-full" to={content.link}>
+                      Selengkapnya
+                    </Link>
                   </p>
                 </div>
               </div>

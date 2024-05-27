@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "../../assets/artikel/g2.png";
 import Image2 from "../../assets/artikel/a3.png";
 import Image3 from "../../assets/artikel/a4.png";
 
 const Artikel2 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Bergulir ke paling atas saat halaman dimuat
+  }, []);
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200">
       <div className="py-10">
         <div className="container">
           {/* header section */}
