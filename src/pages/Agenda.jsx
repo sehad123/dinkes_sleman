@@ -24,8 +24,8 @@ const Agenda = () => {
   };
 
   return (
-    <div className="bg-white mt-10 dark:bg-gray-900 dark:text-white duration-200">
-      <div className="max-w-xl mx-auto  mb-6">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+      <div className="max-w-xl mx-auto mt-10 mb-6">
         {/* <div className="text-center font-bold text-xl py-10">Agenda</div> */}
         <FullCalendar
           plugins={[dayGridPlugin]}
