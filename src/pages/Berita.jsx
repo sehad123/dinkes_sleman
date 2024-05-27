@@ -75,9 +75,9 @@
 //                   <small>Dibuat pada {content.date}</small>
 //                 </em>
 //                 <p className="lg:mt-4 mt-6">
-//                   <a className="p-2 bg-blue-700 text-white" href="/berita/dua-tersangka-illegal-logging-di-belitung-timur-berhasil-ditangkap-oleh-tim-operasi-gabungan">
+//                   <Link className="p-2 bg-blue-700 text-white" to="/berita/dua-tersangka-illegal-logging-di-belitung-timur-berhasil-ditangkap-oleh-tim-operasi-gabungan">
 //                     Selengkapnya
-//                   </a>
+//                   </Link>
 //                 </p>
 //               </div>
 //             </div>
@@ -99,6 +99,7 @@ import Artikel5 from "../assets/hero/g5.png";
 import Artikel6 from "../assets/hero/g6.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Berita = () => {
   const [selectedMonth, setSelectedMonth] = useState(""); // State untuk menyimpan bulan yang dipilih
@@ -262,29 +263,29 @@ const Berita = () => {
             >
               {/* Konten artikel */}
               <div className="relative">
-                <a href={content.link} target="_blank" rel="noopener noreferrer">
+                <Link to={content.link} target="_blank" rel="noopener noreferrer">
                   <img src={content.image} alt="" className="lg:w-[200px] w-[150px] lg:h-[180px] h-[150px] mt-4 lg:ml-3 pr-2 lg:mt-0 object-cover absolute lg:top-0 lg:left-0 " />
-                </a>
+                </Link>
               </div>
 
               {/* Text details section */}
               <div className=" lg:pl-[220px] pl-[150px] pr-2">
                 <h4 className="font-bold text-[12px] mt-2 lg:mt-0 lg:text-[20px]">
-                  <a href={content.link} target="_blank" rel="noopener noreferrer">
+                  <Link to={content.link} target="_blank" rel="noopener noreferrer">
                     {content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}
-                  </a>
+                  </Link>
                 </h4>
                 <p className="text-gray-500 mt-2 text-[9px] lg:text-[17px] dark:text-white">
-                  <a href={content.link} target="_blank" rel="noopener noreferrer">
+                  <Link to={content.link} target="_blank" rel="noopener noreferrer">
                     {content.description}
-                  </a>
+                  </Link>
                 </p>
                 <hr className="my-2" />
                 <div className="flex lg:block ">
                   <p className="lg:mt-4 text-[8px] lg:text-[14px] ">
-                    <a className=" lg:p-2 p-2 bg-blue-700 text-white rounded-full" href={content.link} target="_blank" rel="noopener noreferrer">
+                    <Link className=" lg:p-2 p-2 bg-blue-700 text-white rounded-full" to={content.link} target="_blank" rel="noopener noreferrer">
                       Selengkapnya
-                    </a>
+                    </Link>
                   </p>
                   <p className="lg:mt-5 lg:ml-0 ml-4 text-[8px] lg:text-[15px]">
                     <FontAwesomeIcon icon={faClock} />
@@ -301,13 +302,13 @@ const Berita = () => {
             <ul className="flex items-center">
               {Array.from({ length: totalPages }, (_, i) => (
                 <li key={i} className="mx-1">
-                  <a
-                    href="#!"
+                  <Link
+                    to="#!"
                     onClick={() => paginate(i + 1)}
                     className={`${currentPage === i + 1 ? "text-blue-500 border-blue-500 border rounded-full px-3 py-1" : "text-gray-500"} hover:text-blue-700 hover:border-blue-700 border rounded-full px-3 py-1`}
                   >
                     {i + 1}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -4,6 +4,7 @@ import { IoMdSearch } from "react-icons/io";
 import { FaCaretDown, FaBars, FaHome, FaCaretRight } from "react-icons/fa";
 import DarkMode from "./DarkMode";
 import Popup from "../../components/Popup/Popup_pencarian";
+import { Link } from "react-router-dom";
 
 const Menu1 = [
   {
@@ -44,7 +45,7 @@ const Menu1 = [
   },
   {
     name: "Info Publik",
-    link: "/info publik",
+    link: "/###",
     dropdown: [
       {
         name: "Informasi Setiap Saat",
@@ -118,7 +119,7 @@ const Navbar = () => {
     const result = Menu1.find((menuItem) => menuItem.name.toLowerCase().includes(searchQuery.toLowerCase()));
     if (result) {
       setSearchResult(result); // Menyimpan hasil pencarian
-      window.location.href = result.link; // Arahkan ke halaman yang ditemukan
+      window.location.to = result.link; // Arahkan ke halaman yang ditemukan
     } else {
       setSearchResult("Pencarian tidak ditemukan");
       setOrderPopup(true); // Tampilkan popup ketika pencarian tidak ditemukan
@@ -141,12 +142,12 @@ const Navbar = () => {
       <div className="lg:px-10 bg-green-500 py-2 sm:h-[150px] lg:h-[130px]">
         <div className="container mt-3 sm: flex justify-between items-center">
           <div>
-            <a href="#" onClick={handleShopsyClick} className="font-bold text-2xl sm:text-3xl flex gap-2 items-center">
+            <Link to="#" onClick={handleShopsyClick} className="font-bold text-2xl sm:text-3xl flex gap-2 items-center">
               <img src={Logo} alt="Logo" className="w-20 ml-5 mb-6 lg:mb-0" />
               <p className="ml-5 sm:text-lg md:text-xl lg:text-3xl mb-6 sm:mb-10" style={{ fontFamily: "Montserrat, sans-serif" }}>
                 Dinas Kesehatan Sleman
               </p>
-            </a>
+            </Link>
             {/* Hidden on small screens */}
             <p className="hidden sm:block md:text-xl lg:text-xl lg:ml-[130px] sm:text-lg sm:ml-[130px] sm:-translate-y-14 transform lg:-translate-y-8" style={{ fontFamily: "Roboto, sans-serif" }}>
               Website Resmi Dinas Kesehatan Sleman
@@ -194,29 +195,29 @@ const Navbar = () => {
                   }
                 }}
               >
-                <a href={menuItem.link} className="flex items-center gap-[2px] py-2">
+                <Link to={menuItem.link} className="flex items-center gap-[2px] py-2">
                   {menuItem.name}
                   <span>{menuItem.dropdown && <FaCaretDown className="transition-all duration-200" />}</span>
-                </a>
+                </Link>
                 {/* Dropdown Content */}
                 {menuItem.dropdown && (
                   <div className="group-hover:block absolute z-[9999] hidden w-[200px] rounded-md bg-white p-2 text-black shadow-md">
                     <ul>
                       {menuItem.dropdown.map((subMenuItem, subIndex) => (
                         <li key={subIndex} className="relative cursor-pointer">
-                          <a href={subMenuItem.link} className="inline-block w-full rounded-md p-2 hover:bg-primary/20">
+                          <Link to={subMenuItem.link} className="inline-block w-full rounded-md p-2 hover:bg-primary/20">
                             {subMenuItem.name}
                             <span>{subMenuItem.dropdown && <FaCaretRight className="inline-block ml-1 transition-all duration-200" />}</span>
-                          </a>
+                          </Link>
                           {/* Nested Dropdown Content */}
                           {subMenuItem.dropdown && (
                             <div className="group-hover:block absolute left-full top-0 ml-2 mt-0 w-[200px] rounded-md bg-white p-2 text-black shadow-md">
                               <ul>
                                 {subMenuItem.dropdown.map((nestedMenuItem, nestedIndex) => (
                                   <li key={nestedIndex} className="cursor-pointer">
-                                    <a href={nestedMenuItem.link} className="inline-block w-full rounded-md p-2 hover:bg-primary/20">
+                                    <Link to={nestedMenuItem.link} className="inline-block w-full rounded-md p-2 hover:bg-primary/20">
                                       {nestedMenuItem.name}
-                                    </a>
+                                    </Link>
                                   </li>
                                 ))}
                               </ul>
@@ -248,7 +249,7 @@ const Navbar = () => {
             </li>
             {searchResult && typeof searchResult !== "string" && (
               <div className="absolute top-[400px] left-1/2 transform -translate-x-1/2 z-50 bg-transparent p-4 rounded-md shadow-md">
-                <a href={searchResult.link}>{/* Tampilkan nama menu yang ditemukan */}</a>
+                <Link to={searchResult.link}>{/* Tampilkan nama menu yang ditemukan */}</Link>
               </div>
             )}
             {/* Tampilkan pesan jika pencarian tidak ditemukan */}
@@ -265,27 +266,27 @@ const Navbar = () => {
             <ul className="flex flex-col items-center gap-3 py-2">
               {Menu1.map((menuItem, index) => (
                 <li key={index} className="group relative w-[400px] cursor-pointer hover:bg-slate-400 hover:px-4 hover:b">
-                  <a href={menuItem.link} className="flex items-center justify-center gap-[2px] py-2">
+                  <Link to={menuItem.link} className="flex items-center justify-center gap-[2px] py-2">
                     {menuItem.name}
                     <span>{menuItem.dropdown && <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />}</span>
-                  </a>
+                  </Link>
                   {menuItem.dropdown && (
                     <div className="absolute z-[9999] hidden group-hover:inline-block w-[200px] -translate-y-12 rounded-md bg-white p-2 text-black shadow-md">
                       <ul>
                         {menuItem.dropdown.map((subMenuItem, subIndex) => (
                           <li key={subIndex} className="group relative cursor-pointer">
-                            <a href={subMenuItem.link} className="inline-block w-full rounded-md p-2 hover:bg-primary/20 ">
+                            <Link to={subMenuItem.link} className="inline-block w-full rounded-md p-2 hover:bg-primary/20 ">
                               {subMenuItem.name}
                               <span className="">{subMenuItem.dropdown && <FaCaretDown className="transition-all duration-200 group-hover:rotate-0" />}</span>
-                            </a>
+                            </Link>
                             {subMenuItem.dropdown && (
                               <div className="group-hover:block absolute top-14 -ml-2 mt-0 w-[200px] rounded-md bg-white p-2 text-black shadow-md">
                                 <ul>
                                   {subMenuItem.dropdown.map((nestedMenuItem, nestedIndex) => (
                                     <li key={nestedIndex} className="cursor-pointer">
-                                      <a href={nestedMenuItem.link} className="block w-full rounded-md p-2 hover:bg-primary/20">
+                                      <Link to={nestedMenuItem.link} className="block w-full rounded-md p-2 hover:bg-primary/20">
                                         {nestedMenuItem.name}
-                                      </a>
+                                      </Link>
                                     </li>
                                   ))}
                                 </ul>

@@ -7,6 +7,7 @@ import Artikel5 from "../../assets/hero/g5.png";
 import Artikel6 from "../../assets/hero/g6.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   // Data untuk setiap konten
@@ -71,23 +72,23 @@ const Banner = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
               {/* Image section */}
               <div data-aos="zoom-in">
-                <a href={content.link} target="_blank" rel="noopener noreferrer">
+                <Link to={content.link} target="_blank" rel="noopener noreferrer">
                   <img src={content.image} alt="" className="max-w-[350px] h-[300px] w-full mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)] object-cover" />
-                </a>
+                </Link>
               </div>
 
               {/* Text details section */}
               <div className="flex flex-col justify-center mx-auto gap-6 mt-4 sm:mt-0 w-[300px]">
-                <a href={content.link} target="_blank" rel="noopener noreferrer">
+                <Link to={content.link} target="_blank" rel="noopener noreferrer">
                   <h1 data-aos="fade-up" className="lg:text-xl sm:text-2xl sm:translate-x-3 font-bold">
                     {content.title.length > 80 ? content.title.slice(0, 80) + "..." : content.title}
                   </h1>
-                </a>
-                <a href={content.link} target="_blank" rel="noopener noreferrer">
+                </Link>
+                <Link to={content.link} target="_blank" rel="noopener noreferrer">
                   <p data-aos="fade-up" className="text-gray-500 tracking-wide text-lg leading-5 dark:text-white">
                     {content.description}
                   </p>
-                </a>
+                </Link>
                 <div className="flex text-lg">
                   <p data-aos="fade-up" className="text-left">
                     <FontAwesomeIcon icon={faClock} />

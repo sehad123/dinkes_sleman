@@ -3,6 +3,7 @@ import Image1 from "../../assets/hero/g1.jpeg";
 import Image2 from "../../assets/hero/g2.png";
 import Image3 from "../../assets/hero/g4.jpeg";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const ImageList = [
   {
@@ -55,25 +56,25 @@ const Hero = ({ handleOrderPopup }) => {
                 {/* text content section */}
                 <div className="flex flex-col justify-center mb-10 lg:w-[700px] gap-4 pt-12 mx-6 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
                   <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true" className="sm:text-xl lg:text-2xl mb-6 font-bold">
-                    <a href={data.link} className=" hover:underline">
+                    <Link to={data.link} className=" hover:underline">
                       {data.title}
-                    </a>
+                    </Link>
                   </h1>
                   <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" className="lg:text-xl sm:text-lg">
                     {data.description}
                   </p>
                   <div data-aos="fade-up" className="mt-6" data-aos-duration="500" data-aos-delay="300">
-                    <a href={data.link} className=" bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
+                    <Link to={data.link} className=" bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
                       Lihat Detail
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* image section */}
                 <div className="order-1 sm:order-2 lg:ml-52 lg:mt-4">
                   <div data-aos="zoom-in" data-aos-once="true" className="relative z-10">
-                    <a href={data.link}>
+                    <Link to={data.link}>
                       <img src={data.img} alt="" className="w-[300px] h-[300px] lg:mt-20 mb-2 lg:mb-32 sm:h-[300px] sm:w-[300px] sm:scale-105 lg:scale-120 object-cover object-center mx-auto" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
