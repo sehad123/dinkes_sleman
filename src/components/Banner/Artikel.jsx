@@ -64,14 +64,14 @@ const Banner = () => {
 
   return (
     <>
-      <div className=" lg:translate-x-0 translate-x-16 text-center mt-10 max-w-[600px] mx-auto">
+      <div className=" lg:translate-x-0 translate-x-24 text-center mt-10 max-w-[600px] mx-auto">
         <h1 data-aos="fade-up" className="text-3xl font-bold">
           Informasi Terbaru
         </h1>
         {/* Dropdown untuk memilih bulan */}
       </div>
 
-      <div className=" lg:translate-x-0 translate-x-16 min-h-[550px] flex flex-wrap justify-center items-center lg:py-12 py-0 px-8">
+      <div className=" lg:translate-x-0 translate-x-24 min-h-[550px] flex flex-wrap justify-center items-center lg:py-12 py-0 px-8">
         {/* Mapping data untuk membuat container */}
         {contents.map((content) => (
           <div key={content.id} className="my-20 container w-full sm:w-1/1 lg:w-1/2">
