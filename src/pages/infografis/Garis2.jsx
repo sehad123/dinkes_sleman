@@ -75,7 +75,7 @@
 import React from "react";
 
 const Garis2 = () => {
-  return <div>Garis2</div>;
+  return <div>Garis2 garis</div>;
 };
 
 export default Garis2;
