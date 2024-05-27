@@ -277,11 +277,11 @@ const Berita = () => {
 
               {/* Text details section */}
               <div className=" lg:pl-[220px] pl-[150px] pr-2 lg:mt-0 mt-3">
-                <h4 className="font-bold text-[12px] mt-2 lg:mt-0 lg:text-[20px]">
+                <h4 className="font-bold text-[10px] mt-2 lg:mt-0 lg:text-[20px]">
                   <Link to={content.link}>{content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}</Link>
                 </h4>
                 <p className="text-gray-500 mt-2 text-[9px] lg:text-[17px] dark:text-white">
-                  <Link to={content.link}>{content.description.length > 150 ? content.description.slice(0, 150) + "..." : content.description}</Link>
+                  <Link to={content.link}>{content.description.length > 130 ? content.description.slice(0, 130) + "..." : content.description}</Link>
                 </p>
                 <hr className="my-2" />
                 <div className="hidden md:hidden lg:block ">
