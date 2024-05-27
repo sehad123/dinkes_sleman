@@ -276,7 +276,7 @@ const Berita = () => {
               </div>
 
               {/* Text details section */}
-              <div className=" lg:pl-[220px] pl-[150px] pr-2 lg:mt-0 mt-3">
+              <div className=" lg:pl-[220px] pl-[150px] pr-2 lg:mt-0 mt-5">
                 <h4 className="font-bold text-[10px] mt-2 lg:mt-0 lg:text-[20px]">
                   <Link to={content.link}>{content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}</Link>
                 </h4>
