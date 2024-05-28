@@ -16,7 +16,7 @@ import SertaMerta from "./pages/Info_sertamerta";
 import Berkala from "./pages/Info_berkala";
 import Galeri from "./pages/Galeri";
 // import Unduh from "./pages/unduh/Unduh";
-import HubungiKami from "./pages/Hubungi_kami";
+// import HubungiKami from "./pages/Hubungi_kami";
 import FasilitasKesehatan from "./pages/Fasilitas_kesehatan";
 // import MediaPromosi from "./pages/Media_promosi";
 import JendelaHusada from "./pages/Jendela_husada";
@@ -113,7 +113,7 @@ const App = () => {
             {/* <Route path="unduh" element={<Unduh />} /> */}
             <Route path="fasilitas_kesehatan" element={<FasilitasKesehatan />} />
             {/* <Route path="media_promosi" element={<MediaPromosi />} /> */}
-            <Route path="hubungi_kami" element={<HubungiKami />} />
+            {/* <Route path="hubungi_kami" element={<HubungiKami />} /> */}
             <Route path="wolly_nyoman" element={<WollyNyoman />} />
             <Route path="jendela_husada" element={<JendelaHusada />} />
             {/* artikel */}

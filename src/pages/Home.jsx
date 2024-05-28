@@ -11,19 +11,15 @@ const Home = () => {
   const [orderPopup, setOrderPopup] = useState(false);
 
   useEffect(() => {
-    // Cek apakah aplikasi berjalan di lingkungan produksi
-    const isProduction = process.env.NODE_ENV === "production";
-
-    if (isProduction) {
-      // Jika aplikasi berjalan di lingkungan produksi, set orderPopup menjadi false
+    // Tampilkan pop-up selama pengembangan
+    setOrderPopup(true);
+    // Hapus pop-up setelah 3 detik
+    const popupTimeout = setTimeout(() => {
       setOrderPopup(false);
-    } else {
-      // Jika aplikasi berjalan dalam mode pengembangan, tampilkan pop-up selama 3 detik
-      setOrderPopup(true);
-      setTimeout(() => {
-        setOrderPopup(false);
-      }, 1600);
-    }
+    }, 2000);
+
+    // Membersihkan timeout saat komponen dibongkar
+    return () => clearTimeout(popupTimeout);
   }, []);
 
   const handleOrderPopup = () => {

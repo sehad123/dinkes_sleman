@@ -25,7 +25,7 @@ const SidebarInfo = ({ title, sidebarStyle }) => {
     },
     {
       name: "Rencana",
-      link: "/setiap_saat/ra",
+      link: "#",
       dropdown: [
         {
           name: "Rencana Aksi",

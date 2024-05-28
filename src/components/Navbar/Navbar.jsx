@@ -71,7 +71,7 @@ const Menu1 = [
   },
   {
     name: "Hubungi Kami",
-    link: "/hubungi_kami",
+    link: "#",
   },
   {
     name: "E-PPID",
@@ -265,7 +265,16 @@ const Navbar = () => {
           <div className="container">
             <ul className="flex flex-col items-center gap-3 py-2">
               {Menu1.map((menuItem, index) => (
-                <li key={index} className="group relative w-[400px] cursor-pointer hover:bg-slate-400 hover:px-4 hover:b">
+                <li
+                  key={index}
+                  className="group relative w-[400px] cursor-pointer hover:bg-slate-400 hover:px-4 hover:b"
+                  onClick={(e) => {
+                    handleMenuClick(menuItem.link);
+                    if (menuItem.name === "Hubungi Kami") {
+                      scrollToBottom(e);
+                    }
+                  }}
+                >
                   <Link to={menuItem.link} className="flex items-center justify-center gap-[2px] py-2">
                     {menuItem.name}
                     <span>{menuItem.dropdown && <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />}</span>
