@@ -18,11 +18,11 @@ const Layout = () => {
   const [isSidebarGrafikOpen, setIsSidebarGrafikOpen] = useState(true); // State to track sidebar media
 
   // Check if current location is a profil page
-  const isProfilPage = location.pathname.includes("/");
+  const isProfilPage = location.pathname.includes("/home");
   // Check if current location is an unduh page
   const isUnduhPage = location.pathname.includes("/unduh");
   // Check if current location is an info page
-  const isInfoPage = location.pathname.includes("/setiap_saat");
+  const isInfoPage = location.pathname.includes("/");
   // Check if current location is a media page
   const isMediaPage = location.pathname.includes("/media");
   // infografis
