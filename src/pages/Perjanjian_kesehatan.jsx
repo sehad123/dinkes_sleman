@@ -16,7 +16,7 @@ const data = [
 
 const Perjanjian_kesehatan = () => {
   return (
-    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 w-screen lg:container">
+    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 w-screen ">
       <div className="py-10 dark:py-20">
         <div className="container">
           {/* header section */}
@@ -37,11 +37,12 @@ const Perjanjian_kesehatan = () => {
           <div className="lg:w-[600px] w-[380px] lg:ml-64">
             <h4 className="font-bold text-[19px] my-10 text-center">Peraturan Terkait Kesehatan</h4>
             <table className="w-full border-collapse border border-gray-400">
-              <thead className="bg-gray-300">
+              <thead className="bg-gray-300 dark:bg-gray-900">
+                {" "}
                 <tr>
-                  <th className="text-left border border-gray-400 px-4 py-2">No</th>
-                  <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
-                  <th className="text-left border border-gray-400 px-4 py-2">Aksi</th>
+                  <th className="text-center border border-gray-400 px-4 py-2">No</th>
+                  <th className="text-center border border-gray-400 px-4 py-2">Nama</th>
+                  <th className="text-center border border-gray-400 px-4 py-2">Aksi</th>
                 </tr>
               </thead>
               <tbody>
@@ -74,11 +75,12 @@ const Perjanjian_kesehatan = () => {
           <div className="lg:w-[600px] w-[380px] lg:ml-64">
             <h4 className="font-bold text-[19px] my-10 text-center">Standar Pelayanan Kesehatan</h4>
             <table className="w-full border-collapse border border-gray-400">
-              <thead className="bg-gray-300">
+              <thead className="bg-gray-300 dark:bg-gray-900">
+                {" "}
                 <tr>
-                  <th className="text-left border border-gray-400 px-4 py-2">No</th>
-                  <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
-                  <th className="text-left border border-gray-400 px-4 py-2">Aksi</th>
+                  <th className="text-center border border-gray-400 px-4 py-2">No</th>
+                  <th className="text-center border border-gray-400 px-4 py-2">Nama</th>
+                  <th className="text-center border border-gray-400 px-4 py-2">Aksi</th>
                 </tr>
               </thead>
               <tbody>
@@ -134,20 +136,20 @@ const Perjanjian_kesehatan = () => {
           <div className="lg:w-[600px] w-[380px] lg:ml-64">
             <h4 className="font-bold text-[19px] my-10 text-center">Daftar Formulir</h4>
             <table className="w-full border-collapse border border-gray-400">
-              <thead className="bg-gray-300">
+              <thead className="bg-gray-300 dark:bg-gray-900">
                 <tr>
-                  <th scope="col" className="text-left border border-gray-400 px-4 py-2">
+                  <th scope="col" className="text-center border border-gray-400 px-4 py-2">
                     No.
                   </th>
-                  <th scope="col" className="text-left border border-gray-400 px-4 py-2">
+                  <th scope="col" className="text-center border border-gray-400 px-4 py-2">
                     Jenis
                   </th>
-                  <th scope="col" className="text-left border border-gray-400 px-4 py-2">
+                  <th scope="col" className="text-center border border-gray-400 px-4 py-2">
                     Formulir
                   </th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
+              <tbody>
                 {data.map((item, index) => (
                   <tr key={index}>
                     <td className="border border-gray-400 px-4 py-2">{item.no}</td>

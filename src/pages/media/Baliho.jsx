@@ -7,11 +7,12 @@ const Baliho = () => {
         <div className="lg:w-[700px] w-[380px]">
           <h4 className="font-bold text-[16px] mb-4 text-center">BALIHO</h4>
           <table className="w-full border-collapse border border-gray-400">
-            <thead className="bg-gray-300 dark: bg-gray-900">
+            <thead className="bg-gray-300 dark:bg-gray-900">
+              {" "}
               <tr>
-                <th className="text-left border border-gray-400 px-4 py-2">No</th>
-                <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
-                <th className="text-left border border-gray-400 px-4 py-2">Aksi</th>
+                <th className="text-center border border-gray-400 px-4 py-2">No</th>
+                <th className="text-center border border-gray-400 px-4 py-2">Nama</th>
+                <th className="text-center border border-gray-400 px-4 py-2">Aksi</th>
               </tr>
             </thead>
             <tbody>
