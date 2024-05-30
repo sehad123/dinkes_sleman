@@ -7,7 +7,7 @@ const BaktiHusada = () => {
         <div className="lg:w-[700px] w-[380px]">
           <h4 className="font-bold text-[19px] my-10 text-center ">Bahan Pengembangan Saka Bakti Husada</h4>
           <table className="w-full border-collapse border border-gray-400">
-            <thead>
+            <thead className="bg-gray-300 dark: bg-gray-900">
               <tr>
                 <th className="text-left border border-gray-400 px-4 py-2">No</th>
                 <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
@@ -18,7 +18,7 @@ const BaktiHusada = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">1</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Pedoman Umum Saka Bakti Husada
                   </a>
                 </td>
@@ -29,7 +29,7 @@ const BaktiHusada = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">2</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Permenkes RI Nomor 38 Tahun 2019 tentang Pembinaan Satuan Karya Pramuka Bakti Husada
                   </a>
                 </td>
@@ -40,7 +40,7 @@ const BaktiHusada = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">3</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Kep Kwa Kwarnas Nomor 154 tahun 2011 tentang Petunjuk Penyelenggaraan SBH
                   </a>
                 </td>
@@ -51,7 +51,7 @@ const BaktiHusada = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">4</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Lambang dan Logo Tanda Jabatan: Dewan SBH, Pin SBH Cabang
                   </a>
                 </td>
@@ -62,7 +62,7 @@ const BaktiHusada = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">5</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Logo Krida SBH: Bina Gizi, Bina Lingk Sehat, Bina obat, Bina Keluarga Sehat, Bina Penangg Penyakit., Bina PHBS
                   </a>
                 </td>
@@ -73,7 +73,7 @@ const BaktiHusada = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">6</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Pedoman Orientasi SBH bagi Pamong SBH
                   </a>
                 </td>
@@ -84,7 +84,7 @@ const BaktiHusada = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">7</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Buku saku Anggota SBH
                   </a>
                 </td>

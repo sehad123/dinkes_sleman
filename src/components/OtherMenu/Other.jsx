@@ -91,7 +91,7 @@ const Other = () => {
             <Link key={index} to={content.link} className="text-lg">
               <div
                 style={{ width: "220px" }}
-                className=" dark:bg-gray-900 p-4 drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.5)] bg-white border-4 min-h-[250px] rounded-sm lg:w-1/4 flex items-center justify-center hover:bg-gray-300 cursor-pointer"
+                className=" dark:bg-gray-900 p-4 drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.5)] bg-white border-4 min-h-[250px] rounded-xl lg:w-1/4 flex items-center justify-center hover:bg-gray-300 cursor-pointer"
               >
                 <div data-aos="zoom-in" className="flex flex-col items-center text-xl text-center text-green-900 dark:text-white ">
                   <FontAwesomeIcon icon={content.icon} className="text-6xl mb-10" />

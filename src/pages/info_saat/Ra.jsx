@@ -7,7 +7,7 @@ const Ra = () => {
         <div className="lg:w-[600px] w-[380px]">
           <h4 className="font-bold text-[19px] my-10 text-center">Rencana Aksi</h4>
           <table className="w-full border-collapse border border-gray-400">
-            <thead>
+            <thead className="bg-gray-300 dark: bg-gray-900">
               <tr>
                 <th className="text-left border border-gray-400 px-4 py-2">No</th>
                 <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
@@ -18,7 +18,7 @@ const Ra = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">1</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Rencana Aksi Dinkes Tahun 2018
                   </a>
                 </td>

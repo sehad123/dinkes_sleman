@@ -59,9 +59,9 @@ const SidebarUnduh = ({ title, sidebarStyle }) => {
 
   return (
     <div className={`lg:translate-x-0 translate-x-16 pb-[40px] dark:pb-[20px] bg-white dark:bg-gray-900 dark:text-white duration-200 sidebar-wrapper ${isSidebarOpen ? "" : "closed"} lg:border-r-2 border-b-2 lg:border-b-0 border-gray-300 `}>
-      <div className={`bg-white dark:bg-gray-800 w-64 ml-10 flex flex-col h-full py-4  ${sidebarStyle}`}>
-        <div className={`flex justify-between items-center px-4 mb-4 ${!isSidebarOpen ? "ml-0" : ""}`}>
-          <div className="text-3xl mx-auto font-semibold">{title}</div>
+      <div className={`bg-white dark:bg-gray-900 w-64 mx-6 flex flex-col h-full py-4  ${sidebarStyle}`}>
+        <div className={` lg:border-b-4 flex justify-between items-center px-4 mb-4 ${!isSidebarOpen ? "ml-0" : ""}`}>
+          <div className="text-3xl  font-semibold mb-8 mx-auto">{title}</div>
           {/* <button onClick={toggleSidebar} className="text-gray-600 dark:text-gray-400 focus:outline-none">
             {isSidebarOpen ? <BsChevronCompactUp /> : <BsChevronDown />}
           </button> */}

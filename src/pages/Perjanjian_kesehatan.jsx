@@ -28,59 +28,121 @@ const Perjanjian_kesehatan = () => {
 
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
-            <div className="flex justify-center cursor-pointer">
+            <div className="flex justify-center">
               <img src={Image} className="w-[600px] h-auto" alt="Perjanjian Kesehatan" />
             </div>
           </div>
 
           {/* Dasar Hukum section */}
-          <div data-aos="fade-up" className="container mt-10 max-w-[1000px] mx-auto">
-            <h1 className="text-lg font-bold mb-4">Dasar Hukum</h1>
-            <div className="space-y-2">
-              <a href="https://dinkes.slemankab.go.id/wp-content/uploads/2019/06/Perbup-Sleman-No-7-Tahun-2018-tentang-Kewenangan-Penyelenggaraan-Perizinan.pdf" className="underline hover:no-underline text-[15px] block">
-                - PERATURAN BUPATI SLEMAN NOMOR 7 TAHUN 2018 TENTANG KEWENANGAN PENYELENGGARAAN PERIZINAN
-              </a>
-              <a
-                href="https://dinkes.slemankab.go.id/wp-content/uploads/2019/06/peraturan-menteri-kesehatan-nomor-2052-menkes-per-x-2011-tentang-izin-praktik-dan-pelaksanaan-praktik-kedokteran.pdf"
-                className="underline hover:no-underline text-[15px] block"
-              >
-                - PERATURAN MENTERI KESEHATAN REPUBLIK INDONESIA NOMOR 2052/MENKES/PER/X/2011 TENTANG IZIN PRAKTIK DAN PELAKSANAAN PRAKTIK KEDOKTERAN
-              </a>
-            </div>
+          <div className="lg:w-[600px] w-[380px] lg:ml-64">
+            <h4 className="font-bold text-[19px] my-10 text-center">Peraturan Terkait Kesehatan</h4>
+            <table className="w-full border-collapse border border-gray-400">
+              <thead className="bg-gray-300">
+                <tr>
+                  <th className="text-left border border-gray-400 px-4 py-2">No</th>
+                  <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
+                  <th className="text-left border border-gray-400 px-4 py-2">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">1</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="" href="#">
+                      PERATURAN BUPATI SLEMAN NOMOR 7 TAHUN 2018 TENTANG KEWENANGAN PENYELENGGARAAN PERIZINAN
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">2</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="" href="#">
+                      PERATURAN MENTERI KESEHATAN REPUBLIK INDONESIA NOMOR 2052/MENKES/PER/X/2011 TENTANG IZIN PRAKTIK DAN PELAKSANAAN PRAKTIK KEDOKTERAN
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-
           {/* Layanan Kesehatan section */}
-          <div data-aos="fade-up" className="container mt-10 max-w-[1000px] mx-auto">
-            <h1 className="text-lg font-bold mb-4">Layanan Kesehatan</h1>
-            <div className="space-y-2">
-              <a href="https://dinkes.slemankab.go.id/wp-content/uploads/2020/01/Standart-Pelayanan-Perizinan-Faskes.pdf" className="underline hover:no-underline block">
-                - Standar Pelayanan Perizinan Fasilitas Kesehatan
-              </a>
-              <a href="https://dinkes.slemankab.go.id/wp-content/uploads/2020/01/Standart-Pelayanan-Perizinan-Nakes.pdf" className="underline hover:no-underline block">
-                - Standar Pelayanan Perizinan Tenaga Kesehatan
-              </a>
-              <a href="https://dinkes.slemankab.go.id/wp-content/uploads/2020/01/Standart-Pelayanan-Rekomendasi-Izin-Bidang-Kesehatan.pdf" className="underline hover:no-underline block">
-                - Standar Pelayanan Rekomendasi Izin Bidang Kesehatan
-              </a>
-              <a href="https://perizinan.slemankab.go.id/online/login.php" className="underline hover:no-underline block">
-                - Penguruan Sip Tenaga Kesehatan Online
-              </a>
-            </div>
+          <div className="lg:w-[600px] w-[380px] lg:ml-64">
+            <h4 className="font-bold text-[19px] my-10 text-center">Standar Pelayanan Kesehatan</h4>
+            <table className="w-full border-collapse border border-gray-400">
+              <thead className="bg-gray-300">
+                <tr>
+                  <th className="text-left border border-gray-400 px-4 py-2">No</th>
+                  <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
+                  <th className="text-left border border-gray-400 px-4 py-2">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">1</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="" href="#">
+                      Standar Pelayanan Perizinan Fasilitas Kesehatan
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">2</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="" href="#">
+                      Standar Pelayanan Perizinan Tenaga Kesehatan
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">3</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="" href="#">
+                      Standar Pelayanan Rekomendasi Izin Bidang Kesehatan
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">4</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="" href="#">
+                      Pengurusan SIP Tenaga Kesehatan Online
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           {/* Tabel */}
-          <div data-aos="fade-up" className="container overflow-x-auto mt-10">
-            <table className="lg:w-[800px] lg:ml-20">
-              <caption className="font-bold mb-6 lg:ml-0  ">Daftar Formulir</caption>
+          <div className="lg:w-[600px] w-[380px] lg:ml-64">
+            <h4 className="font-bold text-[19px] my-10 text-center">Daftar Formulir</h4>
+            <table className="w-full border-collapse border border-gray-400">
               <thead className="bg-gray-300">
                 <tr>
-                  <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r">
+                  <th scope="col" className="text-left border border-gray-400 px-4 py-2">
                     No.
                   </th>
-                  <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r">
+                  <th scope="col" className="text-left border border-gray-400 px-4 py-2">
                     Jenis
                   </th>
-                  <th scope="col" className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th scope="col" className="text-left border border-gray-400 px-4 py-2">
                     Formulir
                   </th>
                 </tr>
@@ -88,12 +150,10 @@ const Perjanjian_kesehatan = () => {
               <tbody className="bg-white divide-y divide-gray-200">
                 {data.map((item, index) => (
                   <tr key={index}>
-                    <td className="px-3 py-2 whitespace-nowrap text-sm text-gray-500 border-r">{item.no}</td>
-                    <td className="px-3 py-2 whitespace-nowrap text-sm text-gray-500 border-r">{item.jenis}</td>
-                    <td className="px-3 py-2 whitespace-nowrap text-sm text-gray-500">
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
-                        Lihat
-                      </a>
+                    <td className="border border-gray-400 px-4 py-2">{item.no}</td>
+                    <td className="border border-gray-400 px-4 py-2">{item.jenis}</td>
+                    <td className="border border-gray-400 px-4 py-2">
+                      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">Lihat</button>
                     </td>
                   </tr>
                 ))}
@@ -109,11 +169,11 @@ const Perjanjian_kesehatan = () => {
               </a>
             </p>
           </div>
-          <div data-aos="zoom-in">
+          {/* <div data-aos="zoom-in">
             <div className="lg:ml-40 cursor-pointer">
               <img src={Image2} className="w-[700px] h-auto" alt="Perjanjian Kesehatan" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

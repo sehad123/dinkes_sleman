@@ -137,7 +137,7 @@ const Sertifikat_Produksi = () => {
           </a>
         </p>
       </div>
-      <div data-aos="zoom-in" className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-10">
+      {/* <div data-aos="zoom-in" className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-10">
         <div className="cursor-pointer">
           <img src={Image2} className="w-[80%] h-auto ml-10 lg:ml-20" alt="Perjanjian Kesehatan" />
         </div>
@@ -153,7 +153,7 @@ const Sertifikat_Produksi = () => {
             allowFullScreen
           ></iframe>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

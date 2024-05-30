@@ -148,71 +148,129 @@ const Fasilitas_kesehatan = () => {
               </div>
             </div>
           </div>
-
-          <div className="container mx-auto lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-            <div className="text-center mt-8 lg:mt-0">
-              <h1 data-aos="fade-up" className="text-sm font-bold">
-                Data Fasilitas Kesehatan dapat diunduh pada link berikut:
-              </h1>
-              <ul data-aos="zoom-in" className="mt-4 lg:mt-0">
-                <li>
-                  <a href="" className="underline hover:no-underline">
-                    1. Rekap Faskes Klinik Utama
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="underline hover:no-underline">
-                    2. Rekap Faskes Klinik Pratama
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="underline hover:no-underline">
-                    3. Rekap Faskes Optik
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="underline hover:no-underline">
-                    4. Rekap Faskes Perorangan
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="underline hover:no-underline">
-                    5. Rekap Faskes Apotek
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="underline hover:no-underline">
-                    6. Rekap Faskes Toko Obat
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="underline hover:no-underline">
-                    7. Rekap Faskes Lab Klinik
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="underline hover:no-underline">
-                    8. Rekap Faskes Rumah Sakit
-                  </a>
-                </li>
-                <li>
-                  <a href="" className="underline hover:no-underline">
-                    9. Rekap Faskes Puskesmas
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-center mt-8">
+          <div className="lg:w-[700px] w-[400px] lg:ml-64">
+            <h4 className="font-bold text-[19px] my-10 text-center">Rekap Fasilitas Kesehatan (Faskes)</h4>
+            <table data-aos="fade-up" className="w-full border-collapse border border-gray-400">
+              <thead>
+                <tr>
+                  <th className="text-left border border-gray-400 px-4 py-2">No</th>
+                  <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
+                  <th className="text-left border border-gray-400 px-4 py-2">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">1</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                      Rekap Faskes Klinik Utama
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">2</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                      Rekap Faskes Klinik Pratama
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">3</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                      Rekap Faskes Optik
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">4</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                      Rekap Faskes Perorangan
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">5</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                      Rekap Faskes Apotek
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">6</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                      Rekap Faskes Toko Obat
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">7</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                      Rekap Faskes Lab Klinik
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">8</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                      Rekap Faskes Rumah Sakit
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-400 px-4 py-2">9</td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                      Rekap Faskes Puskesmas
+                    </a>
+                  </td>
+                  <td className="border border-gray-400 px-4 py-2">
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {/* <div className="text-center mt-8">
               <div data-aos="zoom-in">
                 <img src={ses} className="w-full lg:w-auto max-w-[750px] h-auto" alt="Gambar" />
               </div>
-            </div>
-          </div>
-          <div data-aos="zoom-in">
+            </div> */}
+          {/* <div data-aos="zoom-in">
             <div className="my-24 cursor-pointer lg:ml-64">
               <img src={fasilitas} className="w-[750px] h-[500px]" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

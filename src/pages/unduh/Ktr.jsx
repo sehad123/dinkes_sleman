@@ -7,7 +7,7 @@ const Ktr = () => {
         <div className="lg:w-[700px] w-[380px]">
           <h4 className="font-bold text-[19px] my-10 text-center ">Bahan Pengembangan KTR Penting</h4>
           <table className="w-full border-collapse border border-gray-400">
-            <thead>
+            <thead className="bg-gray-300 dark: bg-gray-900">
               <tr>
                 <th className="text-left border border-gray-400 px-4 py-2">No</th>
                 <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
@@ -18,7 +18,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">1</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Perbup Sleman No. 42 Tahun 2012 tentang Kawasan Tanpa Rokok
                   </a>
                 </td>
@@ -29,7 +29,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">2</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Instruksi Bupati Bebas Iklan Rokok
                   </a>
                 </td>
@@ -40,7 +40,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">3</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     SK Bupati Sleman No. 46.3/Kep.KDH/A/2019 tentang Satgas Kawasan Tanpa Rokok
                   </a>
                 </td>
@@ -51,7 +51,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">4</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Instrumen Pemantauan KTR Angkutan Umum
                   </a>
                 </td>
@@ -62,7 +62,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">5</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Instrumen Pemantauan KTR Fasilitas Pelayanan Kesehatan
                   </a>
                 </td>
@@ -73,7 +73,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">6</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Instrumen Pemantauan KTR Tempat Proses Belajar Mengajar
                   </a>
                 </td>
@@ -84,7 +84,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">7</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Instrumen Pemantauan KTR Tempat Bermain Anak
                   </a>
                 </td>
@@ -95,7 +95,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">8</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Instrumen Pemantauan KTR Tempat Ibadah
                   </a>
                 </td>
@@ -106,7 +106,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">9</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Instrumen Pemantauan KTR Tempat Kerja
                   </a>
                 </td>
@@ -117,7 +117,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">10</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Instrumen Pemantauan KTR Tempat-Tempat Umum
                   </a>
                 </td>
@@ -128,7 +128,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">11</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Standar Operational Procedure Pemantauan KTR
                   </a>
                 </td>
@@ -139,7 +139,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">12</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Poster Tubuh Seorang Perokok (update)
                   </a>
                 </td>
@@ -150,7 +150,7 @@ const Ktr = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">13</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Hasil Survei Perilaku Merokok pada Anak 2021
                   </a>
                 </td>

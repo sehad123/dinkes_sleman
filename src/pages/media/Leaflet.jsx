@@ -7,7 +7,7 @@ const Leaflet = () => {
         <div className="lg:w-[700px] w-[380px] lg:mb-32 lg:-translate-x-24">
           <h4 className="font-bold text-[16px] mb-4 text-center">LEAFLET</h4>
           <table className="w-full border-collapse border border-gray-400">
-            <thead>
+            <thead className="bg-gray-300 dark: bg-gray-900">
               <tr>
                 <th className="text-left border border-gray-400 px-4 py-2">No</th>
                 <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
@@ -18,7 +18,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">1</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     IVA Tes dan SADARI
                   </a>
                 </td>{" "}
@@ -29,7 +29,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">2</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Gerakan Keluarga Sehat Bebas Asap Rokok (GASBRO)
                   </a>
                 </td>{" "}
@@ -40,7 +40,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">3</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Penyelenggaran Pelayanan Terpadu PTM
                   </a>
                 </td>{" "}
@@ -51,7 +51,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">4</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Aksi Perjaka 2M Cegah TB
                   </a>
                 </td>{" "}
@@ -62,7 +62,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">5</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Cita Mas Jajar cegah Covid 19
                   </a>
                 </td>{" "}
@@ -73,7 +73,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">6</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Inovasi Pandu Teman (Pelayanan ANC Terpadu menuju Triple Eliminasi Melibatkan Semua Layanan)
                   </a>
                 </td>{" "}
@@ -84,7 +84,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">7</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Cuci Tangan Pakai Sabun (CTPS)
                   </a>
                 </td>{" "}
@@ -95,7 +95,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">8</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Cegah Kanker Leher Rahim
                   </a>
                 </td>{" "}
@@ -106,7 +106,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">9</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Awas Bahaya Obesitas
                   </a>
                 </td>{" "}
@@ -117,7 +117,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">10</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Dampak Buruk Merokok terhadap Kesehatan
                   </a>
                 </td>{" "}
@@ -128,7 +128,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">11</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Stimulasi Deteksi dan Intervensi Dini Tumbuh Kembang (SDIDTK) pada Balita
                   </a>
                 </td>{" "}
@@ -139,7 +139,7 @@ const Leaflet = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">12</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Kenali dan Cegah Penyakit Tidak Menular (PTM)
                   </a>
                 </td>{" "}

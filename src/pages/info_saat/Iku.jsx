@@ -7,7 +7,7 @@ const Iku = () => {
         <div className="lg:w-[600px] w-[380px]">
           <h4 className="font-bold text-[19px] my-10 text-center">Indikator Kinerja Utama (IKU)</h4>
           <table className="w-full border-collapse border border-gray-400">
-            <thead>
+            <thead className="bg-gray-300 dark: bg-gray-900">
               <tr>
                 <th className="text-left border border-gray-400 px-4 py-2">No</th>
                 <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
@@ -18,7 +18,7 @@ const Iku = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">1</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Indikator Kinerja Utama Dinkes Tahun 2024
                   </a>
                 </td>
@@ -29,7 +29,7 @@ const Iku = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">2</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Indikator Kinerja Utama Dinkes Tahun 2023
                   </a>
                 </td>
@@ -40,7 +40,7 @@ const Iku = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">3</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Indikator Kinerja Utama Dinkes Tahun 2022
                   </a>
                 </td>
@@ -51,7 +51,7 @@ const Iku = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">4</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Indikator Kinerja Utama Dinkes Tahun 2021
                   </a>
                 </td>
@@ -62,7 +62,7 @@ const Iku = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">5</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Indikator Kinerja Utama Dinkes Perubahan Tahun 2021
                   </a>
                 </td>
@@ -73,7 +73,7 @@ const Iku = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">6</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Indikator Kinerja Utama Dinkes Tahun 2020
                   </a>
                 </td>
@@ -84,7 +84,7 @@ const Iku = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">7</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     Indikator Kinerja Utama Dinkes Tahun 2019
                   </a>
                 </td>
@@ -95,7 +95,7 @@ const Iku = () => {
               <tr>
                 <td className="border border-gray-400 px-4 py-2">8</td>
                 <td className="border border-gray-400 px-4 py-2">
-                  <a className="underline hover:no-underline hover:cursor-pointer" href="#">
+                  <a className="" href="#">
                     SK Indikator Kinerja Utama (IKU) Dinkes Sleman
                   </a>
                 </td>
