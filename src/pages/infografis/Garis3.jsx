@@ -57,7 +57,7 @@ const Garis3 = () => {
     drawLineChart4();
   }, []);
   return (
-    <div className="ml-32 lg:ml-0 lg:h-[500px] bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto">
+    <div className="ml-32 lg:ml-0 lg:h-[550px] bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto">
       <div className="text-center mt-10 max-w-[600px] mx-auto">
         <h1 data-aos="fade-up" className="text-xl font-bold">
           Pelayanan Kesehatan Penderita Diabetes Melitus tahun 2019-2021

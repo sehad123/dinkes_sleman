@@ -2,7 +2,7 @@ import React from "react";
 
 const Sanitasi = () => {
   return (
-    <div className="lg:h-[500px] ml-32 lg:ml-0 bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
+    <div className="lg:h-[550px] ml-32 lg:ml-0 pb-20 bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
       <div data-aos="zoom-in" className="grid grid-cols-1 md:grid-cols-1 gap-4">
         <div className="flex items-center justify-center w-max container">
           <div className="lg:w-[600px] w-[380px]">

@@ -2,7 +2,7 @@ import React from "react";
 
 const Leaflet = () => {
   return (
-    <div className="lg:h-[500px] lg:translate-x-6 translate-x-16 bg-white py-10 dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
+    <div className="lg:h-[500px] lg:translate-x-0 translate-x-16 bg-white py-10 dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
       <div className="flex items-center justify-center w-max container lg:ml-48">
         <div className="lg:w-[700px] w-[380px] lg:mb-32 lg:-translate-x-24">
           <h4 className="font-bold text-[16px] mb-4 text-center">LEAFLET</h4>

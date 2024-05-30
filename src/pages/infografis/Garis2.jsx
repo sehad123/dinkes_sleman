@@ -57,7 +57,7 @@ const Garis2 = () => {
     drawLineChart1();
   }, []);
   return (
-    <div className="lg:h-[500px] ml-32 lg:ml-0 bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto">
+    <div className="lg:h-[550px] ml-32 lg:ml-0 bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto">
       <div className="text-center mt-10 max-w-[600px] mx-auto">
         <h1 data-aos="fade-up" className="text-xl font-bold">
           Pelayanan Kesehatan Penderita Hipertensi tahun 2019-2021

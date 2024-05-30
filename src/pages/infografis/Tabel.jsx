@@ -2,7 +2,7 @@ import React from "react";
 
 const Tabel = () => {
   return (
-    <div className="ml-32 h-[500px] lg:ml-0 bg-white dark:bg-gray-900 dark:text-white duration-200  overflow-y-auto">
+    <div className="ml-32 h-[550px] lg:ml-0 bg-white dark:bg-gray-900 dark:text-white duration-200  overflow-y-auto">
       <div className="flex items-center justify-center w-max container">
         <div className="lg:w-[600px] w-[380px]">
           <h4 data-aos="fade-up" className="font-bold text-[19px] my-10 text-center">

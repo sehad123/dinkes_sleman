@@ -4,7 +4,7 @@ import Image2 from "../assets/zona_integrasi.jpeg";
 
 const Sertifikat_Produksi = () => {
   return (
-    <div className="lg:translate-x-0 translate-x-16 bg-white dark:bg-gray-900 dark:text-white duration-200 w-screen lg:container">
+    <div className="lg:translate-x-0 translate-x-16 bg-white dark:bg-gray-900 dark:text-white duration-200 w-screen">
       <div className="py-10 dark:py-20">
         <div className="container">
           {/* header section */}
@@ -129,14 +129,14 @@ const Sertifikat_Produksi = () => {
         </div>
       </div>
       {/* header section */}
-      <div className="lg:ml-20 my-5 lg:w-max -mt-2 mb-10">
+      {/* <div className="lg:ml-20 my-5 lg:w-max -mt-2 mb-10">
         <p data-aos="fade-up" className="text-sm">
           Informasi lebih lanjut silakan menghubungi Kantor Dinas Kesehatan Kabupaten Sleman
           <a href="" className="text-blue-400 ml-2">
             (0274) 868409 ext 7238
           </a>
         </p>
-      </div>
+      </div> */}
       {/* <div data-aos="zoom-in" className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-10">
         <div className="cursor-pointer">
           <img src={Image2} className="w-[80%] h-auto ml-10 lg:ml-20" alt="Perjanjian Kesehatan" />

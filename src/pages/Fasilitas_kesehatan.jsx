@@ -92,9 +92,9 @@ const Fasilitas_kesehatan = () => {
               <table data-aos="zoom-in" className="w-full border-collapse border border-gray-400">
                 <thead>
                   <tr>
-                    <th className="text-left border border-gray-400 px-4 py-2">No</th>
-                    <th className="text-left border border-gray-400 px-4 py-2">Nama Puskesmas</th>
-                    <th className="text-left border border-gray-400 px-4 py-2">Lokasi</th>
+                    <th className="text-center border border-gray-400 px-4 py-2">No</th>
+                    <th className="text-center border border-gray-400 px-4 py-2">Nama Puskesmas</th>
+                    <th className="text-center border border-gray-400 px-4 py-2">Lokasi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -123,9 +123,9 @@ const Fasilitas_kesehatan = () => {
               <table data-aos="zoom-in" className="w-full border-collapse border border-gray-400">
                 <thead>
                   <tr>
-                    <th className="text-left border border-gray-400 px-4 py-2">No</th>
-                    <th className="text-left border border-gray-400 px-4 py-2">Nama Rumah Sakit</th>
-                    <th className="text-left border border-gray-400 px-4 py-2">Lokasi</th>
+                    <th className="text-center border border-gray-400 px-4 py-2">No</th>
+                    <th className="text-center border border-gray-400 px-4 py-2">Nama Rumah Sakit</th>
+                    <th className="text-center border border-gray-400 px-4 py-2">Lokasi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -153,9 +153,9 @@ const Fasilitas_kesehatan = () => {
             <table data-aos="fade-up" className="w-full border-collapse border border-gray-400">
               <thead>
                 <tr>
-                  <th className="text-left border border-gray-400 px-4 py-2">No</th>
-                  <th className="text-left border border-gray-400 px-4 py-2">Nama</th>
-                  <th className="text-left border border-gray-400 px-4 py-2">Aksi</th>
+                  <th className="text-center border border-gray-400 px-4 py-2">No</th>
+                  <th className="text-center border border-gray-400 px-4 py-2">Nama</th>
+                  <th className="text-center border border-gray-400 px-4 py-2">Aksi</th>
                 </tr>
               </thead>
               <tbody>
