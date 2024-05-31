@@ -214,52 +214,101 @@ const Berita = () => {
 
   return (
     <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 py-10">
-      <div data-aos="fade-up" className="container mx-auto">
-        {/* header section */}
-        <div className="text-center mb-5 lg:-translate-y-1 max-w-[600px] mx-auto"></div>
-        {/* filter section */}
-        <div className="flex justify-end items-center mb-5 lg:-translate-y-6 lg:ml-10 lg:mr-0 mr-4 lg:-space-x-24 lg:gap-2 gap-2">
-          <div className="">
-            <select className="border border-gray-500 rounded lg:px-3 px-1 py-1 lg:mr-[100px] outline-none dark:text-gray-900" value={selectedDays} onChange={handleDayChange}>
-              <option value="">Pilih Hari</option>
-              <option value="0">Senin</option>
-              <option value="1">Selasa</option>
-              <option value="2">Rabu</option>
-              <option value="3">Kamis</option>
-              <option value="4">Jumat</option>
-              <option value="5">Sabtu</option>
-              <option value="6">Minggu</option>
-              {/* Tambahkan opsi bulan lainnya sesuai kebutuhan */}
-            </select>
+      <div data-aos="fade-up" className="container grid lg:grid-cols-2 grid-cols-1 justify-start items-start ">
+        <div className="flex flex-col justify-end items-center mt-5 lg:-translate-y-6 lg:ml-10 lg:mr-0 mr-4 lg:-space-x-24 lg:gap-2 gap-2 lg:-translate-x-36">
+          <div className="lg:mr-48">
+            <h1 className="font-bold mb-7 text-xl ml-10">Filter berita</h1>
+            <div>
+              <h1 className="font-bold mb-2 text-[15px]">Kata Kunci</h1>
+              <form>
+                <input
+                  type="text"
+                  placeholder=""
+                  className="w-[200px] mb-4 group-hover:w-[150px] transition-all duration-300 border border-gray-900 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary bg-gray-300 text-black dark:border-gray-500 dark:bg-gray-700 dark:text-white"
+                />
+              </form>
+              <div className=" -translate-y-4">
+                <input type="checkbox" />
+                <span className="text-[12px] ml-2 translate-y-6">Cari hanya berdasarkan judul </span>
+              </div>
+            </div>
           </div>
-          <div className="">
-            <select className="border border-gray-500 rounded lg:px-3 px-1 py-1 lg:mr-[100px] outline-none dark:text-gray-900" value={selectedMonth} onChange={handleMonthChange}>
-              <option value="">Pilih Bulan</option>
-              <option value="0">Januari</option>
-              <option value="1">Februari</option>
-              <option value="2">Maret</option>
-              <option value="3">April</option>
-              <option value="4">Mei</option>
-              {/* Tambahkan opsi bulan lainnya sesuai kebutuhan */}
-            </select>
+          <div className="-mt-3">
+            <h1 className="font-bold my-1 text-[15px]">Tahun</h1>
+
+            <div className="relative inline-block w-[200px] lg:mr-[100px]">
+              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-gray-300 dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
+                {/* Options */}
+                <option value="">Pilih Tahun</option>
+                <option value="0">2024</option>
+                <option value="1">2023</option>
+                <option value="2">2022</option>
+                <option value="3">2021</option>
+                <option value="4">2020</option>
+                <option value="5">2019</option>
+                <option value="6">2018</option>
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                <div className="w-px h-6 bg-gray-900"></div>
+                <svg className="w-4 h-4 ml-2 text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
           </div>
 
-          <div className="ml-0 mr-0">
-            <select className="border border-gray-500 rounded lg:px-3 px-1 py-1 lg:mr-[100px] outline-none dark:text-gray-900" value={selectedYear} onChange={handleYearChange}>
-              <option value="">Pilih Tahun</option>
-              <option value="0">2024</option>
-              <option value="1">2023</option>
-              <option value="2">2022</option>
-              <option value="3">2021</option>
-              <option value="4">2020</option>
-              <option value="5">2019</option>
-              <option value="6">2018</option>
-              {/* Tambahkan opsi bulan lainnya sesuai kebutuhan */}
-            </select>
+          <div className="">
+            <h1 className="font-bold my-1 text-[15px]">Bulan</h1>
+
+            <div className="relative inline-block w-[200px] lg:mr-[100px]">
+              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-gray-300 dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
+                {/* Options */}
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="february">Maret</option>
+                <option value="february">April</option>
+                <option value="february">Mei</option>
+                <option value="february">Juni</option>
+                {/* <option value="february">Juli</option>
+                <option value="february">Agustus</option>
+                <option value="february">September</option>
+                <option value="february">Oktober</option>
+                <option value="february">November</option>
+                <option value="february">Desember</option> */}
+                {/* Tambahkan opsi lainnya sesuai kebutuhan */}
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                <div className="w-px h-6 bg-gray-900"></div>
+                <svg className="w-4 h-4 ml-2 text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
           </div>
+          <div className="">
+            <h1 className="font-bold my-1 text-[15px]">Urutkan Berdasarkan</h1>
+
+            <div className="relative inline-block w-[200px] lg:mr-[100px]">
+              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-gray-300 dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
+                {/* Options */}
+                <option value="february">Terbaru</option>
+                <option value="february">Terlama</option>
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                <div className="w-px h-6 bg-gray-900"></div>
+                <svg className="w-4 h-4 ml-2 text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button className="w-[200px] h-[30px] lg:mb-4 mb-20 transition-all duration-300 border rounded-lg mt-4 lg:-translate-x-12 border-gray-900 px-2 focus:outline-none focus:border-1 text-gray-100 pb-3 focus:border-primary bg-blue-600 dark:border-gray-500 dark:bg-gray-700 dark:text-white">
+            Tampilkan
+          </button>
         </div>
 
-        <div className="container grid grid-cols-1 gap-8 sm:grid-cols-1 lg:grid-cols-1 lg:-translate-y-5">
+        <div className="container grid grid-cols-1 gap-8 sm:grid-cols-1 lg:grid-cols-1 lg:-translate-x-[450px]">
           {/* Mapping data untuk membuat container */}
           {currentItems.map((content) => (
             <div
@@ -300,7 +349,7 @@ const Berita = () => {
           ))}
         </div>
         {/* Pagination */}
-        <div className="flex justify-center mt-5">
+        <div className="flex justify-center lg:ml-[700px] mt-5">
           <nav>
             <ul className="flex items-center">
               {Array.from({ length: totalPages }, (_, i) => (

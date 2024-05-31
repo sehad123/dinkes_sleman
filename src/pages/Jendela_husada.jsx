@@ -67,11 +67,11 @@ const Jendela_husada = () => {
             <div data-aos="fade-up" key={index} className="dark:border-white lg: lg:h-[400px] h-[530px]">
               {/* Image section */}
               <div className="relative">
-                <img src={content.image} alt="" className="w-full  lg:h-[300px] h-[420px] object-cover" />
+                <img src={content.image} alt="" className="w-[330px]  lg:h-auto h-[420px] object-cover" />
               </div>
 
               {/* Text details section */}
-              <div className="py-2 px-4">
+              <div className="py-2 mr-10">
                 <h4 className="font-bold text-center">{content.title}</h4>
 
                 {/* <p className="mt-3">

@@ -2,8 +2,33 @@ import React, { useEffect, useState } from "react";
 import puskesmas from "../assets/puskesmas.jpg";
 import puskesmas2 from "../assets/puskesmas2.jpg";
 import ses from "../assets/ses.jpg";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import rs from "../assets/rumahsakit.jpg";
 import fasilitas from "../assets/fasilitas.jpg";
+import {
+  faHeartPulse,
+  faComputer,
+  faDatabase,
+  faHeartCirclePlus,
+  faPlus,
+  faHeart,
+  faHospital,
+  faHospitalAlt,
+  faAmbulance,
+  faPlusCircle,
+  faShield,
+  faEye,
+  faPerson,
+  faKitMedical,
+  faBookMedical,
+  faMedkit,
+  faHouseChimney,
+  faHouseChimneyMedical,
+  faHouseSignal,
+} from "@fortawesome/free-solid-svg-icons";
+import { faHospitalSymbol } from "@fortawesome/free-solid-svg-icons/faHospitalSymbol";
+import HeroFasilitas from "../components/Hero/HeroFasilitas";
 
 const Fasilitas_kesehatan = () => {
   const [puskesmasData, setPuskesmasData] = useState([]);
@@ -59,6 +84,53 @@ const Fasilitas_kesehatan = () => {
     setRumahSakitData(rumahSakit);
   }, []);
 
+  const Menu1 = [
+    {
+      name: "Klinik Utama",
+      link: "https://inspektorat.slemankab.go.id/whistleblowersystem/",
+      icon: faPlus,
+    },
+    {
+      name: "Klinik Pratama",
+      link: "/fasilitas_kesehatan",
+      icon: faPlusCircle,
+    },
+    {
+      name: "Optik",
+      link: "/media_promosi/iklan",
+      icon: faEye,
+    },
+    {
+      name: "Perorangan",
+      link: "/infografis/piramida",
+      icon: faPerson,
+    },
+    {
+      name: "Apotek",
+      link: "/infografis/piramida",
+      icon: faBookMedical,
+    },
+    {
+      name: "Toko Obat",
+      link: "/infografis/piramida",
+      icon: faMedkit,
+    },
+    {
+      name: "Lab Klinik",
+      link: "/infografis/piramida",
+      icon: faHouseChimneyMedical,
+    },
+    {
+      name: "Rumah Sakit",
+      link: "/infografis/piramida",
+      icon: faHospital,
+    },
+    {
+      name: "Puskesmas",
+      link: "/infografis/piramida",
+      icon: faHospitalSymbol,
+    },
+  ];
   // Menghitung indeks data yang akan ditampilkan pada halaman ini
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfLastItem2 = currentPage2 * itemsPerPage;
@@ -81,10 +153,11 @@ const Fasilitas_kesehatan = () => {
               Daftar Fasilitas Kesehatan Kabupaten Sleman
             </h1>
           </div>
+          <HeroFasilitas />
 
           {/* Testimonial cards */}
 
-          <div className="grid grid-cols-1 lg:grid-cols-1 w-max mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-1 mt-10  w-max mx-auto">
             <div className="lg:w-[700px] w-[400px]">
               <h4 data-aos="zoom-in" className="font-bold text-[18px] my-10 text-center">
                 Daftar Puskesmas
@@ -148,118 +221,24 @@ const Fasilitas_kesehatan = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-[700px] w-[400px] lg:ml-64">
-            <h4 className="font-bold text-[19px] my-10 text-center">Rekap Fasilitas Kesehatan (Faskes)</h4>
-            <table data-aos="fade-up" className="w-full border-collapse border border-gray-400">
-              <thead>
-                <tr>
-                  <th className="text-center border border-gray-400 px-4 py-2">No</th>
-                  <th className="text-center border border-gray-400 px-4 py-2">Nama</th>
-                  <th className="text-center border border-gray-400 px-4 py-2">Aksi</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">1</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
-                      Rekap Faskes Klinik Utama
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">2</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
-                      Rekap Faskes Klinik Pratama
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">3</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
-                      Rekap Faskes Optik
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">4</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
-                      Rekap Faskes Perorangan
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">5</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
-                      Rekap Faskes Apotek
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">6</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
-                      Rekap Faskes Toko Obat
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">7</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
-                      Rekap Faskes Lab Klinik
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">8</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
-                      Rekap Faskes Rumah Sakit
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">9</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="underline hover:no-underline hover:cursor-pointer" href="#">
-                      Rekap Faskes Puskesmas
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+
+          <div className="container mx-auto px-4 py-20 ">
+            <h3 className="font-bold text-xl text-center mb-10"> Fasilitas Kesehatan</h3>
+            <div data-aos="fade-up" className="container w-max grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-14">
+              {Menu1.map((content, index) => (
+                <Link key={index} to={content.link} className="text-lg">
+                  <div
+                    style={{ width: "220px" }}
+                    className=" dark:bg-gray-900 p-4 drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.5)] bg-white border-4 min-h-[100px] rounded-xl lg:w-1/6 flex items-center justify-center hover:bg-gray-300 cursor-pointer"
+                  >
+                    <div data-aos="fade-up" className="flex flex-row items-center text-xl text-center text-green-900 dark:text-white ">
+                      <FontAwesomeIcon icon={content.icon} className="text-2xl mr-4" />
+                      {content.name}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
           {/* <div className="text-center mt-8">
               <div data-aos="zoom-in">
