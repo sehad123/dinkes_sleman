@@ -7,7 +7,7 @@ const StrukturOrganisasi = () => {
       <div className="py-10">
         <div className="container">
           {/* header section */}
-          <div className="text-center mb-10 max-w-[600px] mx-auto">
+          <div className="text-center mb-10 w-max h-auto mx-auto">
             <h1 data-aos="fade-up" className="text-3xl font-bold">
               Struktur Organisasi
             </h1>

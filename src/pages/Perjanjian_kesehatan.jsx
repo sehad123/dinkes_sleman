@@ -163,14 +163,14 @@ const Perjanjian_kesehatan = () => {
             </table>
           </div>
           {/* header section */}
-          <div className="lg:ml-40 my-5 lg:w-max mt-20">
+          {/* <div className="lg:ml-40 my-5 lg:w-max mt-20">
             <p data-aos="fade-up" className="text-sm">
               Informasi lebih lanjut silakan menghubungi Kantor Dinas Kesehatan Kabupaten Sleman
               <a href="" className="text-blue-400 ml-2">
                 (0274) 868409 ext 7238
               </a>
             </p>
-          </div>
+          </div> */}
           {/* <div data-aos="zoom-in">
             <div className="lg:ml-40 cursor-pointer">
               <img src={Image2} className="w-[700px] h-auto" alt="Perjanjian Kesehatan" />

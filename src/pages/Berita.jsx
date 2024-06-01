@@ -128,7 +128,7 @@ const Berita = () => {
     {
       id: 3,
       image: Artikel4,
-      title: "Tingkatkan Kapasitas Puskesmas, Dinkes Sleman Selenggarakan Orientasi Integrasi Pelayanan Kesehatan Primer",
+      title: "Dinkes Sleman Selenggarakan Orientasi Integrasi Pelayanan Kesehatan Primer",
       description: "Senin (22/4) Kepala Dinas Kesehatan Kabupaten Sleman, dr. Cahya Purnama, M.Kes membuka secara resmi Orientasi Integrasi Pelayanan Kesehatan Primer bagi...",
       date: "Rabu, 24 Maret 2024",
       link: "/artikel4",
@@ -314,32 +314,32 @@ const Berita = () => {
             <div
               data-aos="fade-up"
               key={content.id}
-              className="border border-gray-800 dark:border-white lg:h-[220px] h-[190px] lg:w-[1000px] lg:p-4 lg:px-0 px-4 lg:ml-10"
+              className="border rounded-3xl dark:border-white lg:h-[220px] h-[190px] lg:w-[1000px] lg:p-4 lg:px-0 px-4 lg:ml-10"
               style={{ boxShadow: "10px 10px 12px rgba(0, 0, 0, 0.1)" }} // Menambahkan shadow
             >
               {/* Konten artikel */}
               <div className="relative">
                 <Link to={content.link}>
-                  <img src={content.image} alt="" className="lg:w-[200px] w-[150px] lg:h-[180px] h-[150px] mt-5 lg:ml-3 pr-2 lg:mt-0 object-cover absolute lg:top-0 lg:left-0 " />
+                  <img src={content.image} alt="" className="lg:w-[180px] w-[150px] lg:h-[170px] h-[140px] mt-5 lg:ml-5 pr-2 lg:mt-0 object-cover absolute lg:top-0 lg:left-0 " />
                 </Link>
               </div>
 
               {/* Text details section */}
               <div className=" lg:pl-[220px] pl-[150px] pr-2 lg:mt-0 mt-5">
-                <h4 className="font-bold text-[10px] mt-2 lg:mt-0 lg:text-[20px]">
+                <p className="text-[8px] lg:text-[15px] lg:mr-[470px]">
+                  <FontAwesomeIcon icon={faClock} />
+                  <span> {content.date}</span>
+                </p>
+                <h4 className="font-bold text-[10px] mt-2 lg:mt-2 lg:text-[20px]">
                   <Link to={content.link}>{content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}</Link>
                 </h4>
-                <p className="text-gray-500 mt-2 text-[9px] lg:text-[17px] dark:text-white">
+                <p className="text-gray-500 mt-1 text-[9px] lg:text-[17px] dark:text-white">
                   <Link to={content.link}>{content.description.length > 130 ? content.description.slice(0, 130) + "..." : content.description}</Link>
                 </p>
                 <hr className="my-2" />
-                <div className="hidden md:hidden lg:block ">
-                  <p className="text-[8px] lg:text-[15px] ">
-                    <FontAwesomeIcon icon={faClock} />
-                    <span> {content.date}</span>
-                  </p>
-                  <p className="lg:mt-4 lg:ml-0 ml-2 text-[7px] lg:text-[15px]">
-                    <Link className=" lg:p-[10px] bg-blue-700 text-white rounded-full" to={content.link}>
+                <div className="hidden md:hidden lg:block translate-y-3">
+                  <p className=" -translate-y-2 lg:ml-0 ml-2 text-[7px] mr-4  lg:text-[16px]">
+                    <Link className=" lg:text-green-500 text-white rounded-lg" to={content.link}>
                       Selengkapnya
                     </Link>
                   </p>

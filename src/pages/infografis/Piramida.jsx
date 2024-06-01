@@ -24,14 +24,14 @@ const Piramida = () => {
           labels: ageLabels,
           datasets: [
             {
-              label: "Laki-laki",
-              backgroundColor: "blue",
-              data: malePopulation,
-            },
-            {
               label: "Perempuan",
               backgroundColor: "red",
               data: femalePopulation.map((value) => -value), // Negative value for displaying bars on the left side
+            },
+            {
+              label: "Laki-laki",
+              backgroundColor: "blue",
+              data: malePopulation,
             },
           ],
         },

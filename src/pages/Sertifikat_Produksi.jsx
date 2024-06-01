@@ -18,7 +18,7 @@ const Sertifikat_Produksi = () => {
           <div data-aos="fade-up" className="container-fluid mt-10 max-w-[1050px] mx-auto">
             <p className="text-center text-lg font-bold">Standar Pelayanan Penerbitan SPP-IRT (on line)</p>
             <h1 className="text-lg mb-4">Dasar Hukum :</h1>
-            <ol>
+            <ol className="pl-5">
               <li>1. Peraturan Badan POM RI nomor 22Tahun 2018 tentang Pedoman Pemberian Sertifikat Produksi Pangan Industri Rumah Tangga.</li>
               <li>2. Peraturan Badan POM RI nomor 10 Tahun 2021 tentang Standar Kegiatan dan Produk pada Penyelenggaraan Berusaha Berbasis Risiko di Sektor Obat dan Makanan.</li>
               <li>3. Peraturan Daerah Kabupaten Sleman No. 17 Tahun 2020 tentang Pengawasan Keamanan Pangan.</li>
@@ -59,7 +59,7 @@ const Sertifikat_Produksi = () => {
                   <td className="px-6 py-4 whitespace-nowrap text-sm">Prosedur/Mekanisme</td>
                   <td className="px-6 py-4 whitespace-wrap text-sm">
                     <p>A. PENYAMPAIAN INFORMASI/KONSULTASI</p>
-                    <ul className="list-disc list-inside">
+                    <ul className="list-disc list-inside pl-6">
                       <li>Menyampaikan informasi kepada pemohon bahwa penerbitan SPP-IRT diselenggarakan secara online melalui OSS-RBA</li>
                       <li>Menjelaskan persyaratan dokumen dan/atau data yang perlu disiapkan pemohon sebelum masuk aplikasi OSS-RBA, meliputi :</li>
                       <li>Identitas pemohon (seperti KTP, NPWP, kartu BPJS, dll)</li>
@@ -71,20 +71,20 @@ const Sertifikat_Produksi = () => {
                       <li>Label yang akan digunakan (dalam bentuk file pdf/foto)</li>
                     </ul>
                     <p>B. PEMBIMBINGAN/PENDAMPINGAN APLIKASI ON LINE</p>
-                    <ul className="list-disc list-inside">
+                    <ul className="list-disc list-inside pl-6">
                       <li>Menyarankan kepada pemohon agar dapat mengakses PIRT on line secara mandiri, kapan saja dan di mana saja.</li>
                       <li>Terhadap pemohon yang menghendaki mengakses SPP-PIRT on line di Dinas Kesehatan, Dinas Kesehatan menyediakan perangkat keras (komputer) dan perangkat lunak (aplikasi dan jaringan)</li>
                       <li>Memberikan petunjuk dan atau pendampingan bagi pemohon yang mengakses SPP-PIRT on line di Dinas Kesehatan.</li>
                     </ul>
                     <p>C. PENERBITAN SPP-IRT.</p>
-                    <ul className="list-disc list-inside">
+                    <ul className="list-disc list-inside pl-6">
                       <li>SPP-IRT terbit otomatis setelah pemohon mengisi data dan/atau mengunggah file di aplikasi dengan lengkap dan benar.</li>
                       <li>Dokumen fisik SPP-IRT dapat di print secara mandiri atau disimpan dalam bentuk file.</li>
                       <li>SPP-IRT yang telah terbit on line merupakan dokumen resmi yang memuat nomor PIRT sesuai jenis produk pangan yang didaftarkan.</li>
                       <li>Catatan: Terhadap SPP-IRT yang telah terbit on line, wajib dilakukan verifikasi pemenuhan komitmen dalam waktu selama-lamanya 3 (tiga) bulan</li>
                     </ul>
                     <p>Catatan :</p>
-                    <ul className="list-disc list-inside">
+                    <ul className="list-disc list-inside pl-6">
                       <li>Terhadap SPP-IRT yang telah terbit on line, wajib dilakukan verifikasi pemenuhan komitmen dalam waktu selama-lamanya 3 (tiga) bulan</li>
                       <li>Tata cara verifikasi pemenuhan komitmen, diatur dalam prosedur tersendiri.</li>
                     </ul>

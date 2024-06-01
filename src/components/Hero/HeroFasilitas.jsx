@@ -45,9 +45,9 @@ const HeroFasilitas = () => {
         <Slider {...settings}>
           {ImageList.map((data) => (
             <div key={data.id}>
-              <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 mx-3">
+              <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 mx-5 lg:-translate-x-6">
                 {/* text content section */}
-                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true" className="sm:text-xl w-[350px]  lg:text-4xl -translate-x-10 font-bold">
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true" className="sm:text-xl w-[350px]  lg:text-4xl lg:-translate-x-10 font-bold">
                   <Link to={data.link} className="hover:underline">
                     {data.title}
                   </Link>

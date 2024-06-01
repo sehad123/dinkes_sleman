@@ -1,21 +1,21 @@
 import React from "react";
-import Image1 from "../../assets/hero/g1.jpeg";
-import Image2 from "../../assets/hero/g2.png";
-import Image3 from "../../assets/hero/g4.jpeg";
+import Image2 from "../../assets/hero/g4.jpeg";
+import Image1 from "../../assets/hero/g5.png";
+import Image3 from "../../assets/hero/g6.jpeg";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 
 const ImageList = [
   {
     id: 1,
-    img: Image1,
+    img: Image2,
     title: "Implementasikan PKAT, Dinkes Sleman Raih Apresiasi Kemenkes RI",
     description: "Sebagai wujud apresiasi atas penyelenggaraan Pemeriksaan Kesehatan Anak Terintegrasi (PKAT), Dinas Kesehatan Kabupaten Sleman sukses raih penghargaan dari Kementerian Kesehatan...",
     link: "/artikel1",
   },
   {
     id: 2,
-    img: Image2,
+    img: Image1,
     title: "Empat Tenaga Kesehatan Sleman Raih Juara Nakesdan Tingkat DIY Tahun 2024",
     description: "Prestasi membanggakan kembali diraih Tenaga Kesehatan Kabupaten Sleman pada tahun 2024. Sebanyak empat orang sabet Juara I Tenaga Kesehatan Teladan...",
     link: "/artikel2", // tambahkan link
