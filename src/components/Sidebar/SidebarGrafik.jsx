@@ -46,13 +46,15 @@ const SidebarInfo = ({ title, sidebarStyle }) => {
   };
 
   return (
-    <div className={`pb-[40px] lg:translate-x-0 translate-x-16 dark:pb-[12px] bg-white dark:bg-gray-900 dark:text-white duration-200 sidebar-wrapper ${isSidebarOpen ? "" : "closed"} lg:border-r-2 border-b-2 lg:border-b-0 border-gray-300 `}>
-      <div className={`bg-white dark:bg-gray-900 w-64 mx-6 flex flex-col h-full py-4  ${sidebarStyle}`}>
-        <div className={` lg:border-b-4 flex justify-between items-center px-4 mb-4 ${!isSidebarOpen ? "ml-0" : ""}`}>
-          <div className="text-3xl  font-semibold mb-8 mx-auto">{title}</div>
-          {/* <button onClick={toggleSidebar} className="text-gray-600 dark:text-gray-400 focus:outline-none">
-            {isSidebarOpen ? <BsChevronCompactUp /> : <BsChevronDown />}
-          </button> */}
+    <div
+      className={`lg:translate-x-0 translate-x-20 my-10 lg:h-[500px] h-[500px]  border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)] ${
+        isSidebarOpen ? "" : "closed"
+      } lg:border-r-2 border-b-2 lg:border-b-2  border-gray-300  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)] `}
+    >
+      {" "}
+      <div className={`bg-white dark:bg-gray-900 w-64 mx-6 flex flex-col h-full py-4 ${sidebarStyle}`}>
+        <div className={` flex justify-between items-center px-4 mb-2 ${!isSidebarOpen ? "ml-0" : ""}`}>
+          <div className="text-3xl font-semibold mx-auto">{title}</div>
         </div>
         <div className={` dark:bg-gray-900 transition-all duration-300 ${isSidebarOpen ? "" : "hidden"} ${isSidebarOpen ? "bg-white" : "bg-gray-800"} ${!isSidebarOpen ? "-ml-64 " : ""}`}>
           <ul className="text-lg mr-2">

@@ -355,6 +355,10 @@ const Menu1 = [
     link: "/profil/visi_misi",
   },
   {
+    name: "Berita",
+    link: "/berita",
+  },
+  {
     name: "Layanan",
     link: "/##",
     dropdown: [
@@ -371,32 +375,33 @@ const Menu1 = [
         link: "/agenda",
       },
       {
-        name: "Sertifikasi",
-        link: "/##",
-        dropdown: [
-          {
-            name: "Sertifikat Produksi",
-            link: "/sertifikat_produksi",
-          },
-          {
-            name: "Sertifikasi Sanitasi",
-            link: "/sertifikat_laik",
-          },
-          // {
-          //   name: "Sertifikat Produksi Pangan Industri Rumah Tangga (SP-PIRT)",
-          //   link: "/sertifikat_produksi",
-          // },
-          // {
-          //   name: "Sertifikasi Laik Higiene Sanitasi Tempat Pengelolaan Pangan",
-          //   link: "/sertifikat_laik",
-          // },
-        ],
+        name: "Galeri",
+        link: "/galeri",
       },
+
+      // {
+      //   name: "Sertifikasi",
+      //   link: "/##",
+      //   dropdown: [
+      //     {
+      //       name: "Sertifikat Produksi",
+      //       link: "/sertifikat_produksi",
+      //     },
+      //     {
+      //       name: "Sertifikasi Sanitasi",
+      //       link: "/sertifikat_laik",
+      //     },
+      //     // {
+      //     //   name: "Sertifikat Produksi Pangan Industri Rumah Tangga (SP-PIRT)",
+      //     //   link: "/sertifikat_produksi",
+      //     // },
+      //     // {
+      //     //   name: "Sertifikasi Laik Higiene Sanitasi Tempat Pengelolaan Pangan",
+      //     //   link: "/sertifikat_laik",
+      //     // },
+      //   ],
+      // },
     ],
-  },
-  {
-    name: "Berita",
-    link: "/berita",
   },
 
   {
@@ -418,8 +423,26 @@ const Menu1 = [
     ],
   },
   {
-    name: "Galeri",
-    link: "/galeri",
+    name: "Sertifikat",
+    link: "/##",
+    dropdown: [
+      {
+        name: "Sertifikat Produksi",
+        link: "/sertifikat_produksi",
+      },
+      {
+        name: "Sertifikat Sanitasi",
+        link: "/sertifikat_laik",
+      },
+      // {
+      //   name: "Sertifikat Produksi Pangan Industri Rumah Tangga (SP-PIRT)",
+      //   link: "/sertifikat_produksi",
+      // },
+      // {
+      //   name: "Sertifikasi Laik Higiene Sanitasi Tempat Pengelolaan Pangan",
+      //   link: "/sertifikat_laik",
+      // },
+    ],
   },
 
   // {
@@ -490,7 +513,7 @@ const Navbar = () => {
     window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
   };
   return (
-    <div className="shadow-md bg-white h-[90px] dark:bg-gray-900 w-[500px] lg:w-[100%] dark:text-white duration-200 relative z-40">
+    <div className="lg:shadow-md bg-white lg:h-[95px] h-[150px] dark:bg-gray-900 w-max lg:w-[100%] dark:text-white duration-200 relative z-40">
       <div className="lg:hidden block lg:px-10 bg-green-500 py-2 sm:h-[150px] lg:h-[130px] h-[120px]">
         <div className="container mt-3 sm: flex justify-between items-center lg:translate-y-0 -translate-y-40">
           <div>
@@ -529,7 +552,7 @@ const Navbar = () => {
               <div className="container mt-3 sm: flex justify-between items-center">
                 <div>
                   <Link to="#" onClick={handleShopsyClick} className="font-bold text-2xl sm:text-3xl flex gap-2 items-center">
-                    <img src={Logo} alt="Logo" className="w-16 h-auto -ml-2 -mt-10 lg:mb-0" />
+                    <img src={Logo} alt="Logo" className="w-16 h-auto -mt-10 lg:mb-0" />
                     <p className="ml-2 sm:text-lg md:text-xl lg:text-xl sm:mb-10 w-[200px]" style={{ fontFamily: "Montserrat, sans-serif" }}>
                       Dinas Kesehatan Sleman
                     </p>
@@ -555,7 +578,7 @@ const Navbar = () => {
             {Menu1.map((menuItem, index) => (
               <li
                 key={index}
-                className={`group mt-4 relative cursor-pointer ${menuItem.link === activeMenu ? "underline" : ""} hover:text-xl hover:underline`}
+                className={`group mt-4 relative cursor-pointer ${menuItem.link === activeMenu ? "underline" : ""} hover:underline`}
                 onClick={(e) => {
                   handleMenuClick(menuItem.link);
                   if (menuItem.name === "Hubungi Kami") {
@@ -632,7 +655,7 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu (Hidden on Desktop) */}
       {showMenu && (
-        <div className="md:hidden">
+        <div className="md:hidden bg-white">
           <div className="container">
             <ul className="flex flex-col items-center gap-3 py-2">
               {Menu1.map((menuItem, index) => (

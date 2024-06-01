@@ -57,8 +57,12 @@ const Garis3 = () => {
     drawLineChart4();
   }, []);
   return (
-    <div className="ml-32 lg:ml-0 lg:h-[550px] bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto">
-      <div className="text-center mt-10 max-w-[600px] mx-auto">
+    <div
+      className="lg:translate-x-0 translate-x-20 my-10 lg:h-[500px] h-[400px] lg:w-[850px] w-[480px]  border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"
+      style={{ fontFamily: "Montserrat, sans-serif" }}
+    >
+      {" "}
+      <div className="text-center mt-10 w-[400px] mx-auto">
         <h1 data-aos="fade-up" className="text-xl font-bold">
           Pelayanan Kesehatan Penderita Diabetes Melitus tahun 2019-2021
         </h1>

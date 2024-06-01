@@ -27,6 +27,7 @@ import Artikel2 from "./pages/artikel/Artikel2";
 import Artikel3 from "./pages/artikel/Artikel3";
 import Artikel4 from "./pages/artikel/Artikel4";
 import Artikel5 from "./pages/artikel/Artikel5";
+import Ambulance from "./pages/Ambulance";
 import Artikel6 from "./pages/artikel/Artikel6";
 
 import Merta1 from "./pages/info_merta/merta1";
@@ -110,6 +111,7 @@ const App = () => {
             <Route path="serta_merta" element={<SertaMerta />} />
             <Route path="berkala" element={<Berkala />} />
             <Route path="galeri" element={<Galeri />} />
+            <Route path="ambulance" element={<Ambulance />} />
             {/* <Route path="unduh" element={<Unduh />} /> */}
             <Route path="fasilitas_kesehatan" element={<FasilitasKesehatan />} />
             {/* <Route path="media_promosi" element={<MediaPromosi />} /> */}

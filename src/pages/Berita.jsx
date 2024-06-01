@@ -198,7 +198,7 @@ const Berita = () => {
 
   // State untuk pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3;
+  const itemsPerPage = 2;
   const totalPages = Math.ceil(filteredContents.length / itemsPerPage);
 
   // Menghitung indeks konten untuk halaman saat ini
@@ -257,7 +257,7 @@ const Berita = () => {
             </div>
           </div>
 
-          <div className="">
+          <div className="my-2">
             <h1 className="font-bold my-1 text-[15px]">Bulan</h1>
 
             <div className="relative inline-block w-[200px] lg:mr-[100px]">
@@ -285,7 +285,7 @@ const Berita = () => {
               </div>
             </div>
           </div>
-          <div className="">
+          <div className="my-2">
             <h1 className="font-bold my-1 text-[15px]">Urutkan Berdasarkan</h1>
 
             <div className="relative inline-block w-[200px] lg:mr-[100px]">
@@ -303,7 +303,7 @@ const Berita = () => {
             </div>
           </div>
 
-          <button className="w-[200px] h-[30px] lg:mb-4 mb-20 transition-all duration-300 border rounded-lg mt-4 lg:-translate-x-12 border-gray-900 px-2 focus:outline-none focus:border-1 text-gray-100 pb-3 focus:border-primary bg-blue-600 dark:border-gray-500 dark:bg-gray-700 dark:text-white">
+          <button className="w-[200px] h-[30px] lg:mb-4 mb-20 transition-all duration-300 border rounded-lg mt-6 lg:-translate-x-12 px-2 focus:outline-none focus:border-1 text-gray-100 pb-3 focus:border-primary bg-green-600 dark:border-gray-500 dark:bg-gray-700 dark:text-white">
             Tampilkan
           </button>
         </div>
@@ -314,7 +314,7 @@ const Berita = () => {
             <div
               data-aos="fade-up"
               key={content.id}
-              className="border rounded-3xl dark:border-white lg:h-[220px] h-[190px] lg:w-[1000px] lg:p-4 lg:px-0 px-4 lg:ml-10"
+              className="border rounded-3xl dark:border-white lg:h-[210px] h-[190px] lg:w-[1000px] lg:p-4 lg:px-0 px-4 lg:ml-10"
               style={{ boxShadow: "10px 10px 12px rgba(0, 0, 0, 0.1)" }} // Menambahkan shadow
             >
               {/* Konten artikel */}
@@ -326,9 +326,9 @@ const Berita = () => {
 
               {/* Text details section */}
               <div className=" lg:pl-[220px] pl-[150px] pr-2 lg:mt-0 mt-5">
-                <p className="text-[8px] lg:text-[15px] lg:mr-[470px]">
+                <p className="lg:flex hidden text-[8px] lg:text-[15px] lg:mr-[470px]">
                   <FontAwesomeIcon icon={faClock} />
-                  <span> {content.date}</span>
+                  <span className="ml-2 -mt-1"> {content.date}</span>
                 </p>
                 <h4 className="font-bold text-[10px] mt-2 lg:mt-2 lg:text-[20px]">
                   <Link to={content.link}>{content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}</Link>
@@ -349,7 +349,7 @@ const Berita = () => {
           ))}
         </div>
         {/* Pagination */}
-        <div className="flex justify-center lg:ml-[700px] mt-5">
+        <div className="flex justify-center lg:ml-[700px] lg:mt-0 mt-5">
           <nav>
             <ul className="flex items-center">
               {Array.from({ length: totalPages }, (_, i) => (

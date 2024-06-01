@@ -2,11 +2,15 @@ import React from "react";
 
 const LaporanTahunan = () => {
   return (
-    <div className="ml-32 lg:ml-0 lg:h-[650px] pb-[50px] bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto">
+    <div
+      className="lg:translate-x-0 translate-x-20 my-10 lg:h-[500px] lg:w-[850px] w-[480px]  border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 h-[650px] overflow-y-auto  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"
+      style={{ fontFamily: "Montserrat, sans-serif" }}
+    >
+      {" "}
       <div className="flex items-center justify-center w-max container">
         <div className="lg:w-[600px] w-[380px]">
-          <h4 className="font-bold text-[19px] my-10 text-center">Laporan Tahunan</h4>
-          <table className="w-full border-collapse border border-gray-400">
+          <h4 className="font-bold text-[19px] my-5 text-center">Laporan Tahunan</h4>
+          <table className="w-full border-collapse border border-gray-400 mb-10">
             <thead className="bg-gray-300 dark:bg-gray-900">
               {" "}
               <tr>

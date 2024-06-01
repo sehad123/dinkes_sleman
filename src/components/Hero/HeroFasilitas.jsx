@@ -8,14 +8,14 @@ const ImageList = [
   {
     id: 1,
     img: Image1,
-    title: "Kapasitas Bed Rumah Sakit",
-    link: "/artikel1",
+    title: "Sleman Emergency Service",
+    link: "/ambulance", // tambahkan link
   },
   {
     id: 2,
     img: Image2,
-    title: "Sleman Emergency Service",
-    link: "/artikel2", // tambahkan link
+    title: "Kapasitas Bed Rumah Sakit",
+    link: "/https://yankes.kemkes.go.id/app/siranap/rumah_sakit?jenis=1&propinsi=34prop&kabkota=3404",
   },
 ];
 
@@ -37,9 +37,9 @@ const HeroFasilitas = () => {
   };
 
   return (
-    <div className="relative container overflow-hidden lg:w-[780px] w-[430px] lg:h-[350px] h-[300px] bg-white lg:border-4 border-8 mt-10 dark:mt-0 rounded-xl flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]">
+    <div className="relative overflow-hidden lg:w-[780px] w-[430px] ml-24 lg:ml-40 lg:h-[350px] h-[300px] bg-gray-100 lg:border-4 border-8 mt-10 dark:mt-0 rounded-xl flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]">
       {/* background pattern */}
-      <div className="lg:h-[600px] lg:w-[450px] w-[300px] h-[500px] absolute -top-1/2 -right-40 rounded-full rotate-45 -z-[8]" style={{ backgroundImage: `url(${ImageList[currentSlide].img})`, backgroundSize: "initial" }}></div>
+      <div className="lg:h-[600px] lg:w-[500px] w-[300px] h-[500px] absolute -top-1/2 -right-40 rounded-full rotate-45 -z-[8]" style={{ backgroundImage: `url(${ImageList[currentSlide].img})`, backgroundSize: "initial" }}></div>
       {/* HeroFasilitas section */}
       <div className="container pb-8 sm:pb-0 hover:cursor-pointer">
         <Slider {...settings}>
@@ -47,7 +47,7 @@ const HeroFasilitas = () => {
             <div key={data.id}>
               <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 mx-5 lg:-translate-x-6">
                 {/* text content section */}
-                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true" className="sm:text-xl w-[350px]  lg:text-4xl lg:-translate-x-10 font-bold">
+                <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true" className="sm:text-xl lg:w-[350px] w-[150px]  lg:text-4xl lg:ml-5 font-bold">
                   <Link to={data.link} className="hover:underline">
                     {data.title}
                   </Link>
