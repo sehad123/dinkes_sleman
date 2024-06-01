@@ -490,8 +490,8 @@ const Navbar = () => {
     window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
   };
   return (
-    <div className="shadow-md bg-white dark:bg-gray-900 w-[500px] lg:w-[100%] dark:text-white duration-200 relative z-40">
-      <div className="lg:hidden block lg:px-10 bg-green-500 py-2 sm:h-[150px] lg:h-[130px] h-[140px]">
+    <div className="shadow-md bg-white h-[90px] dark:bg-gray-900 w-[500px] lg:w-[100%] dark:text-white duration-200 relative z-40">
+      <div className="lg:hidden block lg:px-10 bg-green-500 py-2 sm:h-[150px] lg:h-[130px] h-[120px]">
         <div className="container mt-3 sm: flex justify-between items-center lg:translate-y-0 -translate-y-40">
           <div>
             <a href="#" onClick={handleShopsyClick} className="font-bold text-2xl sm:text-3xl flex gap-2 items-center">
@@ -529,8 +529,8 @@ const Navbar = () => {
               <div className="container mt-3 sm: flex justify-between items-center">
                 <div>
                   <Link to="#" onClick={handleShopsyClick} className="font-bold text-2xl sm:text-3xl flex gap-2 items-center">
-                    <img src={Logo} alt="Logo" className="w-16 h-auto -ml-2 -mt-1 lg:mb-0" />
-                    <p className="ml-2 sm:text-lg md:text-xl lg:text-xl mt-5 sm:mb-10" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                    <img src={Logo} alt="Logo" className="w-16 h-auto -ml-2 -mt-10 lg:mb-0" />
+                    <p className="ml-2 sm:text-lg md:text-xl lg:text-xl sm:mb-10 w-[200px]" style={{ fontFamily: "Montserrat, sans-serif" }}>
                       Dinas Kesehatan Sleman
                     </p>
                   </Link>
@@ -555,7 +555,7 @@ const Navbar = () => {
             {Menu1.map((menuItem, index) => (
               <li
                 key={index}
-                className={`group mt-6 relative cursor-pointer ${menuItem.link === activeMenu ? "underline" : ""}`}
+                className={`group mt-4 relative cursor-pointer ${menuItem.link === activeMenu ? "underline" : ""} hover:text-xl hover:underline`}
                 onClick={(e) => {
                   handleMenuClick(menuItem.link);
                   if (menuItem.name === "Hubungi Kami") {
@@ -607,11 +607,11 @@ const Navbar = () => {
                   <input
                     type="text"
                     placeholder=""
-                    className="w-[40px] sm:w-[40px] mt-6 group-hover:w-[150px] transition-all duration-300 rounded-full border border-gray-900 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800  "
+                    className="w-[40px] sm:w-[40px] mt-4 group-hover:w-[150px] transition-all duration-300 rounded-full border border-gray-900 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800  "
                     value={searchQuery}
                     onChange={handleInputChange}
                   />
-                  <IoMdSearch type="submit" className="text-gray-500 mt-3 group-hover:text-primary absolute top-1/2 dark:text-white -translate-y-1/2 right-3 cursor-pointer" />
+                  <IoMdSearch type="submit" className="text-gray-500 mt-2 group-hover:text-primary absolute top-1/2 dark:text-white -translate-y-1/2 right-3 cursor-pointer" />
                 </form>
               </div>
             </li>
