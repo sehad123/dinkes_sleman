@@ -1,96 +1,4 @@
-// import React from "react";
-// import Artikel from "../assets/hero/g1.jpeg";
-// import Artikel2 from "../assets/hero/g2.png";
-// import Artikel3 from "../assets/hero/g3.jpg";
-// import Artikel4 from "../assets/hero/g4.jpeg";
-// import Artikel5 from "../assets/hero/g5.png";
-// import Artikel6 from "../assets/hero/g6.jpeg";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faClock } from "@fortawesome/free-solid-svg-icons";
-
-// const Berita = () => {
-//   // Data untuk setiap konten
-//   const contents = [
-//     {
-//       image: Artikel,
-//       title: "Implementasikan PKAT, Dinkes Sleman Raih Apresiasi Kemenkes RI",
-//       description: "Sebagai wujud apresiasi atas penyelenggaraan Pemeriksaan Kesehatan Anak Terintegrasi (PKAT), Dinas Kesehatan Kabupaten Sleman sukses raih penghargaan dari Kementerian Kesehatan...",
-//       date: "13 May 2024",
-//     },
-//     {
-//       image: Artikel2,
-//       title: "Empat Tenaga Kesehatan Sleman Raih Juara Nakesdan Tingkat DIY Tahun 2024",
-//       description: "Prestasi membanggakan kembali diraih Tenaga Kesehatan Kabupaten Sleman pada tahun 2024. Sebanyak empat orang sabet Juara I Tenaga Kesehatan Teladan...",
-//       date: "12 May 2024",
-//     },
-//     {
-//       image: Artikel3,
-//       title: "Simulasi Bencana dalam Peringatan Hari Kesiapsiagaan Bencana (HKB)",
-//       description: "Dinas Kesehatan Kabupaten Sleman menyelenggarakan simulasi bencana. Agenda ini merupakan bagian dalam mendukung Peringatan Hari Kesiapsiagaan Bencana di Daerah Istimewa...",
-//       date: "26 April 2024",
-//     },
-//     {
-//       image: Artikel4,
-//       title: "Tingkatkan Kapasitas Puskesmas, Dinkes Sleman Selenggarakan Orientasi Integrasi Pelayanan Kesehatan Primer",
-//       description: "Senin (22/4) Kepala Dinas Kesehatan Kabupaten Sleman, dr. Cahya Purnama, M.Kes membuka secara resmi Orientasi Integrasi Pelayanan Kesehatan Primer bagi...",
-//       date: "24 April 2024",
-//     },
-//     {
-//       image: Artikel5,
-//       title: "Selamat Hari Raya Idul Fitri 1445 H",
-//       description: "Kepala Dinas Kesehatan Kabupaten Sleman beserta seluruh jajaran menghaturkan Selamat Hari Raya Idul Fitri 1445 H. Mohon maaf lahir dan...",
-//       date: "16 April 2024",
-//     },
-//     {
-//       image: Artikel6,
-//       title: "Dialog Interaktif Tetap Sehat dan Bugar Saat Lebaran",
-//       description: "Mudik pada Hari Raya Idul Fitri merupakan fenomena yang umumnya terjadi di Indonesia. Kabupaten Sleman menjadi salah satu tujuan mudik...",
-//       date: "4 April 2024",
-//     },
-//   ];
-
-//   return (
-//     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 py-10">
-//       <div data-aos="fade-up" className="container mx-auto">
-//         {/* header section */}
-//         <div className="text-center mb-10">
-//           <h1 className="text-3xl font-bold">Daftar Berita</h1>
-//         </div>
-
-//         <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 lg:grid-cols-3">
-//           {/* Mapping data untuk membuat container */}
-//           {contents.map((content, index) => (
-//             <div data-aos="fade-up" key={index} className=" border border-gray-800 dark:border-white lg:h-[600px] h-[700px]">
-//               {/* Image section */}
-//               <div className="relative">
-//                 <img src={content.image} alt="" className="w-full  lg:h-[300px] h-[420px] object-cover" />
-//               </div>
-
-//               {/* Text details section */}
-//               <div className="py-6 px-4">
-//                 <h4 className="font-bold">{content.title}</h4>
-//                 <p className="text-gray-500 mt-2">{content.description}</p>
-//                 <hr className="my-2" />
-//                 <em>
-//                   <small>Dibuat pada {content.date}</small>
-//                 </em>
-//                 <p className="lg:mt-4 mt-6">
-//                   <Link className="p-2 bg-blue-700 text-white" to="/berita/dua-tersangka-illegal-logging-di-belitung-timur-berhasil-ditangkap-oleh-tim-operasi-gabungan">
-//                     Selengkapnya
-//                   </Link>
-//                 </p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Berita;
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Artikel from "../assets/hero/g1.jpeg";
 import Artikel2 from "../assets/hero/g2.png";
 import Artikel3 from "../assets/hero/g3.jpg";
@@ -105,7 +13,25 @@ const Berita = () => {
   const [selectedMonth, setSelectedMonth] = useState(""); // State untuk menyimpan bulan yang dipilih
   const [selectedDays, setSelectedDays] = useState(""); // State untuk menyimpan bulan yang dipilih
   const [selectedYear, setSelectedYear] = useState(""); // State untuk menyimpan bulan yang dipilih
+  const [isMobile, setIsMobile] = useState(false); // State untuk mendeteksi tampilan mobile
 
+  useEffect(() => {
+    // Fungsi untuk mendeteksi ukuran layar
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Mengatur ukuran max untuk mobile
+    };
+
+    // Menambahkan event listener untuk resize
+    window.addEventListener("resize", handleResize);
+
+    // Memanggil handleResize saat komponen dimuat
+    handleResize();
+
+    // Membersihkan event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   // Data untuk setiap konten
   const contents = [
     {
@@ -204,7 +130,7 @@ const Berita = () => {
   // Menghitung indeks konten untuk halaman saat ini
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = filteredContents.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = isMobile ? filteredContents : filteredContents.slice(indexOfFirstItem, indexOfLastItem);
 
   // Fungsi untuk mengubah halaman
   const paginate = (pageNumber) => {
@@ -330,7 +256,7 @@ const Berita = () => {
                   <FontAwesomeIcon icon={faClock} />
                   <span className="ml-2 -mt-1"> {content.date}</span>
                 </p>
-                <h4 className="font-bold text-[10px] mt-2 lg:mt-2 lg:text-[20px]">
+                <h4 className="font-bold text-[8px] mt-2 lg:mt-2 lg:text-[20px]">
                   <Link to={content.link}>{content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}</Link>
                 </h4>
                 <p className="text-gray-500 mt-1 text-[9px] lg:text-[17px] dark:text-white">
@@ -349,23 +275,25 @@ const Berita = () => {
           ))}
         </div>
         {/* Pagination */}
-        <div className="flex justify-center lg:ml-[700px] lg:mt-0 mt-5">
-          <nav>
-            <ul className="flex items-center">
-              {Array.from({ length: totalPages }, (_, i) => (
-                <li key={i} className="mx-1">
-                  <Link
-                    to="#!"
-                    onClick={() => paginate(i + 1)}
-                    className={`${currentPage === i + 1 ? "text-blue-500 border-blue-500 border rounded-full px-3 py-1" : "text-gray-500"} hover:text-blue-700 hover:border-blue-700 border rounded-full px-3 py-1`}
-                  >
-                    {i + 1}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+        {!isMobile && totalPages > 1 && (
+          <div className="flex justify-center lg:ml-[700px] lg:-mt-3 mt-5">
+            <nav>
+              <ul className="flex items-center">
+                {Array.from({ length: totalPages }, (_, i) => (
+                  <li key={i} className="mx-1">
+                    <Link
+                      to="#!"
+                      onClick={() => paginate(i + 1)}
+                      className={`${currentPage === i + 1 ? "text-blue-500 border-blue-500 border rounded-full px-3 py-1" : "text-gray-500"} hover:text-blue-700 hover:border-blue-700 border rounded-full px-3 py-1`}
+                    >
+                      {i + 1}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        )}
       </div>
     </div>
   );
