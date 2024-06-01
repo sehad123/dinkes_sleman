@@ -20,7 +20,6 @@
     "@mui/material": "^5.15.18",
     "aos": "^2.3.4",
     "chart.js": "^2.9.4",
-    "chartjs-plugin-datalabels": "^2.2.0",
     "react": "^18.2.0",
     "react-calendar": "^5.0.0",
     "react-dom": "^18.2.0",
