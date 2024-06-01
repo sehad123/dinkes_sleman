@@ -84,7 +84,7 @@ const Layout = () => {
         {isGrafikPage && (
           <div className={`w-[10px] absolute top-[30px] ${!isSidebarGrafikOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[500px] left-[400px]"} transition-all duration-300`}>
             <button onClick={toggleSidebarGrafik} className="lg:hidden md:flex bg-gray-200 text-4xl  dark:bg-gray-800 ">
-              {isSidebarUnduhOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
+              {isSidebarGrafikOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>
           </div>
         )}
