@@ -16,25 +16,25 @@ const data = [
 
 const Perjanjian_kesehatan = () => {
   return (
-    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 w-screen ">
+    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 w-max ">
       <div className="py-10 dark:py-20">
         <div className="container">
           {/* header section */}
-          <div className="text-center mb-10 max-w-[600px] mx-auto">
-            <h1 data-aos="fade-up" className="text-3xl font-bold">
+          <div className="text-center mb-10 mx-auto ">
+            <h1 data-aos="fade-up" className="text-3xl font-bold lg:ml-[350px]">
               Perjanjian Kesehatan
             </h1>
           </div>
 
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
-            <div className="flex justify-center">
-              <img src={Image} className="w-[600px] h-auto" alt="Perjanjian Kesehatan" />
+            <div className=" lg:ml-[400px]">
+              <img src={Image} className="lg:w-[600px] h-auto w-[400px]" alt="Perjanjian Kesehatan" />
             </div>
           </div>
 
           {/* Dasar Hukum section */}
-          <div className="lg:w-[600px] w-[380px] lg:ml-64">
+          <div className="lg:w-[600px] w-[380px] lg:ml-[400px] mt-20">
             <h4 className="font-bold text-[19px] my-10 text-center">Peraturan Terkait Kesehatan</h4>
             <table className="w-full border-collapse border border-gray-400">
               <thead className="bg-gray-300 dark:bg-gray-900">
@@ -72,7 +72,7 @@ const Perjanjian_kesehatan = () => {
             </table>
           </div>
           {/* Layanan Kesehatan section */}
-          <div className="lg:w-[600px] w-[380px] lg:ml-64">
+          <div className="lg:w-[600px] w-[380px] lg:ml-[400px] mt-20">
             <h4 className="font-bold text-[19px] my-10 text-center">Standar Pelayanan Kesehatan</h4>
             <table className="w-full border-collapse border border-gray-400">
               <thead className="bg-gray-300 dark:bg-gray-900">
@@ -133,7 +133,7 @@ const Perjanjian_kesehatan = () => {
           </div>
 
           {/* Tabel */}
-          <div className="lg:w-[600px] w-[380px] lg:ml-64">
+          <div className="lg:w-[600px] w-[380px] lg:ml-[400px] mt-20">
             <h4 className="font-bold text-[19px] my-10 text-center">Daftar Formulir</h4>
             <table className="w-full border-collapse border border-gray-400">
               <thead className="bg-gray-300 dark:bg-gray-900">

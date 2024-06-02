@@ -1,43 +1,51 @@
 import React from "react";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
+import { Calendar, momentLocalizer } from "react-big-calendar";
+import moment from "moment";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 
+// Konfigurasi lokal untuk react-big-calendar menggunakan moment
+const localizer = momentLocalizer(moment);
+
+// Data events contoh
 const events = [
   {
-    title: "Foto BTM",
-    start: "2024-05-21",
-    url: "/acara/1",
+    id: 0,
+    title: "Hari Kemerdekaan",
+    start: new Date(2024, 5, 3, 10, 0), // Tahun, Bulan (0-11), Tanggal, Jam, Menit
+    end: new Date(2024, 5, 3, 12, 0),
   },
   {
-    title: "Sindu Ultah",
-    start: "2024-04-25",
-    url: "/acara/2",
+    id: 1,
+    title: "Foto BTM",
+    start: new Date(2024, 5, 4, 12, 0),
+    end: new Date(2024, 5, 4, 13, 0),
   },
-  // Tambahkan acara lainnya sesuai kebutuhan
+  {
+    id: 2,
+    title: "Rapat Dinas Sosial",
+    start: new Date(2024, 5, 5, 15, 0),
+    end: new Date(2024, 5, 5, 16, 0),
+  },
+  {
+    id: 3,
+    title: "Deadline KSI",
+    start: new Date(2024, 5, 6, 23, 59),
+    end: new Date(2024, 5, 6, 23, 59),
+  },
+  {
+    id: 4,
+    title: "UJian Akhir Semester",
+    start: new Date(2024, 5, 7, 19, 0),
+    end: new Date(2024, 5, 7, 21, 0),
+  },
 ];
 
 const Agenda = () => {
-  const handleEventClick = (info) => {
-    if (info.event.extendedProps.url) {
-      window.location.href = info.event.extendedProps.url;
-    }
-  };
-
   return (
-    <div className="bg-white lg:translate-x-0 translate-x-16 mb-20 dark:mb-0 dark:pb-20 dark:bg-gray-900 dark:text-white duration-200">
-      <div className="max-w-xl mx-auto mt-10 dark:mt-0 dark:pt-20 mb-6">
-        {/* <div className="text-center font-bold text-xl py-10">Agenda</div> */}
-        <FullCalendar
-          plugins={[dayGridPlugin]}
-          initialView="dayGridMonth"
-          headerToolbar={{
-            left: "prev,next today",
-            center: "title",
-            right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
-          }}
-          events={events}
-          eventClick={handleEventClick}
-        />
+    <div className=" lg:w-[1200px] w-[500px] ml-40 mt-5 p-4 lg:mx-auto mb-10  ">
+      {/* <h1 className="text-2xl font-bold mb-4 text-center ">Jadwal Agenda Dinas Kesehatan Sleman</h1> */}
+      <div className="bg-white rounded-lg shadow-lg p-4 font-bold text-sm dark:bg-gray-900 dark:text-white">
+        <Calendar localizer={localizer} events={events} startAccessor="start" endAccessor="end" style={{ height: 450 }} />
       </div>
     </div>
   );
