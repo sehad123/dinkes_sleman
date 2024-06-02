@@ -141,7 +141,7 @@ const Berita = () => {
   return (
     <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 py-10">
       <div data-aos="fade-up" className="container grid lg:grid-cols-2 grid-cols-1 justify-start items-start ">
-        <div className="flex flex-col justify-end items-center mt-5 lg:-translate-y-6 lg:ml-10 lg:mr-0 mr-4 lg:-space-x-24 lg:gap-2 gap-2 lg:-translate-x-36">
+        <div className="flex flex-col justify-end items-center mt-5 lg:-translate-y-6 lg:ml-10 ml-20 lg:mr-0 mr-4 lg:-space-x-24 lg:gap-2 gap-2 lg:-translate-x-36">
           <div className="lg:mr-48">
             <h1 className="font-bold mb-7 text-xl ml-10">Filter berita</h1>
             <div>
@@ -240,7 +240,7 @@ const Berita = () => {
             <div
               data-aos="fade-up"
               key={content.id}
-              className="border rounded-3xl dark:border-white lg:h-[210px] h-[190px] lg:w-[1000px] lg:p-4 lg:px-0 px-4 lg:ml-10"
+              className="border rounded-3xl dark:border-white lg:h-[210px] h-[190px] lg:w-[1000px] w-screen lg:p-4 lg:px-0 px-4 lg:ml-10"
               style={{ boxShadow: "10px 10px 12px rgba(0, 0, 0, 0.1)" }} // Menambahkan shadow
             >
               {/* Konten artikel */}
@@ -252,20 +252,20 @@ const Berita = () => {
 
               {/* Text details section */}
               <div className=" lg:pl-[220px] pl-[150px] pr-2 lg:mt-0 mt-5">
-                <p className="lg:flex hidden text-[8px] lg:text-[15px] lg:mr-[470px]">
+                <p className="lg:flex text-[9px] lg:text-[15px] lg:mr-[470px]">
                   <FontAwesomeIcon icon={faClock} />
                   <span className="ml-2 -mt-1"> {content.date}</span>
                 </p>
-                <h4 className="font-bold text-[8px] mt-2 lg:mt-2 lg:text-[20px]">
+                <h4 className="font-bold text-[9px] mt-2 lg:mt-2 lg:text-[20px]">
                   <Link to={content.link}>{content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}</Link>
                 </h4>
                 <p className="text-gray-500 mt-1 text-[9px] lg:text-[17px] dark:text-white">
                   <Link to={content.link}>{content.description.length > 130 ? content.description.slice(0, 130) + "..." : content.description}</Link>
                 </p>
                 <hr className="my-2" />
-                <div className="hidden md:hidden lg:block translate-y-3">
-                  <p className=" -translate-y-2 lg:ml-0 ml-2 text-[7px] mr-4  lg:text-[16px]">
-                    <Link className=" lg:text-green-500 text-white rounded-lg" to={content.link}>
+                <div className="translate-y-3">
+                  <p className="-translate-y-4 text-[9px] mr-4  lg:text-[16px]">
+                    <Link className=" text-green-500 rounded-lg" to={content.link}>
                       Selengkapnya
                     </Link>
                   </p>

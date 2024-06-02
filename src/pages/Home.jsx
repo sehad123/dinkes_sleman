@@ -16,7 +16,7 @@ const Home = () => {
     // Hapus pop-up setelah 3 detik
     const popupTimeout = setTimeout(() => {
       setOrderPopup(false);
-    }, 2000);
+    }, 0);
 
     // Membersihkan timeout saat komponen dibongkar
     return () => clearTimeout(popupTimeout);

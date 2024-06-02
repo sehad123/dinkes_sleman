@@ -21,7 +21,7 @@ const Artikel2 = () => {
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
             <div className="my-6 cursor-pointer lg:ml-52">
-              <img src={Image} className="w-[750px] h-[500px]" />
+              <img src={Image} className="w-[750px] h-auto" />
             </div>
           </div>
           <div className="container lg:px-28 pt-10">
