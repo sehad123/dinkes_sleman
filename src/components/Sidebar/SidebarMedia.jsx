@@ -41,13 +41,13 @@ const SidebarMedia = ({ title, sidebarStyle }) => {
     >
       <div className={`bg-white dark:bg-gray-900 w-64 mx-6 flex flex-col h-full py-4 ${sidebarStyle}`}>
         <div className={` flex justify-between items-center px-4 ${!isSidebarOpen ? "ml-0" : ""}`}>
-          <div className="text-3xl font-semibold mb-2 mx-auto">{title}</div>
+          <div className="text-2xl font-bold mb-2 mx-auto">{title}</div>
         </div>
         <div className={` dark:bg-gray-900 transition-all duration-300 ${isSidebarOpen ? "" : "hidden"} ${isSidebarOpen ? "bg-white" : "bg-gray-800"} ${!isSidebarOpen ? "-ml-64 " : ""}`}>
-          <ul className="text-xl">
+          <ul className="text-lg">
             {menuItems.map((menuItem, index) => (
-              <li key={index} className={`px-4 my-6  py-2 ${location.pathname === menuItem.link ? "bg-gray-300 rounded-lg dark:bg-gray-700" : "hover:bg-gray-300 hover:rounded-lg dark:hover:bg-gray-700"}`}>
-                <Link to={menuItem.link} className={`block ${location.pathname === menuItem.link ? "text-gray-800 dark:text-gray-200 ml-16" : "text-gray-600 dark:text-white ml-16"}`}>
+              <li key={index} className={`px-4 my-6 py-2 ${location.pathname === menuItem.link ? "bg-blue-400 rounded-lg dark:bg-gray-700" : "hover:bg-blue-400  hover:rounded-lg dark:hover:bg-gray-700 hover:text-white"}`}>
+                <Link to={menuItem.link} className={`block ${location.pathname === menuItem.link ? "text-white ml-20 font-semibold dark:text-gray-200" : "text-gray-600 hover:text-white hover:font-semibold ml-20  dark:text-white"}`}>
                   {menuItem.name}
                 </Link>
               </li>

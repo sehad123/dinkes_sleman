@@ -150,7 +150,7 @@ const Berita = () => {
                 <input
                   type="text"
                   placeholder=""
-                  className="w-[200px] mb-4 group-hover:w-[150px] transition-all duration-300 border border-gray-900 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary bg-gray-300 text-black dark:border-gray-500 dark:bg-gray-700 dark:text-white"
+                  className="w-[200px] mb-4 group-hover:w-[150px] transition-all duration-300 border border-gray-900 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary bg-white text-black dark:border-gray-500 dark:bg-gray-700 dark:text-white"
                 />
               </form>
               <div className=" -translate-y-4">
@@ -163,7 +163,7 @@ const Berita = () => {
             <h1 className="font-bold my-1 text-[15px]">Tahun</h1>
 
             <div className="relative inline-block w-[200px] lg:mr-[100px]">
-              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-gray-300 dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
+              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-white dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
                 {/* Options */}
                 <option value="">Pilih Tahun</option>
                 <option value="0">2024</option>
@@ -187,7 +187,7 @@ const Berita = () => {
             <h1 className="font-bold my-1 text-[15px]">Bulan</h1>
 
             <div className="relative inline-block w-[200px] lg:mr-[100px]">
-              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-gray-300 dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
+              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-white dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
                 {/* Options */}
                 <option value="january">January</option>
                 <option value="february">February</option>
@@ -215,7 +215,7 @@ const Berita = () => {
             <h1 className="font-bold my-1 text-[15px]">Urutkan Berdasarkan</h1>
 
             <div className="relative inline-block w-[200px] lg:mr-[100px]">
-              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-gray-300 dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
+              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-white dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
                 {/* Options */}
                 <option value="february">Terbaru</option>
                 <option value="february">Terlama</option>
@@ -229,7 +229,7 @@ const Berita = () => {
             </div>
           </div>
 
-          <button className="w-[200px] h-[30px] lg:mb-4 mb-20 transition-all duration-300 border rounded-lg mt-6 lg:-translate-x-12 px-2 focus:outline-none focus:border-1 text-gray-100 pb-3 focus:border-primary bg-green-600 dark:border-gray-500 dark:bg-gray-700 dark:text-white">
+          <button className="w-[200px] h-[35px] pt-1 mb-20 transition-all duration-300 border rounded-lg mt-6 lg:-translate-x-12 px-2 focus:outline-none focus:border-1 text-gray-100 pb-3 focus:border-primary bg-blue-600 dark:border-gray-500 dark:bg-gray-700 dark:text-white">
             Tampilkan
           </button>
         </div>
@@ -265,7 +265,7 @@ const Berita = () => {
                 <hr className="my-2" />
                 <div className="translate-y-3">
                   <p className="-translate-y-4 text-[9px] mr-4  lg:text-[16px]">
-                    <Link className=" text-green-500 rounded-lg" to={content.link}>
+                    <Link className=" text-blue-500 rounded-lg" to={content.link}>
                       Selengkapnya
                     </Link>
                   </p>

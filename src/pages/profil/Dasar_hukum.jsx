@@ -11,7 +11,7 @@ const Dasar_hukum = () => {
       <div className="py-10">
         <div className="container">
           {/* header section */}
-          <div className="text-center mb-4 max-w-[600px] lg:ml-42 mx-auto">
+          <div className="text-center mb-4 max-w-[600px] lg:ml-[75px] mx-auto">
             <h1 data-aos="fade-up" className="text-3xl font-bold">
               Dasar Hukum
             </h1>
