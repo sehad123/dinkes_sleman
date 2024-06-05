@@ -96,6 +96,9 @@ import Chart from "chart.js";
 
 const PopulationPyramid = () => {
   useEffect(() => {
+    window.scrollTo(0, 0); // Bergulir ke paling atas saat halaman dimuat
+  }, []);
+  useEffect(() => {
     const data = {
       labels: ["0-4", "10-14", "20-24", "30-34", "40-44", "50-54", "60-64", "70-74"],
       males: [1000, 1200, 1300, 1400, 1500, 1400, 1300, 1200, 1100, 1000, 900, 800, 700],
