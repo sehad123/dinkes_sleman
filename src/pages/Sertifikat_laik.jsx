@@ -6,9 +6,9 @@ import Form from "../components/Form/Form";
 
 const Sertifikat_laik = () => {
   return (
-    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 w-screen">
+    <div className="lg:translate-x-0 translate-x-16 bg-white dark:bg-gray-900 dark:text-white duration-200 w-screen lg:w-full">
       <div className="py-10 dark:py-20">
-        <div className="container">
+        <div>
           {/* header section */}
           <div className="text-center mb-10 max-w-[600px] mx-auto">
             <h1 data-aos="fade-up" className="text-2xl font-bold">

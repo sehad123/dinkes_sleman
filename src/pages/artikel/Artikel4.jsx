@@ -23,10 +23,10 @@ const Artikel4 = () => {
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
             <div className="my-6 cursor-pointer lg:ml-52">
-              <img src={Image} className="w-[750px] h-[500px]" />
+              <img src={Image} className="w-[750px] h-auto" />
             </div>
           </div>
-          <div className="container lg:px-40">
+          <div className="container lg:px-40 text-justify">
             <p data-aos="zoom-in">
               Senin (22/4) Kepala Dinas Kesehatan Kabupaten Sleman, dr. Cahya Purnama, M.Kes membuka secara resmi Orientasi Integrasi Pelayanan Kesehatan Primer bagi Tenaga Kesehatan Puskesmas se Kabupaten Sleman di The Alana Yogyakarta
               Hotel & Convention Center. Acara yang diselenggarakan Tim Kerja Promosi Kesehatan dan Takelmas Bidang Kesehatan Masyarakat berlangsung selama lima hari mulai tanggal 22-26 April 2024. Dalam sambutan pengarahan, Kepala Dinas
@@ -44,16 +44,16 @@ const Artikel4 = () => {
             </p>
           </div>
           <div data-aos="zoom-in" className="grid grid-cols-1 lg:grid-cols-2 -gap-2 my-10 px-10">
-            <div className="my-6 cursor-pointer lg:ml-20">
+            <div className="my-6 cursor-pointer lg:ml-10">
               <img src={Image2} className="w-[750px] h-[300]" />
             </div>
-            <div className="my-6 cursor-pointer lg:ml-20">
+            <div className="my-6 cursor-pointer lg:ml-10">
               <img src={Image3} className="w-[750px] h-[300]" />
             </div>
-            <div className="my-6 cursor-pointer lg:ml-20">
+            <div className="my-6 cursor-pointer lg:ml-10">
               <img src={Image4} className="w-[750px] h-[300]" />
             </div>
-            <div className="my-6 cursor-pointer lg:ml-20">
+            <div className="my-6 cursor-pointer lg:ml-10">
               <img src={Image5} className="w-[750px] h-[300]" />
             </div>
           </div>

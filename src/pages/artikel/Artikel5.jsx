@@ -6,7 +6,7 @@ const Artikel5 = () => {
     window.scrollTo(0, 0); // Bergulir ke paling atas saat halaman dimuat
   }, []);
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200">
       <div className="py-10">
         <div className="container">
           {/* header section */}
@@ -19,7 +19,7 @@ const Artikel5 = () => {
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
             <div className="my-6 cursor-pointer lg:ml-52">
-              <img src={Image} className="w-[750px] h-[500px]" />
+              <img src={Image} className="w-[750px] h-auto" />
             </div>
           </div>
           <div className="container lg:px-48">

@@ -144,7 +144,7 @@ const Fasilitas_kesehatan = () => {
   const paginate2 = (pageNumber) => setCurrentPage2(pageNumber);
 
   return (
-    <div className="bg-white ml-24 dark:bg-gray-900 dark:text-white duration-200 ">
+    <div className="bg-white ml-24 dark:pl-24 dark:ml-0 dark:pr-4 dark:bg-gray-900 dark:text-white duration-200 ">
       <div className="py-10">
         <div className="container">
           {/* header section */}
@@ -222,7 +222,7 @@ const Fasilitas_kesehatan = () => {
             </div>
           </div>
 
-          <div className="container mx-auto px-4 py-20 ml-2 ">
+          <div className="container lg:mx-auto lg:px-4 py-20 pl-12 ">
             <h3 className="font-bold text-xl text-center mb-10"> Fasilitas Kesehatan</h3>
             <div data-aos="fade-up" className="container w-max grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 lg:gap-14 gap-4">
               {Menu1.map((content, index) => (

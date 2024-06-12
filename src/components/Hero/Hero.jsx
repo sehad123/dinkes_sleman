@@ -9,23 +9,23 @@ const ImageList = [
   {
     id: 1,
     img: Image2,
-    title: "Implementasikan PKAT, Dinkes Sleman Raih Apresiasi Kemenkes RI",
-    description: "Sebagai wujud apresiasi atas penyelenggaraan Pemeriksaan Kesehatan Anak Terintegrasi (PKAT), Dinas Kesehatan Kabupaten Sleman sukses raih penghargaan dari Kementerian Kesehatan...",
-    link: "/artikel1",
+    title: "Tingkatkan Kapasitas Puskesmas, Dinkes Sleman Selenggarakan Orientasi Integrasi Pelayanan Kesehatan Primer",
+    description: "Senin (22/4) Kepala Dinas Kesehatan Kabupaten Sleman, dr. Cahya Purnama, M.Kes membuka secara resmi Orientasi Integrasi Pelayanan Kesehatan Primer bagi...",
+    link: "/artikel4",
   },
   {
     id: 2,
     img: Image1,
-    title: "Empat Tenaga Kesehatan Sleman Raih Juara Nakesdan Tingkat DIY Tahun 2024",
-    description: "Prestasi membanggakan kembali diraih Tenaga Kesehatan Kabupaten Sleman pada tahun 2024. Sebanyak empat orang sabet Juara I Tenaga Kesehatan Teladan...",
-    link: "/artikel2", // tambahkan link
+    title: "Selamat Hari Raya Idul Fitri 1445 H",
+    description: "Kepala Dinas Kesehatan Kabupaten Sleman beserta seluruh jajaran menghaturkan Selamat Hari Raya Idul Fitri 1445 H. Mohon maaf lahir dan...",
+    link: "/artikel5",
   },
   {
     id: 3,
     img: Image3,
-    title: "Tingkatkan Kapasitas Puskesmas, Dinkes Sleman Selenggarakan Orientasi Integrasi Pelayanan Kesehatan Primer",
-    description: "Kepala Dinas Kesehatan Kabupaten Sleman, dr. Cahya Purnama, M.Kes membuka secara resmi Orientasi Integrasi Pelayanan Kesehatan Primer bagi...",
-    link: "/artikel3", // tambahkan link
+    title: "Dialog Interaktif Tetap Sehat dan Bugar Saat Lebaran",
+    description: "Mudik pada Hari Raya Idul Fitri merupakan fenomena yang umumnya terjadi di Indonesia. Kabupaten Sleman menjadi salah satu tujuan mudik...",
+    link: "/artikel6",
   },
 ];
 

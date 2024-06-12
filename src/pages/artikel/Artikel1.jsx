@@ -19,11 +19,11 @@ const Artikel1 = () => {
 
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
-            <div className="my-6 cursor-pointer lg:ml-52">
-              <img src={Image} className="w-[750px] h-[500px]" />
+            <div className="my-6 cursor-pointer lg:ml-56">
+              <img src={Image} className="w-[750px] h-auto" />
             </div>
           </div>
-          <div className="container lg:px-28">
+          <div className="container lg:px-28 text-justify">
             <p data-aos="zoom-in">
               Sebagai wujud apresiasi atas penyelenggaraan Pemeriksaan Kesehatan Anak Terintegrasi (PKAT), Dinas Kesehatan Kabupaten Sleman sukses raih penghargaan dari Kementerian Kesehatan (Kemenkes) RI. Piagam penghargaan bernomor KG.
               02.06/BIII/814/2024 tertanggal 27 Februari 2024 tersebut ditandatangani oleh Direktur Gizi dan Kesehatan Ibu dan Anak Kemenkes RI, dr Lovely Daisy MKM di Jakarta. Apresiasi tersebut diraih karena keberhasilan Dinas Kesehatan
@@ -39,7 +39,7 @@ const Artikel1 = () => {
             </p>
           </div>
           <div data-aos="zoom-in">
-            <div className="my-6 cursor-pointer lg:ml-52">
+            <div className="my-6 cursor-pointer lg:ml-60">
               <img src={Image2} className="w-[750px] h-[500px]" />
             </div>
           </div>

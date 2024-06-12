@@ -19,11 +19,11 @@ const Artikel6 = () => {
 
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
-            <div className="my-6 cursor-pointer lg:ml-52">
-              <img src={Image} className="w-[750px] h-[500px]" />
+            <div className="my-6 cursor-pointer lg:ml-56">
+              <img src={Image} className="w-[750px] h-auto" />
             </div>
           </div>
-          <div className="container lg:px-24">
+          <div className="container lg:px-24 text-justify mt-10">
             <p data-aos="zoom-in">
               Mudik pada Hari Raya Idul Fitri merupakan fenomena yang umumnya terjadi di Indonesia. Kabupaten Sleman menjadi salah satu tujuan mudik dari para perantau. Berdasarkan estimasi Dinas Perhubungan DIY jumlah pemudik yang masuk ke
               wilayah DIY tahun 2024 ini dapat mencapai 8,7 juta orang atau meningkat sekitar enam persen dibanding lebaran sebelumnya. Secara serentak jutaan orang berbondong-bondong pulang ke kampung halaman masing-masing untuk bersua dan

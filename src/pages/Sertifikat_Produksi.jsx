@@ -4,7 +4,7 @@ import Image2 from "../assets/zona_integrasi.jpeg";
 
 const Sertifikat_Produksi = () => {
   return (
-    <div className="lg:translate-x-0 translate-x-16 bg-white dark:bg-gray-900 dark:text-white duration-200 w-screen">
+    <div className="lg:translate-x-0 translate-x-16 bg-white dark:bg-gray-900 dark:text-white duration-200 w-screen lg:w-full">
       <div className="py-10 dark:py-20">
         <div className="container">
           {/* header section */}

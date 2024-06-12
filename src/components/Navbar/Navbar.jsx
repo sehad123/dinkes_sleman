@@ -424,7 +424,7 @@ const Menu1 = [
   },
   {
     name: "Sertifikat",
-    link: "/##",
+    link: "/####",
     dropdown: [
       {
         name: "Sertifikat Produksi",

@@ -49,16 +49,16 @@ const Banner = () => {
     //   image: Artikel5,
     //   title: "Selamat Hari Raya Idul Fitri 1445 H",
     //   description: "Kepala Dinas Kesehatan Kabupaten Sleman beserta seluruh jajaran menghaturkan Selamat Hari Raya Idul Fitri 1445 H. Mohon maaf lahir dan...",
-    //   date: "16 April 2024",
     //   link: "/artikel5",
+    //   date: "16 April 2024",
     // },
     // {
     //   id: 6,
     //   image: Artikel6,
     //   title: "Dialog Interaktif Tetap Sehat dan Bugar Saat Lebaran",
     //   description: "Mudik pada Hari Raya Idul Fitri merupakan fenomena yang umumnya terjadi di Indonesia. Kabupaten Sleman menjadi salah satu tujuan mudik...",
-    //   date: "4 April 2024",
     //   link: "/artikel6",
+    //   date: "4 April 2024",
     // },
   ];
 

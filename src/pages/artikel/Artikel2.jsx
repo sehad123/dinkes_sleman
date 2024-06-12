@@ -20,11 +20,11 @@ const Artikel2 = () => {
 
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
-            <div className="my-6 cursor-pointer lg:ml-52">
+            <div className="my-6 cursor-pointer lg:ml-56">
               <img src={Image} className="w-[750px] h-auto" />
             </div>
           </div>
-          <div className="container lg:px-28 pt-10">
+          <div className="container lg:px-28 pt-10 text-justify">
             <p data-aos="zoom-in">
               Prestasi membanggakan kembali diraih Tenaga Kesehatan Kabupaten Sleman pada tahun 2024. Sebanyak empat orang sabet Juara I Tenaga Kesehatan Teladan (Nakesdan) Tingkat Daerah Istimewa Yogyakarta. Sebanyak tiga orang dari
               Puskesmas sedangkan satu orang perwakilan dari rumah sakit. Adapun nama Nakesdan yang dimaksud adalah Umi Khasanah,Str.Keb. Bidan Puskesmas Ngaglik 2, Puguh Darmawan,ST Tenaga Sanitasi Lingkungan Puskesmas Cangkringan, Siti

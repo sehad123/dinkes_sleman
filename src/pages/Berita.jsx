@@ -150,7 +150,7 @@ const Berita = () => {
                 <input
                   type="text"
                   placeholder=""
-                  className="w-[200px] mb-4 group-hover:w-[150px] transition-all duration-300 border border-gray-900 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary bg-white text-black dark:border-gray-500 dark:bg-gray-700 dark:text-white"
+                  className="w-[200px] mb-4 group-hover:w-[150px] transition-all duration-300 border border-gray-900 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary bg-white text-black dark:border-gray-500 dark:bg-white dark:text-white"
                 />
               </form>
               <div className=" -translate-y-4">
@@ -229,12 +229,12 @@ const Berita = () => {
             </div>
           </div>
 
-          <button className="w-[200px] h-[35px] pt-1 mb-20 transition-all duration-300 border rounded-lg mt-6 lg:-translate-x-12 px-2 focus:outline-none focus:border-1 text-gray-100 pb-3 focus:border-primary bg-blue-600 dark:border-gray-500 dark:bg-gray-700 dark:text-white">
+          <button className="w-[200px]   h-[35px] pt-1 mb-20 transition-all duration-300 border rounded-lg mt-6 lg:-translate-x-12 px-2 focus:outline-none focus:border-1 text-gray-100 pb-3 focus:border-primary bg-blue-600  dark:border-gray-500 dark:bg-blue-600 dark:text-white">
             Tampilkan
           </button>
         </div>
 
-        <div className="container grid grid-cols-1 gap-8 sm:grid-cols-1 lg:grid-cols-1 lg:-translate-x-[450px]">
+        <div className="container grid grid-cols-1 mt-2 mb-4 gap-8 sm:grid-cols-1 lg:grid-cols-1 lg:-translate-x-[450px]">
           {/* Mapping data untuk membuat container */}
           {currentItems.map((content) => (
             <div
@@ -276,7 +276,7 @@ const Berita = () => {
         </div>
         {/* Pagination */}
         {!isMobile && totalPages > 1 && (
-          <div className="flex justify-center lg:ml-[700px] lg:-mt-3 mt-5">
+          <div className="flex justify-center lg:ml-[700px] lg:-mt-20 mt-5">
             <nav>
               <ul className="flex items-center">
                 {Array.from({ length: totalPages }, (_, i) => (
