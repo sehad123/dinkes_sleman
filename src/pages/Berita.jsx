@@ -139,7 +139,7 @@ const Berita = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 py-10 lg:w-[90%]">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 py-10 lg:w-[90%] pl-16">
       <div data-aos="fade-up" className="container grid lg:grid-cols-2 grid-cols-1 justify-start items-start ">
         <div className="flex flex-col justify-end items-center mt-5 lg:-translate-y-6 lg:ml-10 ml-20 lg:mr-0 mr-4 lg:-space-x-24 lg:gap-2 gap-2 lg:-translate-x-36">
           <div className="lg:mr-48">

@@ -3,7 +3,7 @@ import React from "react";
 const Lkjp = () => {
   return (
     <div
-      className="my-10 lg:h-[500px] lg:w-[850px] w-screen border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"
+      className="my-10 lg:h-[500px] lg:w-[90%] w-screen border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       {" "}
