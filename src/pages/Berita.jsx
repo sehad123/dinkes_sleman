@@ -11,8 +11,9 @@ import { Link } from "react-router-dom";
 
 const Berita = () => {
   const [selectedMonth, setSelectedMonth] = useState(""); // State untuk menyimpan bulan yang dipilih
-  const [selectedDays, setSelectedDays] = useState(""); // State untuk menyimpan bulan yang dipilih
-  const [selectedYear, setSelectedYear] = useState(""); // State untuk menyimpan bulan yang dipilih
+  const [selectedDays, setSelectedDays] = useState(""); // State untuk menyimpan hari yang dipilih
+  const [selectedYear, setSelectedYear] = useState(""); // State untuk menyimpan tahun yang dipilih
+  const [sortOrder, setSortOrder] = useState(""); // State untuk mengurutkan konten
   const [isMobile, setIsMobile] = useState(false); // State untuk mendeteksi tampilan mobile
 
   useEffect(() => {
@@ -32,6 +33,7 @@ const Berita = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   // Data untuk setiap konten
   const contents = [
     {
@@ -50,7 +52,6 @@ const Berita = () => {
       date: "Selasa, 12 Februari 2024",
       link: "/artikel2",
     },
-
     {
       id: 3,
       image: Artikel4,
@@ -85,30 +86,6 @@ const Berita = () => {
     },
   ];
 
-  // Filter konten berdasarkan bulan yang dipilih
-  const filteredContents = selectedMonth
-    ? contents.filter((content) => {
-        const month = new Date(content.date).getMonth();
-        return month.toString() === selectedMonth;
-      })
-    : contents;
-
-  // Fungsi untuk mengatur state ketika pengguna memilih bulan
-  const handleMonthChange = (event) => {
-    setSelectedMonth(event.target.value);
-  };
-  // Filter konten berdasarkan hari yang dipilih
-  const filteredContentsDay = selectedDays
-    ? contents.filter((content) => {
-        const day = new Date(content.date).getDay();
-        return day.toString() === selectedDays;
-      })
-    : contents;
-
-  // Fungsi untuk mengatur state ketika pengguna memilih hari
-  const handleDayChange = (event) => {
-    setSelectedDays(event.target.value);
-  };
   // Filter konten berdasarkan tahun yang dipilih
   const filteredContentsYear = selectedYear
     ? contents.filter((content) => {
@@ -117,25 +94,67 @@ const Berita = () => {
       })
     : contents;
 
+  // Filter konten berdasarkan bulan yang dipilih
+  const filteredContentsMonth = selectedMonth
+    ? filteredContentsYear.filter((content) => {
+        const month = new Date(content.date).getMonth();
+        return month.toString() === selectedMonth;
+      })
+    : filteredContentsYear;
+
+  // Filter konten berdasarkan hari yang dipilih
+  const filteredContentsDay = selectedDays
+    ? filteredContentsMonth.filter((content) => {
+        const day = new Date(content.date).getDay();
+        return day.toString() === selectedDays;
+      })
+    : filteredContentsMonth;
+
+  // Mengurutkan konten berdasarkan urutan yang dipilih
+  const sortedContents = sortOrder
+    ? [...filteredContentsDay].sort((a, b) => {
+        if (sortOrder === "Terbaru") {
+          return new Date(b.date) - new Date(a.date);
+        } else {
+          return new Date(a.date) - new Date(b.date);
+        }
+      })
+    : filteredContentsDay;
+
+  // Fungsi untuk mengatur state ketika pengguna memilih bulan
+  const handleMonthChange = (event) => {
+    setSelectedMonth(event.target.value);
+  };
+
+  // Fungsi untuk mengatur state ketika pengguna memilih hari
+  const handleDayChange = (event) => {
+    setSelectedDays(event.target.value);
+  };
+
   // Fungsi untuk mengatur state ketika pengguna memilih tahun
   const handleYearChange = (event) => {
     setSelectedYear(event.target.value);
   };
 
+  // Fungsi untuk mengatur state ketika pengguna memilih urutan
+  const handleSortChange = (event) => {
+    setSortOrder(event.target.value);
+  };
+
   // State untuk pagination
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 2;
-  const totalPages = Math.ceil(filteredContents.length / itemsPerPage);
+  const totalPages = Math.ceil(sortedContents.length / itemsPerPage);
 
   // Menghitung indeks konten untuk halaman saat ini
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = isMobile ? filteredContents.slice(indexOfFirstItem, indexOfLastItem) : filteredContents.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = sortedContents.slice(indexOfFirstItem, indexOfLastItem);
 
   // Fungsi untuk mengubah halaman
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    // window.scrollTo(0, 0); // Mengatur tampilan layar dan posisi pengguna ke paling atas
+    window.scrollTo(0, 0); // Mengatur tampilan layar dan posisi pengguna ke paling atas
   };
 
   return (
@@ -233,7 +252,7 @@ const Berita = () => {
             <div
               data-aos="fade-up"
               key={content.id}
-              className="border rounded-3xl dark:border-white lg:h-[210px] h-[190px] lg:w-[900px] w-[100%] lg:p-4 lg:px-0 px-4 lg:ml-28"
+              className="border rounded-3xl dark:border-white lg:h-[210px] h-[190px] lg:w-[900px] w-[100%] lg:p-4 lg:px-0 px-4 mb-10 lg:ml-28"
               style={{ boxShadow: "10px 10px 12px rgba(0, 0, 0, 0.1)" }} // Menambahkan shadow
             >
               {/* Konten artikel */}
@@ -269,7 +288,7 @@ const Berita = () => {
         </div>
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center lg:ml-[700px] lg:-mt-20 mt-5 lg:-translate-x-20">
+          <div className="flex justify-center lg:ml-[700px] mb-10 lg:-translate-x-20">
             <nav>
               <ul className="flex items-center">
                 {Array.from({ length: totalPages }, (_, i) => (

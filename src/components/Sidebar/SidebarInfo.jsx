@@ -4,8 +4,7 @@ import { BsChevronDown } from "react-icons/bs";
 
 const SidebarInfo = ({ title, sidebarStyle }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [hoveredDropdown, setHoveredDropdown] = useState(null);
-  const [isHoveredSubMenu, setIsHoveredSubMenu] = useState(false);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
   const location = useLocation();
 
   const menuItems = [
@@ -43,6 +42,14 @@ const SidebarInfo = ({ title, sidebarStyle }) => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const handleDropdownClick = (index) => {
+    setOpenDropdownIndex(openDropdownIndex === index ? null : index);
+  };
+
+  const isSubmenuActive = (submenuItem) => {
+    return location.pathname === submenuItem.link;
+  };
+
   return (
     <div
       className={`bg-white mt-10 border rounded-xl mx-10 dark:bg-gray-900 dark:text-white duration-200 sidebar-wrapper ${
@@ -58,22 +65,49 @@ const SidebarInfo = ({ title, sidebarStyle }) => {
             {menuItems.map((menuItem, index) => (
               <li
                 key={index}
-                className={`relative px-4 py-2 my-6 ${location.pathname === menuItem.link ? "bg-blue-400 rounded-lg dark:bg-gray-700" : "hover:bg-blue-400 hover:font-semibold hover:rounded-lg dark:hover:bg-gray-700"}`}
-                onMouseEnter={() => setHoveredDropdown(index)}
-                onMouseLeave={() => setHoveredDropdown(null)}
+                className={`relative px-4 py-2 my-6 ${
+                  menuItem.dropdown
+                    ? ""
+                    : location.pathname === menuItem.link
+                    ? "bg-blue-400 rounded-lg dark:bg-gray-700"
+                    : "hover:font-semibold hover:rounded-lg dark:hover:bg-gray-700"
+                }`}
               >
                 <Link
                   to={menuItem.link}
-                  className={`block ${location.pathname === menuItem.link ? "text-white hover:text-white hover:font-semibold dark:hover:text-white font-semibold dark:text-gray-200" : "text-gray-600 hover:text-white dark:text-gray-400"}`}
+                  className={`block ${
+                    location.pathname === menuItem.link
+                      ? "text-white hover:font-semibold dark:hover:text-white font-semibold dark:text-gray-200"
+                      : "text-gray-600 dark:text-gray-400"
+                  }`}
+                  onClick={() => menuItem.dropdown && handleDropdownClick(index)}
                 >
                   {menuItem.name}
-                  {menuItem.dropdown && <BsChevronDown className={`absolute right-4 top-1/2 transform -translate-y-1/2 transition-opacity duration-200 ${hoveredDropdown === index ? "rotate-180" : ""}`} />}
+                  {menuItem.dropdown && (
+                    <BsChevronDown
+                      className={`absolute right-4 top-1/2 transform -translate-y-1/2 transition-transform duration-200 ${
+                        openDropdownIndex === index ? "rotate-180" : ""
+                      }`}
+                    />
+                  )}
                 </Link>
-                {menuItem.dropdown && hoveredDropdown === index && (
-                  <ul className="mt-2 bg-white dark:bg-gray-800 border border-blue-400 dark:border-gray-600 rounded-lg shadow-lg py-1" onMouseEnter={() => setIsHoveredSubMenu(true)} onMouseLeave={() => setIsHoveredSubMenu(false)}>
+                {menuItem.dropdown && openDropdownIndex === index && (
+                  <ul className="mt-2 bg-white dark:bg-gray-800 border border-white dark:border-gray-600 rounded-lg">
                     {menuItem.dropdown.map((submenuItem, submenuIndex) => (
-                      <li key={submenuIndex} className="px-4 py-2 hover:bg-gray-300 hover:rounded-lg">
-                        <Link to={submenuItem.link} className={`block ${location.pathname === submenuItem.link ? "text-gray-500 dark:text-gray-200" : "text-gray-500 dark:text-gray-400"}`}>
+                      <li
+                        key={submenuIndex}
+                        className={`px-4 py-2 hover:bg-gray-300 hover:rounded-lg ${
+                          isSubmenuActive(submenuItem) ? "bg-blue-400 rounded-lg dark:bg-gray-700" : ""
+                        }`}
+                      >
+                        <Link
+                          to={submenuItem.link}
+                          className={`block ${
+                            isSubmenuActive(submenuItem)
+                              ? "text-white hover:font-semibold dark:hover:text-white font-semibold dark:text-gray-200"
+                              : "text-gray-500 dark:text-gray-400"
+                          }`}
+                        >
                           {submenuItem.name}
                         </Link>
                       </li>
