@@ -513,7 +513,7 @@ const Navbar = () => {
     window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
   };
   return (
-    <div className="lg:shadow-md bg-white lg:h-[95px] h-[150px] dark:bg-gray-900 w-max lg:w-[100%] dark:text-white duration-200 relative z-40">
+    <div className="lg:shadow-md bg-white lg:h-[95px] h-[150px] dark:bg-gray-900 w-full lg:w-[100%] dark:text-white duration-200 relative z-40">
       <div className="lg:hidden block lg:px-10 bg-green-500 py-2 sm:h-[150px] lg:h-[130px] h-[120px]">
         <div className="container mt-3 sm: flex justify-between items-center lg:translate-y-0 -translate-y-40">
           <div>

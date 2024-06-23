@@ -176,13 +176,13 @@ const TestimonialData = [
 const Other = () => {
   return (
     <>
-      <div className=" lg:translate-x-0 translate-x-16 text-center mt-20 lg:mb-2 mb-10 max-w-[600px] mx-auto">
+      <div className="text-center mt-20 lg:mb-2 mb-10 max-w-[600px] mx-auto">
         <h1 data-aos="fade-up" className="text-3xl font-bold">
           Informasi Lainnya
         </h1>
         {/* Dropdown untuk memilih bulan */}
       </div>
-      <div className=" translate-x-16 container px-6 py-5 -mb-24 lg:-translate-x-24">
+      <div className=" container px-2 py-5 -mb-24 lg:-translate-x-24">
         <div data-aos="fade-up" className="container grid grid-cols-1 sm:grid-cols-2 gap-10">
           {/* Highlighted image */}
           <div className="lg:col-span-1 lg:w-[550px] lg:ml-44 w-[350px] lg:mt-6">
