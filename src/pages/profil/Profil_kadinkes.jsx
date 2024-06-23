@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "../../assets/kadinkes.jpg";
 
 const Profil_kadinkes = () => {
+  useEffect(() => {
+    // Check if the device is mobile
+    if (window.innerWidth <= 768) {
+      const middlePosition = (document.documentElement.scrollHeight - window.innerHeight) / 3;
+      window.scrollTo(0, middlePosition); // Scroll to the middle of the page
+    }
+  }, []);
   return (
     <div
       className="lg:h-[440px] h-[900px] my-10 lg:w-[90%] w-screen  border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"
@@ -19,7 +26,7 @@ const Profil_kadinkes = () => {
           {/* Testimonial cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 lg:gap-4 mt-6">
             <div className="flex justify-center">
-              <img src={Image} className="w-[250px] h-auto lg:ml-30 ml-12 mr-10" />
+              <img src={Image} className="w-[230px] h-auto lg:ml-0 ml-12 mr-10" />
             </div>
             {/* identitas */}
             <div className="lg:w-[400px] ml-10 mt-5 lg:-translate-x-24">

@@ -10,12 +10,12 @@ const Artikel4 = () => {
     window.scrollTo(0, 0); // Bergulir ke paling atas saat halaman dimuat
   }, []);
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 lg:mx-auto">
       <div className="py-10">
         <div className="container">
           {/* header section */}
           <div className="text-center mb-10 max-w-[600px] mx-auto">
-            <h1 data-aos="fade-up" className="text-3xl font-bold">
+            <h1 data-aos="fade-up" className="text-2xl font-bold">
               Tingkatkan Kapasitas Puskesmas, Dinkes Sleman Selenggarakan Orientasi Integrasi Pelayanan Kesehatan Primer{" "}
             </h1>
           </div>
@@ -26,7 +26,7 @@ const Artikel4 = () => {
               <img src={Image} className="w-[750px] h-auto" />
             </div>
           </div>
-          <div className="container lg:px-40 text-justify">
+          <div className="container lg:px-20 text-justify">
             <p data-aos="zoom-in">
               Senin (22/4) Kepala Dinas Kesehatan Kabupaten Sleman, dr. Cahya Purnama, M.Kes membuka secara resmi Orientasi Integrasi Pelayanan Kesehatan Primer bagi Tenaga Kesehatan Puskesmas se Kabupaten Sleman di The Alana Yogyakarta
               Hotel & Convention Center. Acara yang diselenggarakan Tim Kerja Promosi Kesehatan dan Takelmas Bidang Kesehatan Masyarakat berlangsung selama lima hari mulai tanggal 22-26 April 2024. Dalam sambutan pengarahan, Kepala Dinas

@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Tabel = () => {
+  useEffect(() => {
+    // Check if the device is mobile
+    if (window.innerWidth <= 768) {
+      const middlePosition = (document.documentElement.scrollHeight - window.innerHeight) / 3;
+      window.scrollTo(0, middlePosition); // Scroll to the middle of the page
+    }
+  }, []);
+
   return (
     <div
       className="lg:h-[450px] h-[500px] lg:w-[90%] w-screen border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"

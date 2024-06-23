@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import promosi1 from "../../assets/promosi/p1.jpg";
 import promosi2 from "../../assets/promosi/p2.png";
@@ -6,6 +6,13 @@ import promosi3 from "../../assets/promosi/p3.jpg";
 import promosi4 from "../../assets/promosi/p4.jpg";
 
 const Poster = () => {
+  useEffect(() => {
+    // Check if the device is mobile
+    if (window.innerWidth <= 768) {
+      const middlePosition = (document.documentElement.scrollHeight - window.innerHeight) / 3;
+      window.scrollTo(0, middlePosition); // Scroll to the middle of the page
+    }
+  }, []);
   const PromosiData = [
     {
       img: promosi1,
@@ -31,7 +38,7 @@ const Poster = () => {
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       {" "}
-      <div className="max-w-5xl ml-20 px-4 sm:px-6 lg:px-8 lg:ml-24 ">
+      <div className="max-w-5xl ml-5 px-4 sm:px-6 lg:px-8 lg:ml-24 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {PromosiData.map((data, index) => (
             <Link key={index} to={data.link}>

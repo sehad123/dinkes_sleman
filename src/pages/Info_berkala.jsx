@@ -167,7 +167,7 @@ const Info_berkala = () => {
           <br />
           <br />
           <br />
-          <div className="container grid grid-cols-1 pl-10 md:grid-cols-2 gap-6">
+          <div className="container grid grid-cols-1 pl-5 md:grid-cols-2 gap-6">
             <div className="flex flex-col">
               <p className="font-bold text-lg text-center">Laporan Tahunan</p>
               <div data-aos="zoom-in" className="flex flex-wrap lg:justify-start ml-6 lg:ml-0">

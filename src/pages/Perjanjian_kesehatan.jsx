@@ -16,7 +16,7 @@ const data = [
 
 const Perjanjian_kesehatan = () => {
   return (
-    <div className="bg-white dark:bg-gray-900 dark:pr-[285px] dark:text-white duration-200 w-screen lg:w-full ">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 w-screen lg:w-full ">
       <div className="py-10 dark:py-20">
         <div className="container">
           {/* header section */}
@@ -28,49 +28,11 @@ const Perjanjian_kesehatan = () => {
 
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
-            <div className=" lg:ml-[250px]">
+            <div className=" lg:flex justify-center">
               <img src={Image} className="lg:w-[600px] h-auto w-screen" alt="Perjanjian Kesehatan" />
             </div>
           </div>
 
-          {/* Dasar Hukum section */}
-          {/* <div className="lg:w-[600px] w-[110%] lg:ml-[250px] mt-20">
-            <h4 className="font-bold text-[19px] my-10 text-center">Peraturan Terkait Kesehatan</h4>
-            <table className="w-full border-collapse border border-gray-400">
-              <thead className="bg-gray-300 dark:bg-gray-900">
-                {" "}
-                <tr>
-                  <th className="text-center border border-gray-400 px-4 py-2">No</th>
-                  <th className="text-center border border-gray-400 px-4 py-2">Nama</th>
-                  <th className="text-center border border-gray-400 px-4 py-2">Aksi</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">1</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="" href="#">
-                      PERATURAN BUPATI SLEMAN NOMOR 7 TAHUN 2018 TENTANG KEWENANGAN PENYELENGGARAAN PERIZINAN
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-400 px-4 py-2">2</td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <a className="" href="#">
-                      PERATURAN MENTERI KESEHATAN REPUBLIK INDONESIA NOMOR 2052/MENKES/PER/X/2011 TENTANG IZIN PRAKTIK DAN PELAKSANAAN PRAKTIK KEDOKTERAN
-                    </a>
-                  </td>
-                  <td className="border border-gray-400 px-4 py-2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div> */}
           {/* Layanan Kesehatan section */}
           <div className="lg:w-[600px] w-[100%] lg:mx-auto mt-20">
             <h4 className="font-bold text-[19px] my-10 text-center">Standar Pelayanan Kesehatan</h4>

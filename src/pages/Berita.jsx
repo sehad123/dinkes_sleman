@@ -139,9 +139,9 @@ const Berita = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 py-10 lg:w-[90%] lg:pl-16">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 pt-10 lg:w-[90%] dark:lg:w-full lg:pl-20">
       <div data-aos="fade-up" className="container grid lg:grid-cols-2 grid-cols-1 justify-start items-start ">
-        <div className="flex flex-col justify-end items-center mt-5 lg:-translate-y-6 lg:ml-10 ml-20 lg:mr-0 mr-4 lg:-space-x-24 lg:gap-2 gap-2 lg:-translate-x-36">
+        <div className="flex flex-col justify-end items-center mt-5 lg:-translate-y-6 lg:ml-10 ml-6 lg:mr-0 mr-4 lg:-space-x-24 lg:gap-2 gap-2 lg:-translate-x-36">
           <div className="lg:mr-48">
             <h1 className="font-bold mb-7 text-xl ml-10">Filter berita</h1>
             <div>
@@ -233,31 +233,31 @@ const Berita = () => {
             <div
               data-aos="fade-up"
               key={content.id}
-              className="border rounded-3xl dark:border-white lg:h-[210px] h-[190px] lg:w-[1000px] w-[100%] lg:p-4 lg:px-0 px-4 lg:ml-10"
+              className="border rounded-3xl dark:border-white lg:h-[210px] h-[190px] lg:w-[900px] w-[100%] lg:p-4 lg:px-0 px-4 lg:ml-28"
               style={{ boxShadow: "10px 10px 12px rgba(0, 0, 0, 0.1)" }} // Menambahkan shadow
             >
               {/* Konten artikel */}
               <div className="relative">
                 <Link to={content.link}>
-                  <img src={content.image} alt="" className="lg:w-[180px] w-[150px] lg:h-[170px] h-[140px] mt-5 lg:ml-5 pr-2 lg:mt-0 object-cover absolute lg:top-0 lg:left-0 " />
+                  <img src={content.image} alt="" className="lg:w-[180px] w-[150px] lg:h-[170px] h-[150px] mt-3 lg:ml-5 pr-2 lg:mt-0 object-cover absolute lg:top-0 lg:left-0 " />
                 </Link>
               </div>
 
               {/* Text details section */}
-              <div className=" lg:pl-[220px] pl-[150px] pr-2 w-[100%]lg:mt-0 mt-4">
+              <div className=" lg:pl-[220px] pl-[150px] pr-2 w-[100%]lg:mt-0 mt-2">
                 <p className="lg:flex text-[9px] lg:text-[15px] lg:mr-[470px]">
                   <FontAwesomeIcon icon={faClock} />
                   <span className="ml-2 -mt-1"> {content.date}</span>
                 </p>
-                <h4 className="font-bold text-[9px] mt-2 lg:mt-2 lg:text-[20px]">
+                <h4 className="font-bold text-[9px] lg:mt-2 lg:text-[20px]">
                   <Link to={content.link}>{content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}</Link>
                 </h4>
                 <p className="text-gray-500 mt-1 text-[9px] lg:text-[17px] dark:text-white">
-                  <Link to={content.link}>{content.description.length > 130 ? content.description.slice(0, 130) + "..." : content.description}</Link>
+                  <Link to={content.link}>{content.description.length > 130 ? content.description.slice(0, 120) + "..." : content.description}</Link>
                 </p>
                 <hr className="my-2" />
-                <div className="translate-y-3">
-                  <p className="-translate-y-4 text-[9px] mr-4  lg:text-[16px]">
+                <div className="translate-y-2">
+                  <p className="-translate-y-4 text-[9px] mr-4 lg:text-[16px]">
                     <Link className=" text-blue-500 rounded-lg" to={content.link}>
                       Selengkapnya
                     </Link>
@@ -269,7 +269,7 @@ const Berita = () => {
         </div>
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center lg:ml-[700px] lg:-mt-20 mt-5">
+          <div className="flex justify-center lg:ml-[700px] lg:-mt-20 mt-5 lg:-translate-x-20">
             <nav>
               <ul className="flex items-center">
                 {Array.from({ length: totalPages }, (_, i) => (

@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Perbup = () => {
+  useEffect(() => {
+    // Check if the device is mobile
+    if (window.innerWidth <= 768) {
+      const middlePosition = (document.documentElement.scrollHeight - window.innerHeight) / 2.5;
+      window.scrollTo(0, middlePosition); // Scroll to the middle of the page
+    }
+  }, []);
   return (
     <div
       className="my-10 lg:h-[500px] lg:w-[90%] w-screen border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"
@@ -10,7 +17,7 @@ const Perbup = () => {
       <div className="flex items-center justify-center w-max container">
         <div className="lg:w-[600px] w-[380px]">
           <h4 className="font-bold text-[19px] my-5 text-center">Peraturan Bupati (PERBUP)</h4>
-          <table className="w-full border-collapse border border-gray-400 mb-10">
+          <table className="lg:w-full w-[94%] border-collapse border border-gray-400 mb-10">
             <thead className="bg-gray-300 dark:bg-gray-900">
               {" "}
               <tr>

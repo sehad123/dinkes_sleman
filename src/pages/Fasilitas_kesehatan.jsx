@@ -151,7 +151,7 @@ const Fasilitas_kesehatan = () => {
           <HeroFasilitas />
           {/* Testimonial cards */}
           <div className="grid grid-cols-1 lg:grid-cols-1 mt-10 lg:ml-64">
-            <div className="lg:w-[600px] w-[400px]">
+            <div className="lg:w-[600px] w-[350px]">
               <h4 data-aos="zoom-in" className="font-bold text-[18px] my-10 text-center">
                 Daftar Puskesmas
               </h4>
@@ -182,7 +182,7 @@ const Fasilitas_kesehatan = () => {
                 ))}
               </div>
             </div>
-            <div className="lg:w-[600px] w-[400px]">
+            <div className="lg:w-[600px] w-[350px]">
               <h4 data-aos="zoom-in" className="font-bold text-[18px] my-10 text-center pt-20">
                 Daftar Rumah Sakit
               </h4>

@@ -3,7 +3,11 @@ import Chart from "chart.js";
 
 const Batang = () => {
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top when the page loads
+    // Check if the device is mobile
+    if (window.innerWidth <= 768) {
+      const middlePosition = (document.documentElement.scrollHeight - window.innerHeight) / 3;
+      window.scrollTo(0, middlePosition); // Scroll to the middle of the page
+    }
   }, []);
 
   const canvasRef1 = useRef(null);

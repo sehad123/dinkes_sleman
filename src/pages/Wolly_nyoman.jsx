@@ -20,11 +20,11 @@ const Wolly_nyoman = () => {
 
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
-            <div className="my-6 cursor-pointer lg:ml-52">
+            <div className="my-6 cursor-pointer lg:flex justify-center">
               <img src={Image} className="w-[750px] h-[500px]" />
             </div>
           </div>
-          <div className="container lg:px-40">
+          <div className="container lg:px-20">
             <p data-aos="zoom-in">
               Indonesia dihadapkan pada ancaman penyakit Demam Berdarah Dengue (DBD) dengan ekskalasi kasus yang meningkat di awal tahun 2020. Data hingga 31 Maret 2020 kejadian dengue nasional telah mencapai 38.463 dengan kematian sebanyak
               251 jiwa. Bahkan sejumlah daerah telah menetapkan kasus dengue sebagai Kejadian Luar Biasa (KLB). Data kasus DBD di Kabupaten Sleman tahun 2020 ditemukan sebanyak 810 dengan kematian 2 di Rumah Sakit. Kasus ini meningkat cukup

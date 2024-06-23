@@ -10,7 +10,7 @@ const Iku = () => {
       <div className="flex items-center justify-center w-max container">
         <div className="lg:w-[600px] w-[380px]">
           <h4 className="font-bold text-[19px] my-5 text-center">Indikator Kinerja Utama (IKU)</h4>
-          <table className="w-full border-collapse border border-gray-400 mb-10">
+          <table className="lg:w-full w-[94%] border-collapse border border-gray-400 mb-10">
             <thead className="bg-gray-300 dark:bg-gray-900">
               {" "}
               <tr>

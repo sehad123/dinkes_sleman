@@ -76,9 +76,9 @@ const Footer = () => {
   return (
     <div style={BannerImg} className="w-full lg:w-[100%] text-white dark:-mt-6 dark:border-t border-white">
       <div className="container mx-auto ">
-        <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-44 pt-5">
+        <div className="grid md:grid-cols-3 pb-44 pt-5">
           {/* company details */}
-          <div className="py-4 pl-14 pr-6 ">
+          <div className="py-4 lg:pl-0 pl-6 pr-6 ">
             <h1 className="lg:text-xl sm:w-[500px] sm:text-2xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
               <img src={footerLogo} alt="" width={40} className="lg:max-w-[50px] sm:max-w-[25px]" />
               Dinas Kesehatan Sleman
@@ -106,7 +106,7 @@ const Footer = () => {
           </div>
 
           {/* Footer Links */}
-          <div className="ml-16 mt-2 lg:ml-48 md:mt-0 md:col-span-2">
+          <div className="ml-6 mt-2 lg:ml-32 md:mt-0 md:col-span-2">
             <div className="grid grid-cols-1 sm:grid-cols-1 sm:mr-6 sm:-translate-x-6 md:grid-cols-3 gap-6 md:gap-10">
               <div>
                 <div className="py-8 w-[300px] ">

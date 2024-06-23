@@ -37,9 +37,9 @@ const HeroFasilitas = () => {
   };
 
   return (
-    <div className="relative overflow-hidden lg:w-[780px] w-[400px] lg:ml-40 lg:h-[350px] h-[300px] bg-gray-100 lg:border-4 border-8 mt-10 dark:mt-0 rounded-xl flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]">
+    <div className="relative overflow-hidden lg:w-[780px] w-[350px] lg:ml-40 lg:h-[350px] h-[300px] bg-gray-100 lg:border-4 border-8 mt-10 dark:mt-0 rounded-xl flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]">
       {/* background pattern */}
-      <div className="lg:h-[600px] lg:w-[500px] w-[300px] h-[500px] absolute -top-1/2 -right-40 rounded-full rotate-45 -z-[8]" style={{ backgroundImage: `url(${ImageList[currentSlide].img})`, backgroundSize: "initial" }}></div>
+      <div className="lg:h-[600px] lg:w-[500px] w-[240px] h-[500px] absolute -top-1/2 -right-40 rounded-full rotate-45 -z-[8]" style={{ backgroundImage: `url(${ImageList[currentSlide].img})`, backgroundSize: "initial" }}></div>
       {/* HeroFasilitas section */}
       <div className="container pb-8 sm:pb-0 hover:cursor-pointer">
         <Slider {...settings}>
