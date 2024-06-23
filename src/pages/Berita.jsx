@@ -130,12 +130,12 @@ const Berita = () => {
   // Menghitung indeks konten untuk halaman saat ini
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = isMobile ? filteredContents : filteredContents.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = isMobile ? filteredContents.slice(indexOfFirstItem, indexOfLastItem) : filteredContents.slice(indexOfFirstItem, indexOfLastItem);
 
   // Fungsi untuk mengubah halaman
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    window.scrollTo(0, 0); // Mengatur tampilan layar dan posisi pengguna ke paling atas
+    // window.scrollTo(0, 0); // Mengatur tampilan layar dan posisi pengguna ke paling atas
   };
 
   return (
@@ -195,13 +195,6 @@ const Berita = () => {
                 <option value="february">April</option>
                 <option value="february">Mei</option>
                 <option value="february">Juni</option>
-                {/* <option value="february">Juli</option>
-                <option value="february">Agustus</option>
-                <option value="february">September</option>
-                <option value="february">Oktober</option>
-                <option value="february">November</option>
-                <option value="february">Desember</option> */}
-                {/* Tambahkan opsi lainnya sesuai kebutuhan */}
               </select>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                 <div className="w-px h-6 bg-gray-900"></div>
@@ -275,7 +268,7 @@ const Berita = () => {
           ))}
         </div>
         {/* Pagination */}
-        {!isMobile && totalPages > 1 && (
+        {totalPages > 1 && (
           <div className="flex justify-center lg:ml-[700px] lg:-mt-20 mt-5">
             <nav>
               <ul className="flex items-center">
