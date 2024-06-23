@@ -140,7 +140,7 @@ const Info_berkala = () => {
   };
 
   return (
-    <div className=" container dark:rounded-xl dark:mb-10  bg-white w-screen lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:mt-10 dark:text-white duration-200">
+    <div className=" container dark:rounded-xl dark:mb-10  bg-white w-screen dark:bg-gray-900 dark:mt-10 dark:text-white duration-200">
       <div className="py-10">
         <div className="">
           {/* header section */}
@@ -151,7 +151,7 @@ const Info_berkala = () => {
           </div>
 
           {/* Testimonial cards */}
-          <div data-aos="zoom-in" className="px-16  lg:mx-auto ml-10  ">
+          <div data-aos="zoom-in" className="lg:pl-16 px-16 lg:mx-auto  ">
             <p className="text-center font-bold text-lg">Profil Kesehatan</p>
             <Slider {...settings}>
               {KesehatanData.map((data, index) => (
@@ -167,7 +167,7 @@ const Info_berkala = () => {
           <br />
           <br />
           <br />
-          <div className="container grid grid-cols-1 md:grid-cols-2 gap-6 ml-10 lg:ml-0 ">
+          <div className="container grid grid-cols-1 pl-10 md:grid-cols-2 gap-6">
             <div className="flex flex-col">
               <p className="font-bold text-lg text-center">Laporan Tahunan</p>
               <div data-aos="zoom-in" className="flex flex-wrap lg:justify-start ml-6 lg:ml-0">

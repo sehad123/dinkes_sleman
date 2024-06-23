@@ -3,7 +3,7 @@ import React from "react";
 const Banner = () => {
   return (
     <div
-      className="lg:translate-x-0 translate-x-20 my-10 h-[440px] lg:w-[850px] w-[480px]  border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"
+      className="my-10 h-[440px] lg:w-[850px] w-screen  border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-y-auto  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       {" "}

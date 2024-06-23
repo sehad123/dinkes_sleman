@@ -68,35 +68,35 @@ const Layout = () => {
         {/* Conditionally rendering sidebar toggle buttons */}
         {/* Fixed inline styles to adjust the position on smaller screens */}
         {isProfilPage && (
-          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[460px] left-[390px]"} transition-all duration-300`}>
+          <div className={`w-[10px] absolute top-[30px] ${!isSidebarOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[460px] left-[330px]"} transition-all duration-300`}>
             <button onClick={toggleSidebar} className="lg:hidden text-4xl bg-gray-200 dark:bg-gray-800">
               {isSidebarOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>
           </div>
         )}
         {isUnduhPage && (
-          <div className={`w-[10px] absolute top-[30px] ${!isSidebarUnduhOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[480px] left-[390px]"} transition-all duration-300`}>
+          <div className={`w-[10px] absolute top-[30px] ${!isSidebarUnduhOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[480px] left-[330px]"} transition-all duration-300`}>
             <button onClick={toggleSidebarUnduh} className="lg:hidden md:flex text-4xl bg-gray-200 dark:bg-gray-800">
               {isSidebarUnduhOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>
           </div>
         )}
         {isGrafikPage && (
-          <div className={`w-[10px] absolute top-[30px] ${!isSidebarGrafikOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[500px] left-[400px]"} transition-all duration-300`}>
+          <div className={`w-[10px] absolute top-[30px] ${!isSidebarGrafikOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[500px] left-[330px]"} transition-all duration-300`}>
             <button onClick={toggleSidebarGrafik} className="lg:hidden md:flex bg-gray-200 text-4xl  dark:bg-gray-800 ">
               {isSidebarGrafikOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>
           </div>
         )}
         {isInfoPage && (
-          <div className={`w-[10px] absolute top-[30px] ${!isSidebarInfoOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[500px] left-[440px]"} transition-all duration-300`}>
+          <div className={`w-[10px] absolute top-[30px] ${!isSidebarInfoOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[500px] left-[330px]"} transition-all duration-300`}>
             <button onClick={toggleSidebarInfo} className="lg:hidden md:flex text-4xl bg-gray-200 dark:bg-gray-800">
               {isSidebarInfoOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>
           </div>
         )}
         {isMediaPage && (
-          <div className={`w-[10px] absolute top-[30px] ${!isSidebarMediaOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[450px] left-[410px]"} transition-all duration-300`}>
+          <div className={`w-[10px] absolute top-[30px] ${!isSidebarMediaOpen ? "left-0 mt-[100px]" : "lg:left-[290px] top-[450px] left-[330px]"} transition-all duration-300`}>
             <button onClick={toggleSidebarMedia} className="lg:hidden md:flex bg-gray-200 text-4xl dark:bg-gray-800">
               {isSidebarMediaOpen ? <BsChevronCompactLeft /> : <BsChevronCompactRight />}
             </button>

@@ -144,20 +144,13 @@ const Fasilitas_kesehatan = () => {
   const paginate2 = (pageNumber) => setCurrentPage2(pageNumber);
 
   return (
-    <div className="bg-white ml-24 dark:pl-24 dark:ml-0 dark:pr-4 dark:bg-gray-900 dark:text-white duration-200 ">
+    <div className="bg-white  dark:pl-24 dark:ml-0 dark:pr-4 dark:bg-gray-900 dark:text-white duration-200 ">
       <div className="py-10">
         <div className="container">
           {/* header section */}
-          {/* <div className="text-center mb-10 max-w-[600px] mx-auto">
-            <h1 data-aos="fade-up" className="text-2xl font-bold">
-              Daftar Fasilitas Kesehatan Kabupaten Sleman
-            </h1>
-          </div> */}
           <HeroFasilitas />
-
           {/* Testimonial cards */}
-
-          <div className="grid grid-cols-1 lg:grid-cols-1 mt-10 ml-24 lg:mx-auto  w-max mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-1 mt-10 lg:ml-64">
             <div className="lg:w-[700px] w-[400px]">
               <h4 data-aos="zoom-in" className="font-bold text-[18px] my-10 text-center">
                 Daftar Puskesmas
@@ -222,9 +215,9 @@ const Fasilitas_kesehatan = () => {
             </div>
           </div>
 
-          <div className="container lg:mx-auto lg:px-4 py-20 pl-12 ">
+          <div className="container lg:mx-auto lg:px-4 py-20 ">
             <h3 className="font-bold text-xl text-center mb-10"> Fasilitas Kesehatan</h3>
-            <div data-aos="fade-up" className="container w-max grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 lg:gap-14 gap-4">
+            <div data-aos="fade-up" className="container w-max grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-14 gap-4">
               {Menu1.map((content, index) => (
                 <Link key={index} to={content.link} className="text-lg">
                   <div style={{ width: "220px" }} className=" dark:bg-gray-900 p-4 bg-white border-4 min-h-[80px] rounded-xl lg:w-1/6 flex items-center justify-center hover:bg-gray-300 cursor-pointer">
@@ -237,16 +230,6 @@ const Fasilitas_kesehatan = () => {
               ))}
             </div>
           </div>
-          {/* <div className="text-center mt-8">
-              <div data-aos="zoom-in">
-                <img src={ses} className="w-full lg:w-auto max-w-[750px] h-auto" alt="Gambar" />
-              </div>
-            </div> */}
-          {/* <div data-aos="zoom-in">
-            <div className="my-24 cursor-pointer lg:ml-64">
-              <img src={fasilitas} className="w-[750px] h-[500px]" />
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

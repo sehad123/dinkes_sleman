@@ -6,7 +6,7 @@ import Form from "../components/Form/Form";
 
 const Sertifikat_laik = () => {
   return (
-    <div className="lg:translate-x-0 translate-x-16 bg-white dark:bg-gray-900 dark:text-white duration-200 w-screen lg:w-full">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 w-screen lg:w-full">
       <div className="py-10 dark:py-20">
         <div>
           {/* header section */}
@@ -18,7 +18,7 @@ const Sertifikat_laik = () => {
           {/* Dasar Hukum section */}
           <div data-aos="fade-up" className="container-fluid mt-10 max-w-[1050px] mx-auto">
             <p className="text-center text-lg font-bold">Standar Pelayanan Penerbitan Sertifikat Laik Higiene Santasi TPP</p>
-            <h1 className="text-lg mb-4">Dasar Hukum :</h1>
+            <h1 className="text-lg pl-6">Dasar Hukum :</h1>
             <ol className="pl-6">
               <li>1. Peraturan Menteri Kesehatan Nomor 14 Tahun 2021 tentang Standar Kegiatan Usaha dan Produk pada Penyelenggaraan Perizinan Berusaha Berbasis Risiko Sektor Kesehatan</li>
               <li>2. PeraturanDaerah Kabupaten Sleman No. 17 Tahun 2020 tentang Pengawasan Keamanan Pangan.</li>

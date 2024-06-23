@@ -139,7 +139,7 @@ const Berita = () => {
   };
 
   return (
-    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 py-10">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 py-10">
       <div data-aos="fade-up" className="container grid lg:grid-cols-2 grid-cols-1 justify-start items-start ">
         <div className="flex flex-col justify-end items-center mt-5 lg:-translate-y-6 lg:ml-10 ml-20 lg:mr-0 mr-4 lg:-space-x-24 lg:gap-2 gap-2 lg:-translate-x-36">
           <div className="lg:mr-48">
@@ -240,7 +240,7 @@ const Berita = () => {
             <div
               data-aos="fade-up"
               key={content.id}
-              className="border rounded-3xl dark:border-white lg:h-[210px] h-[190px] lg:w-[1000px] w-screen lg:p-4 lg:px-0 px-4 lg:ml-10"
+              className="border rounded-3xl dark:border-white lg:h-[210px] h-[190px] lg:w-[1000px] w-[100%] lg:p-4 lg:px-0 px-4 lg:ml-10"
               style={{ boxShadow: "10px 10px 12px rgba(0, 0, 0, 0.1)" }} // Menambahkan shadow
             >
               {/* Konten artikel */}
@@ -251,7 +251,7 @@ const Berita = () => {
               </div>
 
               {/* Text details section */}
-              <div className=" lg:pl-[220px] pl-[150px] pr-2 lg:mt-0 mt-5">
+              <div className=" lg:pl-[220px] pl-[150px] pr-2 w-[300px] lg:w-[100%] lg:mt-0 mt-4">
                 <p className="lg:flex text-[9px] lg:text-[15px] lg:mr-[470px]">
                   <FontAwesomeIcon icon={faClock} />
                   <span className="ml-2 -mt-1"> {content.date}</span>

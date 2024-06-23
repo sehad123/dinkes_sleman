@@ -3,7 +3,7 @@ import React from "react";
 const LaporanTahunan = () => {
   return (
     <div
-      className="lg:translate-x-0 translate-x-20 my-10 lg:h-[500px] lg:w-[850px] w-[480px]  border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"
+      className="my-10 lg:h-[500px] lg:w-[850px] w-screen border lg:rounded-3xl lg:m-10 bg-white dark:bg-gray-900 dark:text-white duration-200 h-screen overflow-y-auto drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       <div className="flex items-center justify-center w-max container">
@@ -12,9 +12,9 @@ const LaporanTahunan = () => {
           <table className="w-full border-collapse border border-gray-400 mb-10">
             <thead className="bg-gray-300 dark:bg-gray-900">
               <tr>
-                <th className="text-center border border-gray-400 px-4 py-2">No</th>
-                <th className="text-center border border-gray-400 px-4 py-2">Nama</th>
-                <th className="text-center border border-gray-400 px-4 py-2">Aksi</th>
+                <th className="text-center border border-gray-400 px-4 py-2 sticky top-0 bg-gray-300 dark:bg-gray-900 z-10">No</th>
+                <th className="text-center border border-gray-400 px-4 py-2 sticky top-0 bg-gray-300 dark:bg-gray-900 z-10">Nama</th>
+                <th className="text-center border border-gray-400 px-4 py-2 sticky top-0 bg-gray-300 dark:bg-gray-900 z-10">Aksi</th>
               </tr>
             </thead>
             <tbody>

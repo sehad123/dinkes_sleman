@@ -54,7 +54,7 @@ const Jendela_husada = () => {
   ];
 
   return (
-    <div className="bg-white lg:translate-x-0 translate-x-16 dark:bg-gray-900 dark:text-white duration-200 py-10">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 py-10">
       <div data-aos="fade-up" className="container mx-auto">
         {/* header section */}
         <div className="text-center mb-10">

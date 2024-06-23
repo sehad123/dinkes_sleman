@@ -35,7 +35,7 @@ const SidebarMenu = ({ title, sidebarStyle }) => {
 
   return (
     <div
-      className={`lg:translate-x-0 translate-x-16 bg-white mt-10 mb-2 border rounded-xl mx-10  dark:bg-gray-900 dark:text-white duration-200 sidebar-wrapper ${
+      className={`bg-white mt-10 mb-2 border rounded-xl mx-10  dark:bg-gray-900 dark:text-white duration-200 sidebar-wrapper ${
         isSidebarOpen ? "" : "closed"
       } lg:border-r-2 border-b-2 lg:border-b-2  border-gray-300  drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)] `}
     >

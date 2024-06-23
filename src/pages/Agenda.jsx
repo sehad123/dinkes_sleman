@@ -54,7 +54,7 @@ const events = [
 
 const Agenda = () => {
   return (
-    <div className=" lg:w-[1200px] w-[500px] ml-40 mt-24 p-4 lg:mx-auto mb-40 lg:mt-10 ">
+    <div className=" lg:w-[1200px] w-screen lg:ml-24 mt-24 p-4 lg:mx-auto mb-40 lg:mt-10 ">
       <h1 className="text-4xl font-bold mb-4 -translate-y-10 text-center flex lg:hidden ml-10 ">Agenda Dinas Kesehatan Sleman</h1>
       <div className="bg-white rounded-lg shadow-lg p-4 font-bold text-[12px] dark:bg-gray-900 dark:text-white">
         <Calendar localizer={localizer} events={events} startAccessor="start" endAccessor="end" style={{ height: 450 }} />

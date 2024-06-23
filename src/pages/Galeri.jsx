@@ -33,7 +33,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)] p-4 lg:ml-10 my-10 rounded-xl ml-40 w-[500px] lg:w-max dark:bg-gray-900 dark:text-white">
+    <div className="min-h-screen bg-white drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)] p-4 lg:ml-10 my-10 rounded-xl w-screen lg:w-max dark:bg-gray-900 dark:text-white">
       <h1 className="text-3xl font-bold text-center mb-8">Image Gallery</h1>
 
       <div data-aos="fade-up " className="flex justify-center items-center mb-8 mt-10" ref={mainImageRef}>
