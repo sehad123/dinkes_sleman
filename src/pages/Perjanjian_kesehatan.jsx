@@ -21,7 +21,7 @@ const Perjanjian_kesehatan = () => {
         <div className="container">
           {/* header section */}
           <div className="text-center mb-10 mx-auto ">
-            <h1 data-aos="fade-up" className="text-3xl font-bold lg:ml-[200px]">
+            <h1 data-aos="fade-up" className="text-3xl font-bold lg:flex justify-center">
               Perjanjian Kesehatan
             </h1>
           </div>
@@ -72,7 +72,7 @@ const Perjanjian_kesehatan = () => {
             </table>
           </div> */}
           {/* Layanan Kesehatan section */}
-          <div className="lg:w-[600px] w-[100%] lg:ml-[250px] mt-20">
+          <div className="lg:w-[600px] w-[100%] lg:mx-auto mt-20">
             <h4 className="font-bold text-[19px] my-10 text-center">Standar Pelayanan Kesehatan</h4>
             <table className="w-full border-collapse border border-gray-400">
               <thead className="bg-gray-300 dark:bg-gray-900">
@@ -133,7 +133,7 @@ const Perjanjian_kesehatan = () => {
           </div>
 
           {/* Tabel */}
-          <div className="lg:w-[600px] w-[100%] lg:ml-[250px] mt-20">
+          <div className="lg:w-[600px] w-[100%] lg:mx-auto mt-20">
             <h4 className="font-bold text-[19px] my-10 text-center">Daftar Formulir</h4>
             <table className="w-full border-collapse border border-gray-400">
               <thead className="bg-gray-300 dark:bg-gray-900">

@@ -24,18 +24,18 @@ const Info_sertamerta = () => {
       <div className="py-10">
         <div className="container">
           {/* header section */}
-          <div className="text-center mb-10 max-w-[600px] mx-auto lg:ml-96">
+          <div className="text-center mb-10 max-w-[600px] mx-auto">
             <h1 data-aos="fade-up" className="text-3xl font-bold">
               Informasi Serta Merta
             </h1>
           </div>
 
           {/* Testimonial cards */}
-          <div data-aos="zoom-in" className="grid lg:grid-cols-3 lg:ml-20 ml-6">
+          <div data-aos="zoom-in" className="grid lg:grid-cols-3 lg:ml-20 ml-5">
             {MertaData.map((data, index) => (
               <Link key={index} to={data.link}>
-                <div className="my-6 cursor-pointer">
-                  <img src={data.img} alt="" className="w-[350px] mx-16 h-[300px]" />
+                <div className="my-6 cursor-pointer mx-2">
+                  <img src={data.img} alt="" className="lg:w-[350px] w-[250px] h-[300px]" />
                 </div>
               </Link>
             ))}

@@ -19,7 +19,7 @@ const Profil_kadinkes = () => {
           {/* Testimonial cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 lg:gap-4 mt-6">
             <div className="flex justify-center">
-              <img src={Image} className="w-[250px] h-auto ml-30 mr-10" />
+              <img src={Image} className="w-[250px] h-auto lg:ml-30 ml-12 mr-10" />
             </div>
             {/* identitas */}
             <div className="lg:w-[400px] ml-10 mt-5 lg:-translate-x-24">
