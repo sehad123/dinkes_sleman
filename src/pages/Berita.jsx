@@ -251,7 +251,7 @@ const Berita = () => {
               </div>
 
               {/* Text details section */}
-              <div className=" lg:pl-[220px] pl-[150px] pr-2 w-[300px] lg:w-[100%] lg:mt-0 mt-4">
+              <div className=" lg:pl-[220px] pl-[150px] pr-2 w-[100%]lg:mt-0 mt-4">
                 <p className="lg:flex text-[9px] lg:text-[15px] lg:mr-[470px]">
                   <FontAwesomeIcon icon={faClock} />
                   <span className="ml-2 -mt-1"> {content.date}</span>

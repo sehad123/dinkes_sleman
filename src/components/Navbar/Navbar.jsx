@@ -153,9 +153,7 @@ const Navbar = () => {
 
           <div className="flex justify-center items-center gap-2">
             {/* Dark mode switch */}
-            <div className="lg:mb-20 mb-[400px] translate-x-10 ">
-              <DarkMode />
-            </div>
+            <div className="lg:mb-20 mb-[400px] -translate-x-10 ">{/* <DarkMode /> */}</div>
             {/* Hamburger Icon (Hidden on Desktop) */}
             <div className="md:hidden">
               <button onClick={toggleMenu} className="text-dark focus:outline-none">
@@ -265,7 +263,7 @@ const Navbar = () => {
             {searchResult === "Pencarian tidak ditemukan" && (
               <div className="absolute top-[400px] left-1/2 transform -translate-x-1/2 z-50 bg-transparent w-[600px] rounded-md shadow-md">{orderPopup && <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />}</div>
             )}
-            <div className="mb-20 translate-x-16 lg:flex hidden md:hidden">
+            <div className="mb-20 lg:flex hidden md:hidden">
               <DarkMode />
             </div>
           </ul>
