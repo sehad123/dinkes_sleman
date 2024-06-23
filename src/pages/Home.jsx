@@ -28,7 +28,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="bg-white dark:bg-gray-900 dark:text-white dark:-mb-5 dark:pt-10 duration-200">
+      <div className="bg-white dark:bg-gray-900 dark:text-white dark:-mb-5 dark:pt-10 duration-200 lg:w-[100%]">
         <Hero handleOrderPopup={handleOrderPopup} />
         <Other />
         <Artikel />

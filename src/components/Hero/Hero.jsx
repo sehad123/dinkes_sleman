@@ -44,7 +44,7 @@ const Hero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative container overflow-hidden w-screen lg:w-screen lg:h-[400px] h-[700px] bg-white lg:border-4 border-8 mt-10 dark:mt-0 rounded-xl flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)] ">
+    <div className="relative overflow-hidden lg:w-[1000px] w-[400px] lg:ml-40 lg:h-[370px] h-[700px] bg-gray-100 lg:border-4 border-8 mt-10 dark:mt-0 rounded-xl flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 drop-shadow-[-5px_5px_8px_rgba(0,0,0,0.3)]">
       {/* background pattern */}
       <div className="h-[600px] w-[600px] bg-gray-200 dark:bg-gray-700 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
       {/* hero section */}
@@ -54,13 +54,13 @@ const Hero = ({ handleOrderPopup }) => {
             <div key={data.id}>
               <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 mx-3">
                 {/* text content section */}
-                <div className="flex flex-col justify-center mb-10 lg:w-[700px] gap-4 pt-12 mx-6 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
-                  <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true" className="sm:text-xl lg:text-2xl mb-6 font-bold">
+                <div className="flex flex-col justify-center mb-10 lg:w-[100%] gap-4 pt-12 mx-6 mt-4 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
+                  <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true" className="sm:text-xl lg:text-2xl mb-6 mt-6 font-bold">
                     <Link to={data.link} className=" hover:underline">
                       {data.title}
                     </Link>
                   </h1>
-                  <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" className="lg:text-xl sm:text-lg">
+                  <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" className="lg:text-lg sm:text-lg">
                     {data.description}
                   </p>
                   <div data-aos="fade-up" className="mt-6" data-aos-duration="500" data-aos-delay="300">

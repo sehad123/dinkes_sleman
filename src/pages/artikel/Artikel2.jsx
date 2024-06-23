@@ -20,7 +20,7 @@ const Artikel2 = () => {
 
           {/* Testimonial cards */}
           <div data-aos="zoom-in">
-            <div className="my-6 cursor-pointer lg:ml-56">
+            <div className="my-6 cursor-pointer lg:flex justify-center">
               <img src={Image} className="w-[750px] h-auto" />
             </div>
           </div>

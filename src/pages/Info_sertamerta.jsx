@@ -20,11 +20,11 @@ const MertaData = [
 ];
 const Info_sertamerta = () => {
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 lg:w-full">
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 lg:w-[90%]">
       <div className="py-10">
         <div className="container">
           {/* header section */}
-          <div className="text-center mb-10 max-w-[600px] mx-auto">
+          <div className="text-center mb-10 max-w-[600px] mx-auto lg:ml-96">
             <h1 data-aos="fade-up" className="text-3xl font-bold">
               Informasi Serta Merta
             </h1>
@@ -35,7 +35,7 @@ const Info_sertamerta = () => {
             {MertaData.map((data, index) => (
               <Link key={index} to={data.link}>
                 <div className="my-6 cursor-pointer">
-                  <img src={data.img} alt="" className="w-[350px] h-[300px]" />
+                  <img src={data.img} alt="" className="w-[350px] mx-16 h-[300px]" />
                 </div>
               </Link>
             ))}
