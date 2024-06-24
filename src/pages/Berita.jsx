@@ -15,6 +15,7 @@ const Berita = () => {
   const [selectedYear, setSelectedYear] = useState(""); // State untuk menyimpan tahun yang dipilih
   const [sortOrder, setSortOrder] = useState(""); // State untuk mengurutkan konten
   const [isMobile, setIsMobile] = useState(false); // State untuk mendeteksi tampilan mobile
+  const [searchTitle, setSearchTitle] = useState(""); // State untuk menyimpan nilai pencarian judul
 
   useEffect(() => {
     // Fungsi untuk mendeteksi ukuran layar
@@ -41,7 +42,8 @@ const Berita = () => {
       image: Artikel,
       title: "Implementasikan PKAT, Dinkes Sleman Raih Apresiasi Kemenkes RI",
       description: "Sebagai wujud apresiasi atas penyelenggaraan Pemeriksaan Kesehatan Anak Terintegrasi (PKAT), Dinas Kesehatan Kabupaten Sleman sukses raih penghargaan dari Kementerian Kesehatan...",
-      date: "Senin, 13 Januari 2024",
+      dateshow: "Senin, 13 Januari 2024",
+      date: "2024-01-13",
       link: "/artikel1",
     },
     {
@@ -49,7 +51,8 @@ const Berita = () => {
       image: Artikel2,
       title: "Empat Tenaga Kesehatan Sleman Raih Juara Nakesdan Tingkat DIY Tahun 2024",
       description: "Prestasi membanggakan kembali diraih Tenaga Kesehatan Kabupaten Sleman pada tahun 2024. Sebanyak empat orang sabet Juara I Tenaga Kesehatan Teladan...",
-      date: "Selasa, 12 Februari 2024",
+      dateshow: "Selasa, 12 Februari 2024",
+      date: "2024-02-12",
       link: "/artikel2",
     },
     {
@@ -57,7 +60,8 @@ const Berita = () => {
       image: Artikel4,
       title: "Dinkes Sleman Selenggarakan Orientasi Integrasi Pelayanan Kesehatan Primer",
       description: "Senin (22/4) Kepala Dinas Kesehatan Kabupaten Sleman, dr. Cahya Purnama, M.Kes membuka secara resmi Orientasi Integrasi Pelayanan Kesehatan Primer bagi...",
-      date: "Rabu, 24 Maret 2024",
+      dateshow: "Rabu, 24 Maret 2024",
+      date: "2024-03-24",
       link: "/artikel4",
     },
     {
@@ -65,7 +69,8 @@ const Berita = () => {
       image: Artikel3,
       title: "Simulasi Bencana dalam Peringatan Hari Kesiapsiagaan Bencana (HKB)",
       description: "Dinas Kesehatan Kabupaten Sleman menyelenggarakan simulasi bencana. Agenda ini merupakan bagian dalam mendukung Peringatan Hari Kesiapsiagaan Bencana di Daerah Istimewa...",
-      date: "Selasa, 26 April 2024",
+      dateshow: "Selasa, 26 April 2024",
+      date: "2024-04-26",
       link: "/artikel3",
     },
     {
@@ -73,7 +78,8 @@ const Berita = () => {
       image: Artikel5,
       title: "Selamat Hari Raya Idul Fitri 1445 H",
       description: "Kepala Dinas Kesehatan Kabupaten Sleman beserta seluruh jajaran menghaturkan Selamat Hari Raya Idul Fitri 1445 H. Mohon maaf lahir dan...",
-      date: "Kamis, 16 Maret 2024",
+      dateshow: "Kamis, 16 Maret 2024",
+      date: "2024-03-16",
       link: "/artikel5",
     },
     {
@@ -81,7 +87,8 @@ const Berita = () => {
       image: Artikel6,
       title: "Dialog Interaktif Tetap Sehat dan Bugar Saat Lebaran",
       description: "Mudik pada Hari Raya Idul Fitri merupakan fenomena yang umumnya terjadi di Indonesia. Kabupaten Sleman menjadi salah satu tujuan mudik...",
-      date: "Jumat, 4 April 2024",
+      dateshow: "Jumat, 4 April 2024",
+      date: "2024-04-04",
       link: "/artikel6",
     },
   ];
@@ -98,37 +105,31 @@ const Berita = () => {
   const filteredContentsMonth = selectedMonth
     ? filteredContentsYear.filter((content) => {
         const month = new Date(content.date).getMonth();
-        return month.toString() === selectedMonth;
+        return (month + 1).toString() === selectedMonth; // +1 karena getMonth() mengembalikan nilai dari 0-11
       })
     : filteredContentsYear;
 
-  // Filter konten berdasarkan hari yang dipilih
-  const filteredContentsDay = selectedDays
-    ? filteredContentsMonth.filter((content) => {
-        const day = new Date(content.date).getDay();
-        return day.toString() === selectedDays;
-      })
-    : filteredContentsMonth;
-
   // Mengurutkan konten berdasarkan urutan yang dipilih
   const sortedContents = sortOrder
-    ? [...filteredContentsDay].sort((a, b) => {
+    ? [...filteredContentsMonth].sort((a, b) => {
         if (sortOrder === "Terbaru") {
           return new Date(b.date) - new Date(a.date);
         } else {
           return new Date(a.date) - new Date(b.date);
         }
       })
-    : filteredContentsDay;
-
+    : filteredContentsMonth;
+  
+    const filteredContentsTitle = searchTitle
+    ? filteredContentsMonth.filter((content) =>
+        content.title.toLowerCase().includes(searchTitle.toLowerCase())
+      )
+    : filteredContentsMonth;
+  
+  
   // Fungsi untuk mengatur state ketika pengguna memilih bulan
   const handleMonthChange = (event) => {
     setSelectedMonth(event.target.value);
-  };
-
-  // Fungsi untuk mengatur state ketika pengguna memilih hari
-  const handleDayChange = (event) => {
-    setSelectedDays(event.target.value);
   };
 
   // Fungsi untuk mengatur state ketika pengguna memilih tahun
@@ -140,6 +141,11 @@ const Berita = () => {
   const handleSortChange = (event) => {
     setSortOrder(event.target.value);
   };
+
+  const handleSearchTitleChange = (event) => {
+    setSearchTitle(event.target.value);
+  };
+  
 
   // State untuk pagination
   const [currentPage, setCurrentPage] = useState(1);
@@ -164,34 +170,28 @@ const Berita = () => {
           <div className="lg:mr-48">
             <h1 className="font-bold mb-7 text-xl ml-10">Filter berita</h1>
             <div>
-              <h1 className="font-bold mb-2 text-[15px]">Kata Kunci</h1>
+              <h1 className="font-bold mb-2 text-[15px]">Cari Judul</h1>
               <form>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="w-[200px] mb-4 group-hover:w-[150px] transition-all duration-300 border border-gray-900 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary bg-white text-black dark:border-gray-500 dark:bg-white dark:text-white"
-                />
+              <input
+  type="text"
+  placeholder=""
+  value={searchTitle}
+  onChange={handleSearchTitleChange}
+  className="w-[200px] mb-4 group-hover:w-[150px] transition-all duration-300 border border-gray-900 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary bg-white text-black dark:border-gray-500 dark:bg-white dark:text-white"
+/>
+
               </form>
-              <div className=" -translate-y-4">
-                <input type="checkbox" />
-                <span className="text-[12px] ml-2 translate-y-6">Cari hanya berdasarkan judul </span>
-              </div>
+              
             </div>
           </div>
           <div className="-mt-3">
-            <h1 className="font-bold my-1 text-[15px]">Tahun</h1>
-
+            <h1 htmlFor="year-select" className="font-bold my-1 text-[15px]">Tahun</h1>
             <div className="relative inline-block w-[200px] lg:mr-[100px]">
-              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-white dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
+              <select id="year-select" className="appearance-none w-full px-1 py-1 lg:px-3 bg-white dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedYear} onChange={handleYearChange}>
                 {/* Options */}
                 <option value="">Pilih Tahun</option>
-                <option value="0">2024</option>
-                <option value="1">2023</option>
-                <option value="2">2022</option>
-                <option value="3">2021</option>
-                <option value="4">2020</option>
-                <option value="5">2019</option>
-                <option value="6">2018</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
               </select>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                 <div className="w-px h-6 bg-gray-900"></div>
@@ -206,14 +206,21 @@ const Berita = () => {
             <h1 className="font-bold my-1 text-[15px]">Bulan</h1>
 
             <div className="relative inline-block w-[200px] lg:mr-[100px]">
-              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-white dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
+              <select id="month-select" className="appearance-none w-full px-1 py-1 lg:px-3 bg-white dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
                 {/* Options */}
-                <option value="january">January</option>
-                <option value="february">February</option>
-                <option value="february">Maret</option>
-                <option value="february">April</option>
-                <option value="february">Mei</option>
-                <option value="february">Juni</option>
+                <option value="">Pilih Bulan</option>
+              <option value="1">Januari</option>
+              <option value="2">Februari</option>
+              <option value="3">Maret</option>
+              <option value="4">April</option>
+              <option value="5">Mei</option>
+              <option value="6">Juni</option>
+              <option value="7">Juli</option>
+              <option value="8">Agustus</option>
+              <option value="9">September</option>
+              <option value="10">Oktober</option>
+              <option value="11">November</option>
+              <option value="12">Desember</option>
               </select>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                 <div className="w-px h-6 bg-gray-900"></div>
@@ -224,13 +231,13 @@ const Berita = () => {
             </div>
           </div>
           <div className="my-2">
-            <h1 className="font-bold my-1 text-[15px]">Urutkan Berdasarkan</h1>
-
+            <h1 htmlFor="sort-select" className="font-bold my-1 text-[15px]">Urutkan Berdasarkan</h1>
             <div className="relative inline-block w-[200px] lg:mr-[100px]">
-              <select className="appearance-none w-full px-1 py-1 lg:px-3 bg-white dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={selectedMonth} onChange={handleMonthChange}>
+              <select id="sort-select" className="appearance-none w-full px-1 py-1 lg:px-3 bg-white dark:text-gray-900 border border-gray-500 rounded outline-none pr-10" value={sortOrder} onChange={handleSortChange}>
                 {/* Options */}
-                <option value="february">Terbaru</option>
-                <option value="february">Terlama</option>
+                <option value="">Pilih Urutan</option>
+              <option value="Terbaru">Terbaru</option>
+              <option value="Terlama">Terlama</option>
               </select>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                 <div className="w-px h-6 bg-gray-900"></div>
@@ -240,10 +247,10 @@ const Berita = () => {
               </div>
             </div>
           </div>
-
+{/* 
           <button className="w-[200px]   h-[35px] pt-1 mb-20 transition-all duration-300 border rounded-lg mt-6 lg:-translate-x-12 px-2 focus:outline-none focus:border-1 text-gray-100 pb-3 focus:border-primary bg-blue-600  dark:border-gray-500 dark:bg-blue-600 dark:text-white">
             Tampilkan
-          </button>
+          </button> */}
         </div>
 
         <div className="container grid grid-cols-1 mt-2 mb-4 gap-8 sm:grid-cols-1 lg:grid-cols-1 lg:-translate-x-[450px]">
@@ -264,10 +271,10 @@ const Berita = () => {
 
               {/* Text details section */}
               <div className=" lg:pl-[220px] pl-[150px] pr-2 w-[100%]lg:mt-0 mt-2">
-                <p className="lg:flex text-[9px] lg:text-[15px] lg:mr-[470px]">
-                  <FontAwesomeIcon icon={faClock} />
-                  <span className="ml-2 -mt-1"> {content.date}</span>
-                </p>
+              <p className="lg:flex text-[9px] lg:text-[15px] lg:mr-[470px]">
+                <FontAwesomeIcon icon={faClock} />
+                <span className="ml-2 -mt-1" data-date={content.date}> {content.dateshow}</span>
+              </p>
                 <h4 className="font-bold text-[9px] lg:mt-2 lg:text-[20px]">
                   <Link to={content.link}>{content.title.length > 74 ? content.title.slice(0, 74) + "..." : content.title}</Link>
                 </h4>
