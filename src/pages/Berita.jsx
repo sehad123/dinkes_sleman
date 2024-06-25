@@ -93,38 +93,22 @@ const Berita = () => {
     },
   ];
 
-  // Filter konten berdasarkan tahun yang dipilih
-  const filteredContentsYear = selectedYear
-    ? contents.filter((content) => {
-        const year = new Date(content.date).getFullYear();
-        return year.toString() === selectedYear;
-      })
-    : contents;
-
-  // Filter konten berdasarkan bulan yang dipilih
-  const filteredContentsMonth = selectedMonth
-    ? filteredContentsYear.filter((content) => {
-        const month = new Date(content.date).getMonth();
-        return (month + 1).toString() === selectedMonth; // +1 karena getMonth() mengembalikan nilai dari 0-11
-      })
-    : filteredContentsYear;
-
-  // Mengurutkan konten berdasarkan urutan yang dipilih
+  const filteredContents = contents.filter((content) => {
+    const yearMatch = selectedYear ? new Date(content.date).getFullYear().toString() === selectedYear : true;
+    const monthMatch = selectedMonth ? (new Date(content.date).getMonth() + 1).toString() === selectedMonth : true;
+    const titleMatch = searchTitle ? content.title.toLowerCase().includes(searchTitle.toLowerCase()) : true;
+    return yearMatch && monthMatch && titleMatch;
+  });
+  
   const sortedContents = sortOrder
-    ? [...filteredContentsMonth].sort((a, b) => {
+    ? [...filteredContents].sort((a, b) => {
         if (sortOrder === "Terbaru") {
           return new Date(b.date) - new Date(a.date);
         } else {
           return new Date(a.date) - new Date(b.date);
         }
       })
-    : filteredContentsMonth;
-  
-    const filteredContentsTitle = searchTitle
-    ? filteredContentsMonth.filter((content) =>
-        content.title.toLowerCase().includes(searchTitle.toLowerCase())
-      )
-    : filteredContentsMonth;
+    : filteredContents;
   
   
   // Fungsi untuk mengatur state ketika pengguna memilih bulan
