@@ -22,7 +22,7 @@ const Perjanjian_kesehatan = () => {
           {/* header section */}
           <div className="text-center mb-10 mx-auto ">
             <h1 data-aos="fade-up" className="text-3xl font-bold lg:flex justify-center">
-              Perjanjian Kesehatan
+              Perizinan Kesehatan
             </h1>
           </div>
 

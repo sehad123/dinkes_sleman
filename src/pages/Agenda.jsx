@@ -10,43 +10,43 @@ const localizer = momentLocalizer(moment);
 const events = [
   {
     id: 0,
-    title: "Official Statistik Lanjutan",
+    title: "Pelathian Tenaga Kesehatan",
     start: new Date(2024, 5, 19, 10, 0), // Tahun, Bulan (0-11), Tanggal, Jam, Menit
     end: new Date(2024, 5, 19, 12, 0),
   },
   {
     id: 1,
-    title: "Data Mining",
+    title: "Imunisasi",
     start: new Date(2024, 5, 20, 13, 30),
     end: new Date(2024, 5, 20, 15, 30),
   },
   {
     id: 2,
-    title: "Statistik Neraca Nasional",
+    title: "Rapat Bulanan",
     start: new Date(2024, 5, 24, 13, 30),
     end: new Date(2024, 5, 24, 15, 30),
   },
   {
     id: 3,
-    title: "Teknologi Perekayasaan Data",
+    title: "Klinik Keliling",
     start: new Date(2024, 5, 25, 13, 30),
     end: new Date(2024, 5, 25, 15, 30),
   },
   {
     id: 4,
-    title: "Interaksi Manusia Komputer",
+    title: "Posyandu",
     start: new Date(2024, 5, 26, 10, 0),
     end: new Date(2024, 5, 26, 12, 0),
   },
   {
     id: 5,
-    title: "Keamanan Sistem Informasi",
+    title: "Pemantauan Status Gizi",
     start: new Date(2024, 5, 27, 10, 0),
     end: new Date(2024, 5, 27, 12, 0),
   },
   {
     id: 6,
-    title: "PKL",
+    title: "Sanitasi dan Higiene:",
     start: new Date(2024, 5, 28, 13, 30),
     end: new Date(2024, 5, 28, 15, 30),
   },

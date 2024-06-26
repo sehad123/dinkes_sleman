@@ -106,7 +106,7 @@ const Footer = () => {
           </div>
 
           {/* Footer Links */}
-          <div className="ml-6 mt-2 lg:ml-32 md:mt-0 md:col-span-2">
+          <div className="ml-6 mt-2 lg:ml-32 md:mt-0 md:ml-32 md:col-span-2">
             <div className="grid grid-cols-1 sm:grid-cols-1 sm:mr-6 sm:-translate-x-6 md:grid-cols-3 gap-6 md:gap-10">
               <div>
                 <div className="py-8 w-[300px] ">

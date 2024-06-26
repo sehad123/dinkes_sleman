@@ -136,7 +136,7 @@ const Navbar = () => {
   };
   return (
     <div className="shadow-md bg-white lg:h-[95px] h-[130px] dark:bg-gray-900 w-full dark:text-white duration-200 relative z-40">
-      <div className="lg:hidden block lg:px-10 py-2 sm:h-[150px] lg:h-[130px] h-[120px]">
+      <div className="lg:hidden md:hidden block lg:px-10 py-2 sm:h-[150px] lg:h-[130px] h-[120px]">
         <div className="container mt-3 sm: flex justify-between items-center lg:translate-y-0 -translate-y-40">
           <div>
             <a href="#" onClick={handleShopsyClick} className="font-bold text-2xl sm:text-3xl flex gap-2 items-center">
@@ -155,7 +155,7 @@ const Navbar = () => {
             {/* Dark mode switch */}
             <div className="lg:mb-20 mb-[400px] -translate-x-10 ">{/* <DarkMode /> */}</div>
             {/* Hamburger Icon (Hidden on Desktop) */}
-            <div className="md:hidden">
+            <div className="lg:hidden md:block">
               <button onClick={toggleMenu} className="text-dark focus:outline-none">
                 <FaBars className="text-2xl sm:mb-10" />
               </button>
@@ -164,7 +164,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* Lower Navbar (Desktop) */}
-      <div className="hidden md:block">
+      <div className="lg:block hidden">
         <div className="">
           <ul className="flex justify-center lg:gap-10 md:gap-8 text-[16px] py-2  bg-linear-gradient(90deg, #149fce 0%, #10e1d3 100%);" style={{ borderTop: "2px solid black", fontFamily: "Open Sans, sans-serif" }}>
             <li className="relative group cursor-pointer">
@@ -183,9 +183,9 @@ const Navbar = () => {
                   {/* Dark mode switch */}
 
                   {/* Hamburger Icon (Hidden on Desktop) */}
-                  <div className="md:hidden">
+                  <div className="lg:hidden md:block">
                     <button onClick={toggleMenu} className="text-dark focus:outline-none">
-                      <FaBars className="text-2xl sm:mb-10" />
+                      <FaBars className="text-2xl sm:mb-10 md:mb-10" />
                     </button>
                   </div>
                 </div>
@@ -271,7 +271,7 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu (Hidden on Desktop) */}
       {showMenu && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50" onClick={toggleMenu}>
+        <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50" onClick={toggleMenu}>
           <div className="flex flex-col bg-white dark:bg-gray-900 py-4 px-6 absolute top-0 left-0 w-64 h-full shadow-md overflow-y-auto">
             <ul className="flex flex-col items-center gap-3 py-2">
               {Menu1.map((menuItem, index) => (
